@@ -14385,81 +14385,72 @@ div.jp-OutputPrompt {
 <div class="slides"><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="R-&#35486;&#35328;&#30340;&#20116;&#21313;&#36947;&#32244;&#32722;">R &#35486;&#35328;&#30340;&#20116;&#21313;&#36947;&#32244;&#32722;<a class="anchor-link" href="#R-&#35486;&#35328;&#30340;&#20116;&#21313;&#36947;&#32244;&#32722;">&#182;</a></h1><blockquote><p>流程控制</p>
+<h1 id="R-&#35486;&#35328;&#30340;&#20116;&#21313;&#36947;&#32244;&#32722;">R &#35486;&#35328;&#30340;&#20116;&#21313;&#36947;&#32244;&#32722;<a class="anchor-link" href="#R-&#35486;&#35328;&#30340;&#20116;&#21313;&#36947;&#32244;&#32722;">&#182;</a></h1><blockquote><p>函數</p>
 </blockquote>
-<p><a href="https://www.datainpoint.com/">數據交點</a> | 郭耀仁 <a href="mailto:yaojenkuo@datainpoint.com">yaojenkuo@datainpoint.com</a></p>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#20160;&#40636;&#26159;&#27969;&#31243;&#25511;&#21046;">&#20160;&#40636;&#26159;&#27969;&#31243;&#25511;&#21046;<a class="anchor-link" href="#&#20160;&#40636;&#26159;&#27969;&#31243;&#25511;&#21046;">&#182;</a></h2><blockquote><p>在程式執行時，特定區塊的程式碼執行的依據、重複次數以及先後順序等，像是特定條件成立的時候執行一段程式或者重複執行一段程式直到特定條件成立為止。</p>
-</blockquote>
-<p>來源: <a href="https://en.wikipedia.org/wiki/Control_flow">https://en.wikipedia.org/wiki/Control_flow</a></p>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#27969;&#31243;&#25511;&#21046;&#30340;&#31278;&#39006;">&#27969;&#31243;&#25511;&#21046;&#30340;&#31278;&#39006;<a class="anchor-link" href="#&#27969;&#31243;&#25511;&#21046;&#30340;&#31278;&#39006;">&#182;</a></h2><ul>
-<li>條件判斷</li>
-<li>迴圈</li>
-</ul>
+<p><a href="https://www.datainpoint.com">數據交點</a> | 郭耀仁 <a href="mailto:yaojenkuo@datainpoint.com">yaojenkuo@datainpoint.com</a></p>
 
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#26781;&#20214;&#21028;&#26039;">&#26781;&#20214;&#21028;&#26039;<a class="anchor-link" href="#&#26781;&#20214;&#21028;&#26039;">&#182;</a></h2>
+<h2 id="&#20160;&#40636;&#26159;&#20989;&#25976;">&#20160;&#40636;&#26159;&#20989;&#25976;<a class="anchor-link" href="#&#20160;&#40636;&#26159;&#20989;&#25976;">&#182;</a></h2>
 </div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#20160;&#40636;&#26159;&#26781;&#20214;&#21028;&#26039;">&#20160;&#40636;&#26159;&#26781;&#20214;&#21028;&#26039;<a class="anchor-link" href="#&#20160;&#40636;&#26159;&#26781;&#20214;&#21028;&#26039;">&#182;</a></h2><blockquote><p>條件判斷是依指定變數或者運算的布林值為真或假時，來決定是否執行一段位於某區塊內的程式，透過 <code>if-else</code> 指令可以根據指定條件是否成立，決定後續要執行的程式，也可以組合多個 <code>if-else</code> 指令進行更複雜的條件判斷。</p>
-</blockquote>
-<p>Source: <a href="https://en.wikipedia.org/wiki/Conditional_(computer_programming">https://en.wikipedia.org/wiki/Conditional_(computer_programming</a>)</p>
+<h2 id="&#20160;&#40636;&#26159;&#20989;&#25976;">&#20160;&#40636;&#26159;&#20989;&#25976;<a class="anchor-link" href="#&#20160;&#40636;&#26159;&#20989;&#25976;">&#182;</a></h2><p>在電腦科學中，函數是一段有命名的程式碼，每當呼叫函數作用時，就會請該段程式碼運作，依據輸入讓函數能夠回傳對應的輸出。</p>
 
 </div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="if-&#20570;&#21934;&#19968;&#31243;&#24335;&#20998;&#25903;&#30340;&#21312;&#22602;"><code>if</code> &#20570;&#21934;&#19968;&#31243;&#24335;&#20998;&#25903;&#30340;&#21312;&#22602;<a class="anchor-link" href="#if-&#20570;&#21934;&#19968;&#31243;&#24335;&#20998;&#25903;&#30340;&#21312;&#22602;">&#182;</a></h2><ul>
-<li><code>if</code> 保留字。</li>
-<li><code>CONDITION</code> 是一段能產生邏輯值向量的敘述。</li>
+<h2 id="&#20989;&#25976;&#30340;&#32068;&#25104;&#26377;&#20116;&#20491;&#35201;&#20214;">&#20989;&#25976;&#30340;&#32068;&#25104;&#26377;&#20116;&#20491;&#35201;&#20214;<a class="anchor-link" href="#&#20989;&#25976;&#30340;&#32068;&#25104;&#26377;&#20116;&#20491;&#35201;&#20214;">&#182;</a></h2><ol>
+<li>函數名稱</li>
+<li>輸入</li>
+<li>參數</li>
+<li>函數主體</li>
+<li>輸出</li>
+</ol>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#20989;&#25976;&#36939;&#20316;&#30340;&#36942;&#31243;&#23601;&#20687;&#36023;&#19968;&#26479;&#29645;&#29664;&#22902;&#33590;">&#20989;&#25976;&#36939;&#20316;&#30340;&#36942;&#31243;&#23601;&#20687;&#36023;&#19968;&#26479;&#29645;&#29664;&#22902;&#33590;<a class="anchor-link" href="#&#20989;&#25976;&#36939;&#20316;&#30340;&#36942;&#31243;&#23601;&#20687;&#36023;&#19968;&#26479;&#29645;&#29664;&#22902;&#33590;">&#182;</a></h2><p><img src="https://i.imgur.com/6gpJebm.jpg?1" alt="Imgur"></p>
+<p>圖片來源: Google 圖片</p>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#22914;&#20309;&#20351;&#29992;&#20989;&#25976;">&#22914;&#20309;&#20351;&#29992;&#20989;&#25976;<a class="anchor-link" href="#&#22914;&#20309;&#20351;&#29992;&#20989;&#25976;">&#182;</a></h2>
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#22312;&#12300;&#36215;&#27493;&#36208;&#12301;&#21934;&#20803;&#20013;&#25105;&#20497;&#24050;&#32147;&#20351;&#29992;&#20102;&#35377;&#22810;&#20839;&#24314;&#20989;&#25976;">&#22312;&#12300;&#36215;&#27493;&#36208;&#12301;&#21934;&#20803;&#20013;&#25105;&#20497;&#24050;&#32147;&#20351;&#29992;&#20102;&#35377;&#22810;&#20839;&#24314;&#20989;&#25976;<a class="anchor-link" href="#&#22312;&#12300;&#36215;&#27493;&#36208;&#12301;&#21934;&#20803;&#20013;&#25105;&#20497;&#24050;&#32147;&#20351;&#29992;&#20102;&#35377;&#22810;&#20839;&#24314;&#20989;&#25976;">&#182;</a></h2><ul>
+<li><code>print</code></li>
+<li><code>length</code></li>
+<li><code>class</code></li>
+<li>...等。</li>
 </ul>
 
 </div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<div class="highlight"><pre><span></span><span class="c1"># single branch</span>
-<span class="nf">if </span><span class="p">(</span><span class="n">CONDITION</span><span class="p">)</span> <span class="p">{</span>
-  <span class="c1"># do something when CONDITION is evaluated as TRUE</span>
-<span class="p">}</span>
-</pre></div>
-
+<h2 id="&#20197;&#20989;&#25976;&#30340;&#12300;&#21517;&#31281;&#12301;&#21628;&#21483;&#65292;&#20006;&#22312;&#23567;&#25324;&#34399;&#20013;&#23531;&#36914;&#12300;&#36664;&#20837;&#12301;&#25110;&#32773;&#12300;&#21443;&#25976;&#12301;">&#20197;&#20989;&#25976;&#30340;&#12300;&#21517;&#31281;&#12301;&#21628;&#21483;&#65292;&#20006;&#22312;&#23567;&#25324;&#34399;&#20013;&#23531;&#36914;&#12300;&#36664;&#20837;&#12301;&#25110;&#32773;&#12300;&#21443;&#25976;&#12301;<a class="anchor-link" href="#&#20197;&#20989;&#25976;&#30340;&#12300;&#21517;&#31281;&#12301;&#21628;&#21483;&#65292;&#20006;&#22312;&#23567;&#25324;&#34399;&#20013;&#23531;&#36914;&#12300;&#36664;&#20837;&#12301;&#25110;&#32773;&#12300;&#21443;&#25976;&#12301;">&#182;</a></h2>
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#22914;&#26524;&#19968;&#20491;&#25972;&#25976;&#38500;&#20197;-2-&#30340;&#39192;&#25976;&#28858;-1-&#23601;&#26159;&#22855;&#25976;&#65292;&#21542;&#21063;&#26159;&#20598;&#25976;">&#22914;&#26524;&#19968;&#20491;&#25972;&#25976;&#38500;&#20197; 2 &#30340;&#39192;&#25976;&#28858; 1 &#23601;&#26159;&#22855;&#25976;&#65292;&#21542;&#21063;&#26159;&#20598;&#25976;<a class="anchor-link" href="#&#22914;&#26524;&#19968;&#20491;&#25972;&#25976;&#38500;&#20197;-2-&#30340;&#39192;&#25976;&#28858;-1-&#23601;&#26159;&#22855;&#25976;&#65292;&#21542;&#21063;&#26159;&#20598;&#25976;">&#182;</a></h2>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">odd_or_even</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nf">if </span><span class="p">(</span><span class="n">x</span> <span class="o">%%</span> <span class="m">2</span> <span class="o">==</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">msg</span> <span class="o">&lt;-</span> <span class="nf">sprintf</span><span class="p">(</span><span class="s">&quot;%s是偶數&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-        <span class="nf">return</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-    <span class="p">}</span>
-    <span class="nf">if </span><span class="p">(</span><span class="n">x</span> <span class="o">%%</span> <span class="m">2</span> <span class="o">==</span> <span class="m">1</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">msg</span> <span class="o">&lt;-</span> <span class="nf">sprintf</span><span class="p">(</span><span class="s">&quot;%s是奇數&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-        <span class="nf">return</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">hello_world</span> <span class="o">&lt;-</span> <span class="s">&quot;Hello, World!&quot;</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">hello_world</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="n">hello_world</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">class</span><span class="p">(</span><span class="n">hello_world</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -14467,14 +14458,51 @@ div.jp-OutputPrompt {
 </div>
 </div>
 
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[1] &#34;Hello, World!&#34;
+[1] 1
+[1] &#34;character&#34;
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#26377;&#20123;&#20989;&#25976;&#35373;&#35336;&#28858;&#12300;&#19981;&#38656;&#35201;&#12301;&#36664;&#20837;&#25110;&#32773;&#21443;&#25976;&#65292;&#23567;&#25324;&#34399;&#30041;&#31354;&#65292;&#20363;&#22914;&#65306;">&#26377;&#20123;&#20989;&#25976;&#35373;&#35336;&#28858;&#12300;&#19981;&#38656;&#35201;&#12301;&#36664;&#20837;&#25110;&#32773;&#21443;&#25976;&#65292;&#23567;&#25324;&#34399;&#30041;&#31354;&#65292;&#20363;&#22914;&#65306;<a class="anchor-link" href="#&#26377;&#20123;&#20989;&#25976;&#35373;&#35336;&#28858;&#12300;&#19981;&#38656;&#35201;&#12301;&#36664;&#20837;&#25110;&#32773;&#21443;&#25976;&#65292;&#23567;&#25324;&#34399;&#30041;&#31354;&#65292;&#20363;&#22914;&#65306;">&#182;</a></h2><ul>
+<li><code>getwd</code> 函數顯示 R 語言的工作目錄。</li>
+<li><code>sessionInfo</code> 函數顯示 R 語言的版本與相關資訊。</li>
+</ul>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="getwd-&#39023;&#31034;-R-&#35486;&#35328;&#30340;&#24037;&#20316;&#30446;&#37636;"><code>getwd</code> &#39023;&#31034; R &#35486;&#35328;&#30340;&#24037;&#20316;&#30446;&#37636;<a class="anchor-link" href="#getwd-&#39023;&#31034;-R-&#35486;&#35328;&#30340;&#24037;&#20316;&#30446;&#37636;">&#182;</a></h2><p>電腦中應用程式所在的目錄，程式語言在此目錄之下能夠以「相對路徑」存取檔案。</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="nf">odd_or_even</span><span class="p">(</span><span class="m">0</span><span class="p">))</span>
-<span class="nf">print</span><span class="p">(</span><span class="nf">odd_or_even</span><span class="p">(</span><span class="m">1</span><span class="p">))</span>
+<div class=" highlight hl-r"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="nf">getwd</span><span class="p">())</span> <span class="c1"># get working directory</span>
 </pre></div>
 
      </div>
@@ -14494,8 +14522,7 @@ div.jp-OutputPrompt {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[1] &#34;0是偶數&#34;
-[1] &#34;1是奇數&#34;
+<pre>[1] &#34;/Users/kuoyaojen/classroom-rfifty/04-functions&#34;
 </pre>
 </div>
 </div>
@@ -14507,59 +14534,16 @@ div.jp-OutputPrompt {
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="if-else-&#20570;&#20841;&#20491;&#31243;&#24335;&#20998;&#25903;&#30340;&#21312;&#22602;"><code>if else</code> &#20570;&#20841;&#20491;&#31243;&#24335;&#20998;&#25903;&#30340;&#21312;&#22602;<a class="anchor-link" href="#if-else-&#20570;&#20841;&#20491;&#31243;&#24335;&#20998;&#25903;&#30340;&#21312;&#22602;">&#182;</a></h2><ul>
-<li><code>if</code>, <code>else</code> 保留字。</li>
-<li><code>CONDITION</code> 是一段能產生邏輯值向量的敘述。</li>
-</ul>
+<h2 id="sessionInfo-&#20989;&#25976;&#39023;&#31034;-R-&#35486;&#35328;&#30340;&#29256;&#26412;&#33287;&#30456;&#38364;&#36039;&#35338;"><code>sessionInfo</code> &#20989;&#25976;&#39023;&#31034; R &#35486;&#35328;&#30340;&#29256;&#26412;&#33287;&#30456;&#38364;&#36039;&#35338;<a class="anchor-link" href="#sessionInfo-&#20989;&#25976;&#39023;&#31034;-R-&#35486;&#35328;&#30340;&#29256;&#26412;&#33287;&#30456;&#38364;&#36039;&#35338;">&#182;</a></h2><p>注意 <code>sessionInfo</code> 函數中的 <code>Info</code> 是大寫 <code>I</code>。</p>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<div class="highlight"><pre><span></span><span class="c1"># 2 branches</span>
-<span class="nf">if </span><span class="p">(</span><span class="n">CONDITION</span><span class="p">)</span> <span class="p">{</span>
-  <span class="c1"># do something when CONDITION is evaluated as TRUE</span>
-<span class="p">}</span> <span class="n">else</span> <span class="p">{</span>
-  <span class="c1"># do something when CONDITION is evaluated as FALSE</span>
-<span class="p">}</span>
-</pre></div>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#22914;&#26524;&#19968;&#20491;&#25972;&#25976;&#38500;&#20197;-2-&#30340;&#39192;&#25976;&#28858;-1-&#23601;&#26159;&#22855;&#25976;&#65292;&#21542;&#21063;&#26159;&#20598;&#25976;">&#22914;&#26524;&#19968;&#20491;&#25972;&#25976;&#38500;&#20197; 2 &#30340;&#39192;&#25976;&#28858; 1 &#23601;&#26159;&#22855;&#25976;&#65292;&#21542;&#21063;&#26159;&#20598;&#25976;<a class="anchor-link" href="#&#22914;&#26524;&#19968;&#20491;&#25972;&#25976;&#38500;&#20197;-2-&#30340;&#39192;&#25976;&#28858;-1-&#23601;&#26159;&#22855;&#25976;&#65292;&#21542;&#21063;&#26159;&#20598;&#25976;">&#182;</a></h2>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">odd_or_even</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nf">if </span><span class="p">(</span><span class="n">x</span> <span class="o">%%</span> <span class="m">2</span> <span class="o">==</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">msg</span> <span class="o">&lt;-</span> <span class="nf">sprintf</span><span class="p">(</span><span class="s">&quot;%s是偶數&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-        <span class="nf">return</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-    <span class="p">}</span> <span class="n">else</span> <span class="p">{</span>
-        <span class="n">msg</span> <span class="o">&lt;-</span> <span class="nf">sprintf</span><span class="p">(</span><span class="s">&quot;%s是奇數&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-        <span class="nf">return</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="nf">odd_or_even</span><span class="p">(</span><span class="m">0</span><span class="p">))</span>
-<span class="nf">print</span><span class="p">(</span><span class="nf">odd_or_even</span><span class="p">(</span><span class="m">1</span><span class="p">))</span>
+<div class=" highlight hl-r"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="nf">sessionInfo</span><span class="p">())</span>
 </pre></div>
 
      </div>
@@ -14579,8 +14563,26 @@ div.jp-OutputPrompt {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[1] &#34;0是偶數&#34;
-[1] &#34;1是奇數&#34;
+<pre>R version 4.0.5 (2021-03-31)
+Platform: x86_64-apple-darwin17.0 (64-bit)
+Running under: macOS Big Sur 10.16
+
+Matrix products: default
+BLAS:   /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRblas.dylib
+LAPACK: /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRlapack.dylib
+
+locale:
+[1] C/UTF-8/C/C/C/C
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+loaded via a namespace (and not attached):
+ [1] compiler_4.0.5  ellipsis_0.3.2  IRdisplay_0.7.0 pbdZMQ_0.3-3.1 
+ [5] tools_4.0.5     htmltools_0.5.0 pillar_1.4.7    base64enc_0.1-3
+ [9] crayon_1.4.1    uuid_0.1-4      IRkernel_1.2    jsonlite_1.7.2 
+[13] digest_0.6.27   lifecycle_1.0.0 repr_1.1.0      rlang_0.4.11   
+[17] evaluate_0.14  
 </pre>
 </div>
 </div>
@@ -14592,65 +14594,35 @@ div.jp-OutputPrompt {
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="if-else-if-else-&#20570;&#19977;&#20491;&#20197;&#19978;&#31243;&#24335;&#20998;&#25903;&#30340;&#21312;&#22602;"><code>if-else if-else</code> &#20570;&#19977;&#20491;&#20197;&#19978;&#31243;&#24335;&#20998;&#25903;&#30340;&#21312;&#22602;<a class="anchor-link" href="#if-else-if-else-&#20570;&#19977;&#20491;&#20197;&#19978;&#31243;&#24335;&#20998;&#25903;&#30340;&#21312;&#22602;">&#182;</a></h2><ul>
-<li><code>if</code>, <code>else if</code>, <code>else</code> 保留字。</li>
-<li><code>CONDITION_1</code>、<code>CONDITION_2</code> 皆是能產生邏輯值向量的敘述。</li>
-</ul>
+<h2 id="&#20989;&#25976;&#30340;&#36664;&#20837;&#25110;&#21443;&#25976;&#25505;&#21462;&#19977;&#31278;&#27231;&#21046;&#35672;&#21029;">&#20989;&#25976;&#30340;&#36664;&#20837;&#25110;&#21443;&#25976;&#25505;&#21462;&#19977;&#31278;&#27231;&#21046;&#35672;&#21029;<a class="anchor-link" href="#&#20989;&#25976;&#30340;&#36664;&#20837;&#25110;&#21443;&#25976;&#25505;&#21462;&#19977;&#31278;&#27231;&#21046;&#35672;&#21029;">&#182;</a></h2><ol>
+<li>依位置識別。</li>
+<li>依名稱識別（根據<a href="https://style.tidyverse.org/">風格指南</a>多數時候我們推薦使用依名稱識別的機制）。</li>
+<li>採預設值時可以省略不用輸入。</li>
+</ol>
 
 </div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<div class="highlight"><pre><span></span><span class="c1"># 3 branches</span>
-<span class="nf">if </span><span class="p">(</span><span class="n">CONDITION_1</span><span class="p">)</span> <span class="p">{</span>
-  <span class="c1"># do something when CONDITION_1 is evaluated as TRUE</span>
-<span class="p">}</span> <span class="n">else</span> <span class="nf">if </span><span class="p">(</span><span class="n">CONDITION_2</span><span class="p">)</span> <span class="p">{</span>
-  <span class="c1"># do something when CONDITION_2 is evaluated as TRUE</span>
-<span class="p">}</span> <span class="n">else</span> <span class="p">{</span>
-  <span class="c1"># do something when CONDITION_1 &amp; CONDITION_2 are both evaluated as FALSE</span>
-<span class="p">}</span>
-</pre></div>
+<h2 id="&#20197;&#20839;&#24314;&#20989;&#25976;-sub-&#28858;&#20363;">&#20197;&#20839;&#24314;&#20989;&#25976; <code>sub</code> &#28858;&#20363;<a class="anchor-link" href="#&#20197;&#20839;&#24314;&#20989;&#25976;-sub-&#28858;&#20363;">&#182;</a></h2><p><code>pattern</code>、<code>replacement</code> 與 <code>x</code> 依序為兩個參數、一個輸入。</p>
+
+<pre><code>sub(pattern, replacement, x)</code></pre>
 
 </div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#19968;&#20491;&#25972;&#25976;&#38500;&#20197;-3-&#30340;&#39192;&#25976;&#21487;&#33021;&#28858;-0&#12289;1-&#25110;-2">&#19968;&#20491;&#25972;&#25976;&#38500;&#20197; 3 &#30340;&#39192;&#25976;&#21487;&#33021;&#28858; 0&#12289;1 &#25110; 2<a class="anchor-link" href="#&#19968;&#20491;&#25972;&#25976;&#38500;&#20197;-3-&#30340;&#39192;&#25976;&#21487;&#33021;&#28858;-0&#12289;1-&#25110;-2">&#182;</a></h2>
+<h2 id="&#20381;&#20301;&#32622;&#35672;&#21029;">&#20381;&#20301;&#32622;&#35672;&#21029;<a class="anchor-link" href="#&#20381;&#20301;&#32622;&#35672;&#21029;">&#182;</a></h2>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">modulo_divided_by_three</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nf">if </span><span class="p">(</span><span class="n">x</span> <span class="o">%%</span> <span class="m">3</span> <span class="o">==</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">msg</span> <span class="o">&lt;-</span> <span class="nf">sprintf</span><span class="p">(</span><span class="s">&quot;%s除以3的餘數為0&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-        <span class="nf">return</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-    <span class="p">}</span> <span class="n">else</span> <span class="nf">if </span><span class="p">(</span><span class="n">x</span> <span class="o">%%</span> <span class="m">3</span> <span class="o">==</span> <span class="m">1</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">msg</span> <span class="o">&lt;-</span> <span class="nf">sprintf</span><span class="p">(</span><span class="s">&quot;%s除以3的餘數為1&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-        <span class="nf">return</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-    <span class="p">}</span> <span class="n">else</span> <span class="p">{</span>
-        <span class="n">msg</span> <span class="o">&lt;-</span> <span class="nf">sprintf</span><span class="p">(</span><span class="s">&quot;%s除以3的餘數為2&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-        <span class="nf">return</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="nf">modulo_divided_by_three</span><span class="p">(</span><span class="m">4</span><span class="p">))</span>
-<span class="nf">print</span><span class="p">(</span><span class="nf">modulo_divided_by_three</span><span class="p">(</span><span class="m">5</span><span class="p">))</span>
-<span class="nf">print</span><span class="p">(</span><span class="nf">modulo_divided_by_three</span><span class="p">(</span><span class="m">6</span><span class="p">))</span>
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># positional arguments</span>
+<span class="n">luke_skywalker</span> <span class="o">&lt;-</span> <span class="s">&quot;Luke Skywalker&quot;</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">sub</span><span class="p">(</span><span class="s">&quot;Luke&quot;</span><span class="p">,</span> <span class="s">&quot;Anakin&quot;</span><span class="p">,</span> <span class="n">luke_skywalker</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -14670,9 +14642,145 @@ div.jp-OutputPrompt {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[1] &#34;4除以3的餘數為1&#34;
-[1] &#34;5除以3的餘數為2&#34;
-[1] &#34;6除以3的餘數為0&#34;
+<pre>[1] &#34;Anakin Skywalker&#34;
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#20381;&#21517;&#31281;&#35672;&#21029;">&#20381;&#21517;&#31281;&#35672;&#21029;<a class="anchor-link" href="#&#20381;&#21517;&#31281;&#35672;&#21029;">&#182;</a></h2>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># named arguments</span>
+<span class="n">luke_skywalker</span> <span class="o">&lt;-</span> <span class="s">&quot;Luke Skywalker&quot;</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">sub</span><span class="p">(</span><span class="n">pattern</span> <span class="o">=</span> <span class="s">&quot;Luke&quot;</span><span class="p">,</span> <span class="n">replacement</span> <span class="o">=</span> <span class="s">&quot;Anakin&quot;</span><span class="p">,</span> <span class="n">luke_skywalker</span><span class="p">))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[1] &#34;Anakin Skywalker&#34;
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#20197;&#20839;&#24314;&#20989;&#25976;-paste-&#28858;&#20363;">&#20197;&#20839;&#24314;&#20989;&#25976; <code>paste</code> &#28858;&#20363;<a class="anchor-link" href="#&#20197;&#20839;&#24314;&#20989;&#25976;-paste-&#28858;&#20363;">&#182;</a></h2><p><code>...</code> 與 <code>sep</code> 依序為一個輸入、一個預設值為 <code>" "</code> 的參數。</p>
+
+<pre><code>paste(..., sep = " ")</code></pre>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#25505;&#38928;&#35373;&#20540;&#26178;&#21487;&#20197;&#30465;&#30053;&#19981;&#29992;&#36664;&#20837;">&#25505;&#38928;&#35373;&#20540;&#26178;&#21487;&#20197;&#30465;&#30053;&#19981;&#29992;&#36664;&#20837;<a class="anchor-link" href="#&#25505;&#38928;&#35373;&#20540;&#26178;&#21487;&#20197;&#30465;&#30053;&#19981;&#29992;&#36664;&#20837;">&#182;</a></h2>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># default arguments</span>
+<span class="n">luke</span> <span class="o">&lt;-</span> <span class="s">&quot;Luke&quot;</span>
+<span class="n">skywalker</span> <span class="o">&lt;-</span> <span class="s">&quot;Skywalker&quot;</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">paste</span><span class="p">(</span><span class="n">luke</span><span class="p">,</span> <span class="n">skywalker</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">paste</span><span class="p">(</span><span class="n">luke</span><span class="p">,</span> <span class="n">skywalker</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&quot; &quot;</span><span class="p">))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[1] &#34;Luke Skywalker&#34;
+[1] &#34;Luke Skywalker&#34;
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#20989;&#25976;&#34987;&#35373;&#35336;&#28858;&#26377;&#12300;&#22238;&#20659;&#12301;&#27231;&#21046;">&#20989;&#25976;&#34987;&#35373;&#35336;&#28858;&#26377;&#12300;&#22238;&#20659;&#12301;&#27231;&#21046;<a class="anchor-link" href="#&#20989;&#25976;&#34987;&#35373;&#35336;&#28858;&#26377;&#12300;&#22238;&#20659;&#12301;&#27231;&#21046;">&#182;</a></h2><p>我們可以用物件儲存函數所回傳的輸出，後續加以運用。</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="n">luke_skywalker</span> <span class="o">&lt;-</span> <span class="s">&quot;Luke Skywalker&quot;</span>
+<span class="n">anakin_skywalker</span> <span class="o">&lt;-</span> <span class="nf">sub</span><span class="p">(</span><span class="n">pattern</span> <span class="o">=</span> <span class="s">&quot;Luke&quot;</span><span class="p">,</span> <span class="n">replacement</span> <span class="o">=</span> <span class="s">&quot;Anakin&quot;</span><span class="p">,</span> <span class="n">luke_skywalker</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">anakin_skywalker</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[1] &#34;Anakin Skywalker&#34;
 </pre>
 </div>
 </div>
@@ -14684,126 +14792,22 @@ div.jp-OutputPrompt {
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#36852;&#22280;">&#36852;&#22280;<a class="anchor-link" href="#&#36852;&#22280;">&#182;</a></h2>
+<h2 id="&#22914;&#20309;&#20351;&#29992;-R-&#35486;&#35328;&#30340;&#38750;&#20839;&#24314;&#20989;&#25976;">&#22914;&#20309;&#20351;&#29992; R &#35486;&#35328;&#30340;&#38750;&#20839;&#24314;&#20989;&#25976;<a class="anchor-link" href="#&#22914;&#20309;&#20351;&#29992;-R-&#35486;&#35328;&#30340;&#38750;&#20839;&#24314;&#20989;&#25976;">&#182;</a></h2>
 </div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#20160;&#40636;&#26159;&#36852;&#22280;">&#20160;&#40636;&#26159;&#36852;&#22280;<a class="anchor-link" href="#&#20160;&#40636;&#26159;&#36852;&#22280;">&#182;</a></h2><blockquote><p>迴圈是一種常見的流程控制，雖然在程式中只會出現一次、但卻可能被連續執行多次的程式碼，迴圈中的程式碼會執行特定的次數、執行到特定條件成立時結束或者針對資料結構中的所有內容遍歷。</p>
-</blockquote>
-<p>Source: <a href="https://en.wikipedia.org/wiki/Control_flow#Loops">https://en.wikipedia.org/wiki/Control_flow#Loops</a></p>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#36852;&#22280;&#33021;&#22816;&#24171;&#25105;&#20497;&#23559;&#36039;&#26009;&#32080;&#27083;&#20013;&#30340;&#36039;&#26009;&#19968;&#31558;&#19968;&#31558;&#21462;&#20986;&#20358;&#65292;&#20063;&#23601;&#26159;&#20439;&#31281;&#30340;&#36208;&#35370;&#65288;&#25110;&#32773;&#36941;&#27511;&#12289;&#36845;&#20195;&#65289;">&#36852;&#22280;&#33021;&#22816;&#24171;&#25105;&#20497;&#23559;&#36039;&#26009;&#32080;&#27083;&#20013;&#30340;&#36039;&#26009;&#19968;&#31558;&#19968;&#31558;&#21462;&#20986;&#20358;&#65292;&#20063;&#23601;&#26159;&#20439;&#31281;&#30340;&#36208;&#35370;&#65288;&#25110;&#32773;&#36941;&#27511;&#12289;&#36845;&#20195;&#65289;<a class="anchor-link" href="#&#36852;&#22280;&#33021;&#22816;&#24171;&#25105;&#20497;&#23559;&#36039;&#26009;&#32080;&#27083;&#20013;&#30340;&#36039;&#26009;&#19968;&#31558;&#19968;&#31558;&#21462;&#20986;&#20358;&#65292;&#20063;&#23601;&#26159;&#20439;&#31281;&#30340;&#36208;&#35370;&#65288;&#25110;&#32773;&#36941;&#27511;&#12289;&#36845;&#20195;&#65289;">&#182;</a></h2>
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#20841;&#31278;&#36852;&#22280;&#30340;&#35486;&#27861;&#32080;&#27083;">&#20841;&#31278;&#36852;&#22280;&#30340;&#35486;&#27861;&#32080;&#27083;<a class="anchor-link" href="#&#20841;&#31278;&#36852;&#22280;&#30340;&#35486;&#27861;&#32080;&#27083;">&#182;</a></h2><ul>
-<li><code>while</code> 迴圈。</li>
-<li><code>for</code> 迴圈。</li>
-</ul>
+<h2 id="R-&#35486;&#35328;&#30340;&#20989;&#25976;&#26377;&#19977;&#20491;&#20358;&#28304;">R &#35486;&#35328;&#30340;&#20989;&#25976;&#26377;&#19977;&#20491;&#20358;&#28304;<a class="anchor-link" href="#R-&#35486;&#35328;&#30340;&#20989;&#25976;&#26377;&#19977;&#20491;&#20358;&#28304;">&#182;</a></h2><ol>
+<li>來自 <code>base</code>、<code>stats</code> 與 <code>utils</code> 等預先已載入套件的函數，又被稱為內建函數。</li>
+<li>來自其他未被預先載入之套件的函數。</li>
+<li>來自使用者的自行定義。</li>
+</ol>
 
 </div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#32068;&#25104;&#36852;&#22280;&#30340;&#19977;&#20491;&#35201;&#20214;">&#32068;&#25104;&#36852;&#22280;&#30340;&#19977;&#20491;&#35201;&#20214;<a class="anchor-link" href="#&#32068;&#25104;&#36852;&#22280;&#30340;&#19977;&#20491;&#35201;&#20214;">&#182;</a></h2><ul>
-<li>起始值（start）：走訪資料的起點在哪裡？</li>
-<li>終止值（stop）：迭代資料的終點在哪裡？</li>
-<li>間隔（step）：從起點移動到終點的步幅為多少？</li>
-</ul>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="while-&#36852;&#22280;&#30340;&#31243;&#24335;&#21312;&#22602;"><code>while</code> &#36852;&#22280;&#30340;&#31243;&#24335;&#21312;&#22602;<a class="anchor-link" href="#while-&#36852;&#22280;&#30340;&#31243;&#24335;&#21312;&#22602;">&#182;</a></h2><ul>
-<li>保留字 <code>while</code></li>
-<li>起始值（start）</li>
-<li>終止值（stop）：被評估為邏輯值向量的敘述 <code>CONDITION</code></li>
-<li>間隔（step）</li>
-</ul>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">&lt;-</span> <span class="n">start</span> <span class="c1"># start</span>
-<span class="nf">while </span><span class="p">(</span><span class="n">CONDITION</span><span class="p">)</span> <span class="p">{</span>  <span class="c1"># stop</span>
-  <span class="c1"># Codes written here will be ran repeatedly</span>
-  <span class="c1"># until EXPR is evaluated as FALSE</span>
-  <span class="n">i</span> <span class="o">&lt;-</span> <span class="n">i</span> <span class="o">+</span> <span class="n">step</span> <span class="c1"># step</span>
-<span class="p">}</span>
-</pre></div>
-
-</div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">i</span> <span class="o">&lt;-</span> <span class="m">1</span>
-<span class="nf">while </span><span class="p">(</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="m">10</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nf">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-    <span class="n">i</span> <span class="o">&lt;-</span> <span class="n">i</span> <span class="o">+</span> <span class="m">2</span>
-<span class="p">}</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[1] 1
-[1] 3
-[1] 5
-[1] 7
-[1] 9
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="for-&#36852;&#22280;&#30340;&#31243;&#24335;&#21312;&#22602;"><code>for</code> &#36852;&#22280;&#30340;&#31243;&#24335;&#21312;&#22602;<a class="anchor-link" href="#for-&#36852;&#22280;&#30340;&#31243;&#24335;&#21312;&#22602;">&#182;</a></h2><ul>
-<li>保留字 <code>for</code> 與 <code>in</code>。</li>
-<li>迭代變數。</li>
-<li>可被走訪的物件（指派了 start、stop 與 step）。</li>
-<li>重複執行的程式碼。</li>
-</ul>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<div class="highlight"><pre><span></span><span class="nf">for </span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="n">ITERABLE</span><span class="p">)</span> <span class="p">{</span> <span class="c1"># start/stop/step</span>
-  <span class="c1"># Codes written here will be ran repeatedly</span>
-  <span class="c1"># until i reaches the end of ITERABLE</span>
-<span class="p">}</span>
-</pre></div>
-
+<h2 id="&#20351;&#29992;&#20839;&#24314;&#20989;&#25976;&#20043;&#21069;&#19981;&#38656;&#35201;&#20219;&#20309;&#21069;&#32622;&#20316;&#26989;">&#20351;&#29992;&#20839;&#24314;&#20989;&#25976;&#20043;&#21069;&#19981;&#38656;&#35201;&#20219;&#20309;&#21069;&#32622;&#20316;&#26989;<a class="anchor-link" href="#&#20351;&#29992;&#20839;&#24314;&#20989;&#25976;&#20043;&#21069;&#19981;&#38656;&#35201;&#20219;&#20309;&#21069;&#32622;&#20316;&#26989;">&#182;</a></h2>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -14811,9 +14815,9 @@ div.jp-OutputPrompt {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">for </span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="nf">seq</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">10</span><span class="p">,</span> <span class="m">2</span><span class="p">))</span> <span class="p">{</span>
-    <span class="nf">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-<span class="p">}</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">luke_skywalker</span> <span class="o">&lt;-</span> <span class="s">&quot;Luke Skywalker&quot;</span>
+<span class="n">anakin_skywalker</span> <span class="o">&lt;-</span> <span class="nf">sub</span><span class="p">(</span><span class="n">pattern</span> <span class="o">=</span> <span class="s">&quot;Luke&quot;</span><span class="p">,</span> <span class="n">replacement</span> <span class="o">=</span> <span class="s">&quot;Anakin&quot;</span><span class="p">,</span> <span class="n">luke_skywalker</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">anakin_skywalker</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14833,11 +14837,7 @@ div.jp-OutputPrompt {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[1] 1
-[1] 3
-[1] 5
-[1] 7
-[1] 9
+<pre>[1] &#34;Anakin Skywalker&#34;
 </pre>
 </div>
 </div>
@@ -14849,39 +14849,22 @@ div.jp-OutputPrompt {
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#24120;&#35211;&#30340;&#36852;&#22280;&#20219;&#21209;">&#24120;&#35211;&#30340;&#36852;&#22280;&#20219;&#21209;<a class="anchor-link" href="#&#24120;&#35211;&#30340;&#36852;&#22280;&#20219;&#21209;">&#182;</a></h2><ul>
-<li><code>print()</code></li>
-<li>加總（Summation）</li>
-<li>計數（Counter）</li>
-<li>乘積（Product）</li>
-<li>合併（Combine）</li>
-</ul>
+<h2 id="&#22914;&#20309;&#20351;&#29992;&#26410;&#34987;&#38928;&#20808;&#36617;&#20837;&#20043;&#22871;&#20214;&#30340;&#20989;&#25976;">&#22914;&#20309;&#20351;&#29992;&#26410;&#34987;&#38928;&#20808;&#36617;&#20837;&#20043;&#22871;&#20214;&#30340;&#20989;&#25976;<a class="anchor-link" href="#&#22914;&#20309;&#20351;&#29992;&#26410;&#34987;&#38928;&#20808;&#36617;&#20837;&#20043;&#22871;&#20214;&#30340;&#20989;&#25976;">&#182;</a></h2><p>先以 <code>library</code> 函數載入套件後，再使用函數。</p>
+<div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="s">&quot;package_name&quot;</span><span class="p">)</span>
+</pre></div>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#22196;&#26684;&#35498;&#20358;&#65292;&#22914;&#26524;&#25105;&#20497;&#38754;&#23565;&#30340;&#26159;&#21521;&#37327;&#65292;&#22810;&#25976;&#30340;&#20219;&#21209;&#19981;&#38656;&#35201;&#25776;&#23531;&#36852;&#22280;">&#22196;&#26684;&#35498;&#20358;&#65292;&#22914;&#26524;&#25105;&#20497;&#38754;&#23565;&#30340;&#26159;&#21521;&#37327;&#65292;&#22810;&#25976;&#30340;&#20219;&#21209;&#19981;&#38656;&#35201;&#25776;&#23531;&#36852;&#22280;<a class="anchor-link" href="#&#22196;&#26684;&#35498;&#20358;&#65292;&#22914;&#26524;&#25105;&#20497;&#38754;&#23565;&#30340;&#26159;&#21521;&#37327;&#65292;&#22810;&#25976;&#30340;&#20219;&#21209;&#19981;&#38656;&#35201;&#25776;&#23531;&#36852;&#22280;">&#182;</a></h2><ul>
-<li>加總（Summation）</li>
-<li>計數（Counter）</li>
-<li>乘積（Product）</li>
-</ul>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#38754;&#23565;&#21521;&#37327;&#65292;&#25105;&#20497;&#23563;&#25214;&#30340;&#26159;&#20989;&#25976;">&#38754;&#23565;&#21521;&#37327;&#65292;&#25105;&#20497;&#23563;&#25214;&#30340;&#26159;&#20989;&#25976;<a class="anchor-link" href="#&#38754;&#23565;&#21521;&#37327;&#65292;&#25105;&#20497;&#23563;&#25214;&#30340;&#26159;&#20989;&#25976;">&#182;</a></h2>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># 加總（Summation）</span>
-<span class="n">vec</span> <span class="o">&lt;-</span> <span class="m">6</span><span class="o">:</span><span class="m">10</span>
-<span class="nf">sum</span><span class="p">(</span><span class="n">vec</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="s">&quot;stringr&quot;</span><span class="p">)</span>
+
+<span class="n">luke_skywalker</span> <span class="o">&lt;-</span> <span class="s">&quot;Luke Skywalker&quot;</span>
+<span class="n">anakin_skywalker</span> <span class="o">&lt;-</span> <span class="nf">str_replace</span><span class="p">(</span><span class="n">pattern</span> <span class="o">=</span> <span class="s">&quot;Luke&quot;</span><span class="p">,</span> <span class="n">replacement</span> <span class="o">=</span> <span class="s">&quot;Anakin&quot;</span><span class="p">,</span> <span class="n">luke_skywalker</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">anakin_skywalker</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14900,26 +14883,53 @@ div.jp-OutputPrompt {
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-40
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[1] &#34;Anakin Skywalker&#34;
+</pre>
+</div>
 </div>
 
 </div>
 
 </div>
 
-</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#20351;&#29992;-library-&#20989;&#25976;&#36617;&#20837;&#22871;&#20214;&#26178;&#36973;&#36935;&#21040;&#37679;&#35492;&#35442;&#22914;&#20309;&#34389;&#29702;">&#20351;&#29992; <code>library</code> &#20989;&#25976;&#36617;&#20837;&#22871;&#20214;&#26178;&#36973;&#36935;&#21040;&#37679;&#35492;&#35442;&#22914;&#20309;&#34389;&#29702;<a class="anchor-link" href="#&#20351;&#29992;-library-&#20989;&#25976;&#36617;&#20837;&#22871;&#20214;&#26178;&#36973;&#36935;&#21040;&#37679;&#35492;&#35442;&#22914;&#20309;&#34389;&#29702;">&#182;</a></h2><ul>
+<li>表示該套件還尚未安裝。</li>
+<li>確認電腦有連網路後，以 <code>install.packages</code> 函數安裝套件。</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;package_name&quot;</span><span class="p">)</span>
+</pre></div>
 
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#22914;&#20309;&#20351;&#29992;-R-&#35486;&#35328;&#19981;&#21516;&#22871;&#20214;&#20013;&#12300;&#21516;&#21517;&#12301;&#30340;&#20989;&#25976;">&#22914;&#20309;&#20351;&#29992; R &#35486;&#35328;&#19981;&#21516;&#22871;&#20214;&#20013;&#12300;&#21516;&#21517;&#12301;&#30340;&#20989;&#25976;<a class="anchor-link" href="#&#22914;&#20309;&#20351;&#29992;-R-&#35486;&#35328;&#19981;&#21516;&#22871;&#20214;&#20013;&#12300;&#21516;&#21517;&#12301;&#30340;&#20989;&#25976;">&#182;</a></h2><ul>
+<li>R 語言的機制預設為「後載入套件」的函數會取代先前的函數。</li>
+<li>想要使用不同套件中「同名」的函數，必須在函數名稱前面加上套件名稱。</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="n">package_name</span><span class="o">::</span><span class="nf">function_name</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#20363;&#22914;&#20839;&#24314;&#20989;&#25976;-filter">&#20363;&#22914;&#20839;&#24314;&#20989;&#25976; <code>filter</code><a class="anchor-link" href="#&#20363;&#22914;&#20839;&#24314;&#20989;&#25976;-filter">&#182;</a></h2>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># 計數（Counter）</span>
-<span class="n">vec</span> <span class="o">&lt;-</span> <span class="m">6</span><span class="o">:</span><span class="m">10</span>
-<span class="nf">length</span><span class="p">(</span><span class="n">vec</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># Before library(&quot;dplyr&quot;)</span>
+<span class="n">function_env</span> <span class="o">&lt;-</span> <span class="nf">environment</span><span class="p">(</span><span class="n">filter</span><span class="p">)</span>
+<span class="n">function_env_name</span> <span class="o">&lt;-</span> <span class="nf">environmentName</span><span class="p">(</span><span class="n">function_env</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">function_env_name</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14938,26 +14948,33 @@ div.jp-OutputPrompt {
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-5
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[1] &#34;stats&#34;
+</pre>
+</div>
 </div>
 
 </div>
 
 </div>
 
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#36617;&#20837;-dplyr-&#22871;&#20214;&#24460;&#26371;&#34987;&#20854;&#20013;&#21516;&#21517;&#30340;-filter-&#20989;&#25976;&#21462;&#20195;">&#36617;&#20837; <code>dplyr</code> &#22871;&#20214;&#24460;&#26371;&#34987;&#20854;&#20013;&#21516;&#21517;&#30340; <code>filter</code> &#20989;&#25976;&#21462;&#20195;<a class="anchor-link" href="#&#36617;&#20837;-dplyr-&#22871;&#20214;&#24460;&#26371;&#34987;&#20854;&#20013;&#21516;&#21517;&#30340;-filter-&#20989;&#25976;&#21462;&#20195;">&#182;</a></h2>
 </div>
-
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># 乘積（Product）</span>
-<span class="n">vec</span> <span class="o">&lt;-</span> <span class="m">6</span><span class="o">:</span><span class="m">10</span>
-<span class="nf">prod</span><span class="p">(</span><span class="n">vec</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># After library(&quot;dplyr&quot;)</span>
+<span class="nf">library</span><span class="p">(</span><span class="s">&quot;dplyr&quot;</span><span class="p">,</span> <span class="n">warn.conflicts</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+
+<span class="n">function_env</span> <span class="o">&lt;-</span> <span class="nf">environment</span><span class="p">(</span><span class="n">filter</span><span class="p">)</span>
+<span class="n">function_env_name</span> <span class="o">&lt;-</span> <span class="nf">environmentName</span><span class="p">(</span><span class="n">function_env</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">function_env_name</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14976,11 +14993,10 @@ div.jp-OutputPrompt {
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-30240
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[1] &#34;dplyr&#34;
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -14990,16 +15006,7 @@ div.jp-OutputPrompt {
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#22810;&#25976;&#24773;&#27841;&#38656;&#35201;&#25105;&#20497;&#21435;&#36208;&#35370;&#30340;&#23565;&#35937;&#26159;&#65306;">&#22810;&#25976;&#24773;&#27841;&#38656;&#35201;&#25105;&#20497;&#21435;&#36208;&#35370;&#30340;&#23565;&#35937;&#26159;&#65306;<a class="anchor-link" href="#&#22810;&#25976;&#24773;&#27841;&#38656;&#35201;&#25105;&#20497;&#21435;&#36208;&#35370;&#30340;&#23565;&#35937;&#26159;&#65306;">&#182;</a></h2><ul>
-<li><code>list</code></li>
-<li><code>data.frame</code></li>
-</ul>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#22914;&#20309;&#20197;-while-&#36208;&#35370;&#19968;&#20491;-list">&#22914;&#20309;&#20197; <code>while</code> &#36208;&#35370;&#19968;&#20491; <code>list</code><a class="anchor-link" href="#&#22914;&#20309;&#20197;-while-&#36208;&#35370;&#19968;&#20491;-list">&#182;</a></h2>
+<h2 id="&#22312;&#20989;&#25976;&#21517;&#31281;&#21069;&#38754;&#21152;&#19978;&#22871;&#20214;&#21517;&#31281;&#23601;&#21487;&#20197;&#21312;&#38548;&#21516;&#21517;&#30340;-filter-&#20989;&#25976;">&#22312;&#20989;&#25976;&#21517;&#31281;&#21069;&#38754;&#21152;&#19978;&#22871;&#20214;&#21517;&#31281;&#23601;&#21487;&#20197;&#21312;&#38548;&#21516;&#21517;&#30340; <code>filter</code> &#20989;&#25976;<a class="anchor-link" href="#&#22312;&#20989;&#25976;&#21517;&#31281;&#21069;&#38754;&#21152;&#19978;&#22871;&#20214;&#21517;&#31281;&#23601;&#21487;&#20197;&#21312;&#38548;&#21516;&#21517;&#30340;-filter-&#20989;&#25976;">&#182;</a></h2>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -15007,12 +15014,10 @@ div.jp-OutputPrompt {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">a_list</span> <span class="o">&lt;-</span> <span class="nf">list</span><span class="p">(</span><span class="m">6</span><span class="p">,</span> <span class="m">7</span><span class="p">,</span> <span class="m">8</span><span class="p">,</span> <span class="m">9</span><span class="p">,</span> <span class="m">10</span><span class="p">)</span>
-<span class="n">i</span> <span class="o">&lt;-</span> <span class="m">1</span>
-<span class="nf">while </span><span class="p">(</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="nf">length</span><span class="p">(</span><span class="n">a_list</span><span class="p">))</span> <span class="p">{</span>
-    <span class="nf">print</span><span class="p">(</span><span class="n">a_list</span><span class="p">[[</span><span class="n">i</span><span class="p">]])</span>
-    <span class="n">i</span> <span class="o">&lt;-</span> <span class="n">i</span> <span class="o">+</span> <span class="m">1</span>
-<span class="p">}</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">filter_from_stats</span> <span class="o">&lt;-</span> <span class="nf">environmentName</span><span class="p">(</span><span class="nf">environment</span><span class="p">(</span><span class="n">stats</span><span class="o">::</span><span class="n">filter</span><span class="p">))</span>
+<span class="n">filter_from_dplyr</span> <span class="o">&lt;-</span> <span class="nf">environmentName</span><span class="p">(</span><span class="nf">environment</span><span class="p">(</span><span class="n">dplyr</span><span class="o">::</span><span class="n">filter</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">filter_from_stats</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">filter_from_dplyr</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15032,11 +15037,8 @@ div.jp-OutputPrompt {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[1] 6
-[1] 7
-[1] 8
-[1] 9
-[1] 10
+<pre>[1] &#34;stats&#34;
+[1] &#34;dplyr&#34;
 </pre>
 </div>
 </div>
@@ -15048,7 +15050,32 @@ div.jp-OutputPrompt {
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#22914;&#20309;&#20197;-for-&#36208;&#35370;&#19968;&#20491;-list">&#22914;&#20309;&#20197; <code>for</code> &#36208;&#35370;&#19968;&#20491; <code>list</code><a class="anchor-link" href="#&#22914;&#20309;&#20197;-for-&#36208;&#35370;&#19968;&#20491;-list">&#182;</a></h2>
+<h2 id="&#20351;&#29992;&#33258;&#34892;&#23450;&#32681;&#30340;&#20989;&#25976;&#38656;&#35201;&#20808;&#23436;&#25104;&#23459;&#21578;">&#20351;&#29992;&#33258;&#34892;&#23450;&#32681;&#30340;&#20989;&#25976;&#38656;&#35201;&#20808;&#23436;&#25104;&#23459;&#21578;<a class="anchor-link" href="#&#20351;&#29992;&#33258;&#34892;&#23450;&#32681;&#30340;&#20989;&#25976;&#38656;&#35201;&#20808;&#23436;&#25104;&#23459;&#21578;">&#182;</a></h2><p>自行定義函數必須要指定五個組成要件：</p>
+<ol>
+<li>函數名稱 <code>function_name</code>。</li>
+<li>輸入 <code>INPUTS</code>。</li>
+<li>參數 <code>ARGUMENTS</code>。</li>
+<li>函數主體。</li>
+<li>輸出 <code>OUTPUTS</code>。</li>
+</ol>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#33258;&#34892;&#23450;&#32681;&#20989;&#25976;">&#33258;&#34892;&#23450;&#32681;&#20989;&#25976;<a class="anchor-link" href="#&#33258;&#34892;&#23450;&#32681;&#20989;&#25976;">&#182;</a></h2><p>透過 <code>function</code> 與 <code>return</code> 保留字自行定義函數。</p>
+<div class="highlight"><pre><span></span><span class="n">function_name</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">INPUTS</span><span class="p">,</span> <span class="n">ARGUMENTS</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1"># function&#39;s body</span>
+    <span class="c1"># ...</span>
+    <span class="nf">return</span><span class="p">(</span><span class="n">OUTPUTS</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#33258;&#34892;&#23450;&#32681;&#30340;-power--&#20989;&#25976;">&#33258;&#34892;&#23450;&#32681;&#30340; <code>power</code>  &#20989;&#25976;<a class="anchor-link" href="#&#33258;&#34892;&#23450;&#32681;&#30340;-power--&#20989;&#25976;">&#182;</a></h2>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -15056,10 +15083,13 @@ div.jp-OutputPrompt {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">a_list</span> <span class="o">&lt;-</span> <span class="nf">list</span><span class="p">(</span><span class="m">6</span><span class="p">,</span> <span class="m">7</span><span class="p">,</span> <span class="m">8</span><span class="p">,</span> <span class="m">9</span><span class="p">,</span> <span class="m">10</span><span class="p">)</span>
-<span class="nf">for </span><span class="p">(</span><span class="n">item</span> <span class="n">in</span> <span class="n">a_list</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nf">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># define</span>
+<span class="n">power</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="p">){</span>
+    <span class="n">out</span> <span class="o">&lt;-</span> <span class="n">x</span><span class="o">**</span><span class="n">n</span>
+    <span class="nf">return</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
 <span class="p">}</span>
+<span class="c1"># call</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">power</span><span class="p">(</span><span class="m">5</span><span class="p">,</span> <span class="m">3</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -15079,11 +15109,7 @@ div.jp-OutputPrompt {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[1] 6
-[1] 7
-[1] 8
-[1] 9
-[1] 10
+<pre>[1] 125
 </pre>
 </div>
 </div>
@@ -15095,18 +15121,44 @@ div.jp-OutputPrompt {
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#22914;&#20309;&#20197;-while-&#36208;&#35370;&#19968;&#20491;-data.frame-&#30340;&#21015;&#65288;rows&#65289;">&#22914;&#20309;&#20197; <code>while</code> &#36208;&#35370;&#19968;&#20491; <code>data.frame</code> &#30340;&#21015;&#65288;rows&#65289;<a class="anchor-link" href="#&#22914;&#20309;&#20197;-while-&#36208;&#35370;&#19968;&#20491;-data.frame-&#30340;&#21015;&#65288;rows&#65289;">&#182;</a></h2>
+<h2 id="&#29289;&#20214;&#30340;&#20316;&#29992;&#22495;&#65288;scope&#65289;">&#29289;&#20214;&#30340;&#20316;&#29992;&#22495;&#65288;scope&#65289;<a class="anchor-link" href="#&#29289;&#20214;&#30340;&#20316;&#29992;&#22495;&#65288;scope&#65289;">&#182;</a></h2><blockquote><p>在電腦程式設計中，作用域是物件名與資料值繫結保持有效的那部分電腦程式。</p>
+</blockquote>
+<p>Source: <a href="https://en.wikipedia.org/wiki/Scope_(computer_science">https://en.wikipedia.org/wiki/Scope_(computer_science</a>)</p>
+
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#31777;&#32780;&#35328;&#20043;&#65292;&#23384;&#22312;&#26377;&#33258;&#34892;&#23450;&#32681;&#20989;&#25976;&#30340;&#24773;&#27841;&#19979;&#65292;&#29289;&#20214;&#20998;&#28858;&#20841;&#31278;&#39006;&#22411;">&#31777;&#32780;&#35328;&#20043;&#65292;&#23384;&#22312;&#26377;&#33258;&#34892;&#23450;&#32681;&#20989;&#25976;&#30340;&#24773;&#27841;&#19979;&#65292;&#29289;&#20214;&#20998;&#28858;&#20841;&#31278;&#39006;&#22411;<a class="anchor-link" href="#&#31777;&#32780;&#35328;&#20043;&#65292;&#23384;&#22312;&#26377;&#33258;&#34892;&#23450;&#32681;&#20989;&#25976;&#30340;&#24773;&#27841;&#19979;&#65292;&#29289;&#20214;&#20998;&#28858;&#20841;&#31278;&#39006;&#22411;">&#182;</a></h2><ol>
+<li>區域（local）</li>
+<li>全域（global）</li>
+</ol>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#21312;&#22495;&#29289;&#20214;">&#21312;&#22495;&#29289;&#20214;<a class="anchor-link" href="#&#21312;&#22495;&#29289;&#20214;">&#182;</a></h2><ul>
+<li>輸入 <code>INPUTS</code>。</li>
+<li>參數 <code>ARGUMENTS</code>。</li>
+<li>在函數主體中被宣告的物件。</li>
+<li>僅有在函數主體中才有效。</li>
+</ul>
+
+</div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">avengers</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;The Avengers&quot;</span><span class="p">,</span> <span class="s">&quot;Avengers: Age of Ultron&quot;</span><span class="p">,</span> <span class="s">&quot;Avengers: Infinity War&quot;</span><span class="p">,</span> <span class="s">&quot;Avengers: Endgame&quot;</span><span class="p">)</span>
-<span class="n">ratings</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">8.0</span><span class="p">,</span> <span class="m">7.3</span><span class="p">,</span> <span class="m">8.4</span><span class="p">,</span> <span class="m">8.4</span><span class="p">)</span>
-<span class="n">release_year</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">2012</span><span class="p">,</span> <span class="m">2015</span><span class="p">,</span> <span class="m">2018</span><span class="p">,</span> <span class="m">2019</span><span class="p">)</span>
-<span class="n">avengers_df</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span> <span class="n">avengers</span><span class="p">,</span> <span class="n">rating</span> <span class="o">=</span> <span class="n">ratings</span><span class="p">,</span> <span class="n">release_year</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">power</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">p</span><span class="p">){</span>
+    <span class="n">out</span> <span class="o">&lt;-</span> <span class="n">x</span><span class="o">**</span><span class="n">p</span>
+    <span class="nf">return</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c1">#print(x)</span>
+<span class="c1">#print(p)</span>
+<span class="c1">#print(out)</span>
 </pre></div>
 
      </div>
@@ -15114,17 +15166,33 @@ div.jp-OutputPrompt {
 </div>
 </div>
 
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#20840;&#22495;&#29289;&#20214;">&#20840;&#22495;&#29289;&#20214;<a class="anchor-link" href="#&#20840;&#22495;&#29289;&#20214;">&#182;</a></h2><ul>
+<li>在函數主體<strong>之外</strong>被宣告的物件。</li>
+<li>在程式碼的任何地方都有效，但在函數主體中會被同名的區域物件取代。</li>
+</ul>
+
+</div>
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">i</span> <span class="o">&lt;-</span> <span class="m">1</span>
-<span class="nf">while </span><span class="p">(</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="nf">nrow</span><span class="p">(</span><span class="n">avengers_df</span><span class="p">))</span> <span class="p">{</span>
-    <span class="nf">print</span><span class="p">(</span><span class="n">avengers_df</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">])</span>
-    <span class="n">i</span> <span class="o">&lt;-</span> <span class="n">i</span> <span class="o">+</span> <span class="m">1</span>
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># 在程式碼的任何地方都有效</span>
+<span class="n">x</span> <span class="o">&lt;-</span> <span class="m">4</span>
+<span class="n">p</span> <span class="o">&lt;-</span> <span class="m">2</span>
+<span class="n">out</span> <span class="o">&lt;-</span> <span class="n">x</span><span class="o">**</span><span class="n">p</span>
+<span class="n">power</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">p</span><span class="p">){</span>
+    <span class="n">out</span> <span class="o">&lt;-</span> <span class="n">x</span><span class="o">**</span><span class="n">p</span>
+    <span class="nf">return</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
 <span class="p">}</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">power</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">p</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -15144,14 +15212,10 @@ div.jp-OutputPrompt {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>         title rating release_year
-1 The Avengers      8         2012
-                    title rating release_year
-2 Avengers: Age of Ultron    7.3         2015
-                   title rating release_year
-3 Avengers: Infinity War    8.4         2018
-              title rating release_year
-4 Avengers: Endgame    8.4         2019
+<pre>[1] 4
+[1] 2
+[1] 16
+[1] 16
 </pre>
 </div>
 </div>
@@ -15160,22 +15224,24 @@ div.jp-OutputPrompt {
 
 </div>
 
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#22914;&#20309;&#20197;-while-&#36208;&#35370;&#19968;&#20491;-data.frame-&#30340;&#27396;&#65288;columns&#65289;">&#22914;&#20309;&#20197; <code>while</code> &#36208;&#35370;&#19968;&#20491; <code>data.frame</code> &#30340;&#27396;&#65288;columns&#65289;<a class="anchor-link" href="#&#22914;&#20309;&#20197;-while-&#36208;&#35370;&#19968;&#20491;-data.frame-&#30340;&#27396;&#65288;columns&#65289;">&#182;</a></h2>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">i</span> <span class="o">&lt;-</span> <span class="m">1</span>
-<span class="nf">while </span><span class="p">(</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="nf">ncol</span><span class="p">(</span><span class="n">avengers_df</span><span class="p">))</span> <span class="p">{</span>
-    <span class="nf">print</span><span class="p">(</span><span class="n">avengers_df</span><span class="p">[,</span> <span class="n">i</span><span class="p">])</span>
-    <span class="n">i</span> <span class="o">&lt;-</span> <span class="n">i</span> <span class="o">+</span> <span class="m">1</span>
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># 在函數主體中會被同名的區域物件取代</span>
+<span class="n">x</span> <span class="o">&lt;-</span> <span class="m">4</span>
+<span class="n">p</span> <span class="o">&lt;-</span> <span class="m">2</span>
+<span class="n">out</span> <span class="o">&lt;-</span> <span class="n">x</span><span class="o">**</span><span class="n">p</span>
+<span class="n">power</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">p</span><span class="p">){</span>
+    <span class="n">out</span> <span class="o">&lt;-</span> <span class="n">x</span><span class="o">**</span><span class="n">p</span>
+    <span class="nf">return</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
 <span class="p">}</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">power</span><span class="p">(</span><span class="m">5</span><span class="p">,</span> <span class="m">3</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -15195,10 +15261,10 @@ div.jp-OutputPrompt {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[1] &#34;The Avengers&#34;            &#34;Avengers: Age of Ultron&#34;
-[3] &#34;Avengers: Infinity War&#34;  &#34;Avengers: Endgame&#34;      
-[1] 8.0 7.3 8.4 8.4
-[1] 2012 2015 2018 2019
+<pre>[1] 4
+[1] 2
+[1] 16
+[1] 125
 </pre>
 </div>
 </div>
@@ -15210,7 +15276,17 @@ div.jp-OutputPrompt {
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#22914;&#20309;&#20197;-for-&#36208;&#35370;&#19968;&#20491;-data.frame-&#30340;&#21015;">&#22914;&#20309;&#20197; <code>for</code> &#36208;&#35370;&#19968;&#20491; <code>data.frame</code> &#30340;&#21015;<a class="anchor-link" href="#&#22914;&#20309;&#20197;-for-&#36208;&#35370;&#19968;&#20491;-data.frame-&#30340;&#21015;">&#182;</a></h2>
+<h2 id="return-&#30340;&#20316;&#29992;"><code>return</code> &#30340;&#20316;&#29992;<a class="anchor-link" href="#return-&#30340;&#20316;&#29992;">&#182;</a></h2><ul>
+<li>明確指定函數的回傳。</li>
+<li>為函數的主體畫下終止符。</li>
+</ul>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#26126;&#30906;&#25351;&#23450;&#20989;&#25976;&#30340;&#22238;&#20659;">&#26126;&#30906;&#25351;&#23450;&#20989;&#25976;&#30340;&#22238;&#20659;<a class="anchor-link" href="#&#26126;&#30906;&#25351;&#23450;&#20989;&#25976;&#30340;&#22238;&#20659;">&#182;</a></h2><p>R 語言自行定義的函數預設會將函數主體最後一行的物件回傳。</p>
+
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -15218,9 +15294,13 @@ div.jp-OutputPrompt {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">for </span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="m">1</span><span class="o">:</span><span class="nf">nrow</span><span class="p">(</span><span class="n">avengers_df</span><span class="p">))</span> <span class="p">{</span>
-    <span class="nf">print</span><span class="p">(</span><span class="n">avengers_df</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">])</span>
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># define</span>
+<span class="n">power</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">p</span><span class="p">){</span>
+    <span class="n">out</span> <span class="o">&lt;-</span> <span class="n">x</span><span class="o">**</span><span class="n">p</span>
+    <span class="c1"># return(out)</span>
 <span class="p">}</span>
+<span class="c1"># call</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">power</span><span class="p">(</span><span class="m">5</span><span class="p">,</span> <span class="m">3</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -15240,14 +15320,7 @@ div.jp-OutputPrompt {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>         title rating release_year
-1 The Avengers      8         2012
-                    title rating release_year
-2 Avengers: Age of Ultron    7.3         2015
-                   title rating release_year
-3 Avengers: Infinity War    8.4         2018
-              title rating release_year
-4 Avengers: Endgame    8.4         2019
+<pre>[1] 125
 </pre>
 </div>
 </div>
@@ -15259,7 +15332,7 @@ div.jp-OutputPrompt {
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#22914;&#20309;&#20197;-for-&#36208;&#35370;&#19968;&#20491;-data.frame-&#30340;&#27396;">&#22914;&#20309;&#20197; <code>for</code> &#36208;&#35370;&#19968;&#20491; <code>data.frame</code> &#30340;&#27396;<a class="anchor-link" href="#&#22914;&#20309;&#20197;-for-&#36208;&#35370;&#19968;&#20491;-data.frame-&#30340;&#27396;">&#182;</a></h2>
+<h2 id="&#28858;&#20989;&#25976;&#30340;&#20027;&#39636;&#30059;&#19979;&#32066;&#27490;&#31526;">&#28858;&#20989;&#25976;&#30340;&#20027;&#39636;&#30059;&#19979;&#32066;&#27490;&#31526;<a class="anchor-link" href="#&#28858;&#20989;&#25976;&#30340;&#20027;&#39636;&#30059;&#19979;&#32066;&#27490;&#31526;">&#182;</a></h2>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
@@ -15267,9 +15340,15 @@ div.jp-OutputPrompt {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">for </span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="m">1</span><span class="o">:</span><span class="nf">ncol</span><span class="p">(</span><span class="n">avengers_df</span><span class="p">))</span> <span class="p">{</span>
-    <span class="nf">print</span><span class="p">(</span><span class="n">avengers_df</span><span class="p">[,</span> <span class="n">i</span><span class="p">])</span>
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># define</span>
+<span class="n">power</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">p</span><span class="p">){</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+    <span class="n">out</span> <span class="o">&lt;-</span> <span class="n">x</span><span class="o">**</span><span class="n">p</span>
+    <span class="nf">return</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
 <span class="p">}</span>
+<span class="c1"># call</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">power</span><span class="p">(</span><span class="m">5</span><span class="p">,</span> <span class="m">3</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -15289,10 +15368,9 @@ div.jp-OutputPrompt {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[1] &#34;The Avengers&#34;            &#34;Avengers: Age of Ultron&#34;
-[3] &#34;Avengers: Infinity War&#34;  &#34;Avengers: Endgame&#34;      
-[1] 8.0 7.3 8.4 8.4
-[1] 2012 2015 2018 2019
+<pre>[1] 5
+[1] 3
+[1] 125
 </pre>
 </div>
 </div>
@@ -15304,24 +15382,23 @@ div.jp-OutputPrompt {
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#21487;&#20197;&#22312;&#36852;&#22280;&#20013;&#28155;&#21152;&#30340;&#20445;&#30041;&#23383;">&#21487;&#20197;&#22312;&#36852;&#22280;&#20013;&#28155;&#21152;&#30340;&#20445;&#30041;&#23383;<a class="anchor-link" href="#&#21487;&#20197;&#22312;&#36852;&#22280;&#20013;&#28155;&#21152;&#30340;&#20445;&#30041;&#23383;">&#182;</a></h2><ul>
-<li><code>break</code> 符合條件時終止迴圈。</li>
-<li><code>next</code> 符合條件時略過當次的走訪。</li>
-</ul>
-
+<h2 id="&#21363;&#20415;&#31243;&#24335;&#30908;&#23531;&#22312;&#20989;&#25976;&#20027;&#39636;&#20013;&#65292;&#21482;&#35201;&#22312;-return-&#24460;&#25152;&#23531;&#30340;&#31243;&#24335;&#30908;&#22312;&#20989;&#25976;&#34987;&#20351;&#29992;&#26178;&#28961;&#25928;">&#21363;&#20415;&#31243;&#24335;&#30908;&#23531;&#22312;&#20989;&#25976;&#20027;&#39636;&#20013;&#65292;&#21482;&#35201;&#22312; <code>return</code> &#24460;&#25152;&#23531;&#30340;&#31243;&#24335;&#30908;&#22312;&#20989;&#25976;&#34987;&#20351;&#29992;&#26178;&#28961;&#25928;<a class="anchor-link" href="#&#21363;&#20415;&#31243;&#24335;&#30908;&#23531;&#22312;&#20989;&#25976;&#20027;&#39636;&#20013;&#65292;&#21482;&#35201;&#22312;-return-&#24460;&#25152;&#23531;&#30340;&#31243;&#24335;&#30908;&#22312;&#20989;&#25976;&#34987;&#20351;&#29992;&#26178;&#28961;&#25928;">&#182;</a></h2>
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">for </span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="m">1</span><span class="o">:</span><span class="m">6</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nf">if </span><span class="p">(</span><span class="n">i</span> <span class="o">%%</span> <span class="m">2</span> <span class="o">==</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">break</span>
-    <span class="p">}</span>
-    <span class="nf">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># define</span>
+<span class="n">power</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">p</span><span class="p">){</span>
+    <span class="n">out</span> <span class="o">&lt;-</span> <span class="n">x</span><span class="o">**</span><span class="n">p</span>
+    <span class="nf">return</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
 <span class="p">}</span>
+<span class="c1"># call</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">power</span><span class="p">(</span><span class="m">5</span><span class="p">,</span> <span class="m">3</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -15341,7 +15418,7 @@ div.jp-OutputPrompt {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[1] 1
+<pre>[1] 125
 </pre>
 </div>
 </div>
@@ -15350,80 +15427,44 @@ div.jp-OutputPrompt {
 
 </div>
 
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">for </span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="m">1</span><span class="o">:</span><span class="m">6</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nf">if </span><span class="p">(</span><span class="n">i</span> <span class="o">%%</span> <span class="m">2</span> <span class="o">==</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">next</span>
-    <span class="p">}</span>
-    <span class="nf">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-<span class="p">}</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[1] 1
-[1] 3
-[1] 5
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></section><section>
+</div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#25152;&#26377;&#30340;-for-&#37117;&#21487;&#20197;&#29992;-while-&#37325;&#29694;&#65292;&#20294;&#21453;&#20043;&#19981;&#28982;">&#25152;&#26377;&#30340; <code>for</code> &#37117;&#21487;&#20197;&#29992; <code>while</code> &#37325;&#29694;&#65292;&#20294;&#21453;&#20043;&#19981;&#28982;<a class="anchor-link" href="#&#25152;&#26377;&#30340;-for-&#37117;&#21487;&#20197;&#29992;-while-&#37325;&#29694;&#65292;&#20294;&#21453;&#20043;&#19981;&#28982;">&#182;</a></h2><ul>
-<li>確定重複運行次數的情境：採用 <code>for</code></li>
-<li>不確定重複運行次數，包含隨機性的情境：採用 <code>while</code></li>
+<h2 id="&#37325;&#40670;&#32113;&#25972;">&#37325;&#40670;&#32113;&#25972;<a class="anchor-link" href="#&#37325;&#40670;&#32113;&#25972;">&#182;</a></h2><ul>
+<li>以函數的「名稱」呼叫，並在小括號中寫進「輸入」或者「參數」來使用函數。</li>
+<li>函數的輸入或參數採取三種機制識別<ul>
+<li>依位置識別。</li>
+<li>依名稱識別（<strong>推薦</strong>）。</li>
+<li>採預設值時可以省略不用輸入。</li>
+</ul>
+</li>
 </ul>
 
 </div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">rolling_two_six</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nf">while </span><span class="p">(</span><span class="kc">TRUE</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">two_dice</span> <span class="o">&lt;-</span> <span class="nf">sample</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">6</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="m">2</span><span class="p">,</span> <span class="n">replace</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
-        <span class="n">sum_two_dice</span> <span class="o">&lt;-</span> <span class="nf">sum</span><span class="p">(</span><span class="n">two_dice</span><span class="p">)</span>
-        <span class="nf">print</span><span class="p">(</span><span class="n">two_dice</span><span class="p">)</span>
-        <span class="nf">if </span><span class="p">(</span><span class="n">sum_two_dice</span> <span class="o">==</span> <span class="m">12</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">break</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#37325;&#40670;&#32113;&#25972;&#65288;&#32396;&#65289;">&#37325;&#40670;&#32113;&#25972;&#65288;&#32396;&#65289;<a class="anchor-link" href="#&#37325;&#40670;&#32113;&#25972;&#65288;&#32396;&#65289;">&#182;</a></h2><p>R 語言的函數有三個來源：</p>
+<ol>
+<li>來自 <code>base</code>、<code>stats</code> 與 <code>utils</code> 等預先已載入套件的函數，又被稱為內建函數。</li>
+<li>來自其他未被預先載入之套件的函數。</li>
+<li>來自使用者的自行定義。</li>
+</ol>
 
-     </div>
 </div>
-</div>
-</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#37325;&#40670;&#32113;&#25972;&#65288;&#32396;&#65289;">&#37325;&#40670;&#32113;&#25972;&#65288;&#32396;&#65289;<a class="anchor-link" href="#&#37325;&#40670;&#32113;&#25972;&#65288;&#32396;&#65289;">&#182;</a></h2><p>自行定義函數必須要指定五個組成要件：</p>
+<ol>
+<li>函數名稱 <code>function_name</code>。</li>
+<li>輸入 <code>INPUTS</code>。</li>
+<li>參數 <code>ARGUMENTS</code>。</li>
+<li>函數主體。</li>
+<li>輸出 <code>OUTPUTS</code>。</li>
+</ol>
 
+</div>
 </div></section></section>
 </div>
 </div>

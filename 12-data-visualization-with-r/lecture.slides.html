@@ -14385,166 +14385,282 @@ div.jp-OutputPrompt {
 <div class="slides"><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="R-&#35486;&#35328;&#30340;&#20116;&#21313;&#36947;&#32244;&#32722;">R &#35486;&#35328;&#30340;&#20116;&#21313;&#36947;&#32244;&#32722;<a class="anchor-link" href="#R-&#35486;&#35328;&#30340;&#20116;&#21313;&#36947;&#32244;&#32722;">&#182;</a></h1><blockquote><p>流程控制</p>
+<h1 id="R-&#35486;&#35328;&#30340;&#20116;&#21313;&#36947;&#32244;&#32722;">R &#35486;&#35328;&#30340;&#20116;&#21313;&#36947;&#32244;&#32722;<a class="anchor-link" href="#R-&#35486;&#35328;&#30340;&#20116;&#21313;&#36947;&#32244;&#32722;">&#182;</a></h1><blockquote><p>資料視覺化</p>
 </blockquote>
 <p><a href="https://www.datainpoint.com/">數據交點</a> | 郭耀仁 <a href="mailto:yaojenkuo@datainpoint.com">yaojenkuo@datainpoint.com</a></p>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#20160;&#40636;&#26159;&#27969;&#31243;&#25511;&#21046;">&#20160;&#40636;&#26159;&#27969;&#31243;&#25511;&#21046;<a class="anchor-link" href="#&#20160;&#40636;&#26159;&#27969;&#31243;&#25511;&#21046;">&#182;</a></h2><blockquote><p>在程式執行時，特定區塊的程式碼執行的依據、重複次數以及先後順序等，像是特定條件成立的時候執行一段程式或者重複執行一段程式直到特定條件成立為止。</p>
-</blockquote>
-<p>來源: <a href="https://en.wikipedia.org/wiki/Control_flow">https://en.wikipedia.org/wiki/Control_flow</a></p>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#27969;&#31243;&#25511;&#21046;&#30340;&#31278;&#39006;">&#27969;&#31243;&#25511;&#21046;&#30340;&#31278;&#39006;<a class="anchor-link" href="#&#27969;&#31243;&#25511;&#21046;&#30340;&#31278;&#39006;">&#182;</a></h2><ul>
-<li>條件判斷</li>
-<li>迴圈</li>
-</ul>
-
-</div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#26781;&#20214;&#21028;&#26039;">&#26781;&#20214;&#21028;&#26039;<a class="anchor-link" href="#&#26781;&#20214;&#21028;&#26039;">&#182;</a></h2>
+<h2 id="&#35469;&#35672;&#31684;&#20363;&#36039;&#26009;&#38598;&#65306;gapminder">&#35469;&#35672;&#31684;&#20363;&#36039;&#26009;&#38598;&#65306;<code>gapminder</code><a class="anchor-link" href="#&#35469;&#35672;&#31684;&#20363;&#36039;&#26009;&#38598;&#65306;gapminder">&#182;</a></h2>
 </div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#20160;&#40636;&#26159;&#26781;&#20214;&#21028;&#26039;">&#20160;&#40636;&#26159;&#26781;&#20214;&#21028;&#26039;<a class="anchor-link" href="#&#20160;&#40636;&#26159;&#26781;&#20214;&#21028;&#26039;">&#182;</a></h2><blockquote><p>條件判斷是依指定變數或者運算的布林值為真或假時，來決定是否執行一段位於某區塊內的程式，透過 <code>if-else</code> 指令可以根據指定條件是否成立，決定後續要執行的程式，也可以組合多個 <code>if-else</code> 指令進行更複雜的條件判斷。</p>
+<h2 id="&#36039;&#26009;&#35222;&#35258;&#21270;&#32147;&#20856;&#26696;&#20363;">&#36039;&#26009;&#35222;&#35258;&#21270;&#32147;&#20856;&#26696;&#20363;<a class="anchor-link" href="#&#36039;&#26009;&#35222;&#35258;&#21270;&#32147;&#20856;&#26696;&#20363;">&#182;</a></h2><ul>
+<li><a href="https://en.wikipedia.org/wiki/Charles_Joseph_Minard#/media/File:Minard.png">Napoleon's Russian campaign by Charles Minard</a></li>
+<li><a href="https://youtu.be/jbkSRLYSojo">Gapminder by Hans Rosling</a></li>
+</ul>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#38364;&#26044;-Gapminder,-Hans-Rosling-&#33287;-Factfulness">&#38364;&#26044; Gapminder, Hans Rosling &#33287; Factfulness<a class="anchor-link" href="#&#38364;&#26044;-Gapminder,-Hans-Rosling-&#33287;-Factfulness">&#182;</a></h2><ul>
+<li><a href="https://www.gapminder.org/">Gapminder</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Hans_Rosling">Hans Rosling</a></li>
+<li><a href="https://www.youtube.com/watch?v=5uooRe07mYM">Factfulness</a></li>
+</ul>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#29554;&#24471;-gapminder-&#31684;&#20363;&#36039;&#26009;&#38598;">&#29554;&#24471; <code>gapminder</code> &#31684;&#20363;&#36039;&#26009;&#38598;<a class="anchor-link" href="#&#29554;&#24471;-gapminder-&#31684;&#20363;&#36039;&#26009;&#38598;">&#182;</a></h2><ul>
+<li>安裝 <code>gapminder</code> 套件 </li>
+<li>載入 <code>gapminder</code> 套件</li>
+</ul>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#23433;&#35037;-gapminder-&#22871;&#20214;">&#23433;&#35037; <code>gapminder</code> &#22871;&#20214;<a class="anchor-link" href="#&#23433;&#35037;-gapminder-&#22871;&#20214;">&#182;</a></h2><ul>
+<li>透過 RStudio 的 <code>Packages</code> 功能頁籤</li>
+<li>透過 <code>install.pacakges()</code> 函數</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;gapminder&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#36617;&#20837;-gapminder-&#22871;&#20214;">&#36617;&#20837; <code>gapminder</code> &#22871;&#20214;<a class="anchor-link" href="#&#36617;&#20837;-gapminder-&#22871;&#20214;">&#182;</a></h2><ul>
+<li>透過 RStudio 的 <code>Packages</code> 功能頁籤</li>
+<li>透過 <code>library()</code> 函數</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="s">&quot;gapminder&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;gapminder-&#31684;&#20363;&#36039;&#26009;&#38598;&#26377;-m-&#21015;&#65292;n-&#27396;&#65292;&#35531;&#21839;-m-=?,-n-=?">&#38568;&#22530;&#32244;&#32722;&#65306;gapminder &#31684;&#20363;&#36039;&#26009;&#38598;&#26377; <code>m</code> &#21015;&#65292;<code>n</code> &#27396;&#65292;&#35531;&#21839; <code>m</code> =?, <code>n</code> =?<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;gapminder-&#31684;&#20363;&#36039;&#26009;&#38598;&#26377;-m-&#21015;&#65292;n-&#27396;&#65292;&#35531;&#21839;-m-=?,-n-=?">&#182;</a></h2>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="s">&quot;gapminder&quot;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="n">ans</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#35531;&#39023;&#31034;-gapminder-&#31684;&#20363;&#36039;&#26009;&#38598;&#21069;&#19977;&#21015;&#33287;&#24460;&#19977;&#21015;">&#38568;&#22530;&#32244;&#32722;&#65306;&#35531;&#39023;&#31034; <code>gapminder</code> &#31684;&#20363;&#36039;&#26009;&#38598;&#21069;&#19977;&#21015;&#33287;&#24460;&#19977;&#21015;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#35531;&#39023;&#31034;-gapminder-&#31684;&#20363;&#36039;&#26009;&#38598;&#21069;&#19977;&#21015;&#33287;&#24460;&#19977;&#21015;">&#182;</a></h2>
+</div>
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="n">first_three</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="n">last_three</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;gapminder-&#31684;&#20363;&#36039;&#26009;&#38598;&#26377;&#24190;&#20491;&#22283;&#23478;&#65311;&#24190;&#20491;&#27954;&#21029;&#65311;">&#38568;&#22530;&#32244;&#32722;&#65306;<code>gapminder</code> &#31684;&#20363;&#36039;&#26009;&#38598;&#26377;&#24190;&#20491;&#22283;&#23478;&#65311;&#24190;&#20491;&#27954;&#21029;&#65311;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;gapminder-&#31684;&#20363;&#36039;&#26009;&#38598;&#26377;&#24190;&#20491;&#22283;&#23478;&#65311;&#24190;&#20491;&#27954;&#21029;&#65311;">&#182;</a></h2>
+</div>
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="n">ans</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;gapminder-&#31684;&#20363;&#36039;&#26009;&#38598;&#26377;&#21738;&#20123;&#24180;&#20221;&#65311;">&#38568;&#22530;&#32244;&#32722;&#65306;<code>gapminder</code> &#31684;&#20363;&#36039;&#26009;&#38598;&#26377;&#21738;&#20123;&#24180;&#20221;&#65311;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;gapminder-&#31684;&#20363;&#36039;&#26009;&#38598;&#26377;&#21738;&#20123;&#24180;&#20221;&#65311;">&#182;</a></h2>
+</div>
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="n">ans</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#20854;&#20182;&#27298;&#35222;-gapminder-&#31684;&#20363;&#36039;&#26009;&#38598;&#30340;&#20989;&#25976;&#65306;summary()-&#33287;-str()">&#20854;&#20182;&#27298;&#35222; <code>gapminder</code> &#31684;&#20363;&#36039;&#26009;&#38598;&#30340;&#20989;&#25976;&#65306;<code>summary()</code> &#33287; <code>str()</code><a class="anchor-link" href="#&#20854;&#20182;&#27298;&#35222;-gapminder-&#31684;&#20363;&#36039;&#26009;&#38598;&#30340;&#20989;&#25976;&#65306;summary()-&#33287;-str()">&#182;</a></h2>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">summary</span><span class="p">(</span><span class="n">gapminder</span><span class="p">)</span>
+<span class="nf">str</span><span class="p">(</span><span class="n">gapminder</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="ggplot2-&#22522;&#30990;"><code>ggplot2</code> &#22522;&#30990;<a class="anchor-link" href="#ggplot2-&#22522;&#30990;">&#182;</a></h2>
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#20160;&#40636;&#26159;-ggplot2&#65311;">&#20160;&#40636;&#26159; <code>ggplot2</code>&#65311;<a class="anchor-link" href="#&#20160;&#40636;&#26159;-ggplot2&#65311;">&#182;</a></h2><blockquote><p>ggplot2 is a system for declaratively creating graphics, based on The Grammar of Graphics. You provide the data, tell ggplot2 how to map variables to aesthetics, what graphical primitives to use, and it takes care of the details.</p>
 </blockquote>
-<p>Source: <a href="https://en.wikipedia.org/wiki/Conditional_(computer_programming">https://en.wikipedia.org/wiki/Conditional_(computer_programming</a>)</p>
 
 </div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="if-&#20570;&#21934;&#19968;&#31243;&#24335;&#20998;&#25903;&#30340;&#21312;&#22602;"><code>if</code> &#20570;&#21934;&#19968;&#31243;&#24335;&#20998;&#25903;&#30340;&#21312;&#22602;<a class="anchor-link" href="#if-&#20570;&#21934;&#19968;&#31243;&#24335;&#20998;&#25903;&#30340;&#21312;&#22602;">&#182;</a></h2><ul>
-<li><code>if</code> 保留字。</li>
-<li><code>CONDITION</code> 是一段能產生邏輯值向量的敘述。</li>
+<h2 id="gg-as-in-Grammer-of-Graphics"><code>gg</code> as in Grammer of Graphics<a class="anchor-link" href="#gg-as-in-Grammer-of-Graphics">&#182;</a></h2>
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#23433;&#35037;-ggplot2-&#22871;&#20214;">&#23433;&#35037; <code>ggplot2</code> &#22871;&#20214;<a class="anchor-link" href="#&#23433;&#35037;-ggplot2-&#22871;&#20214;">&#182;</a></h2><ul>
+<li>透過 RStudio 的 <code>Packages</code> 功能頁籤</li>
+<li>透過 <code>install.packages()</code> 函數</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;ggplot2&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#36617;&#20837;-ggplot2-&#22871;&#20214;">&#36617;&#20837; <code>ggplot2</code> &#22871;&#20214;<a class="anchor-link" href="#&#36617;&#20837;-ggplot2-&#22871;&#20214;">&#182;</a></h2><ul>
+<li>透過 RStudio 的 <code>Packages</code> 功能頁籤</li>
+<li>透過 <code>library()</code> 函數</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="s">&quot;ggplot2&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#22522;&#30990;&#35222;&#35258;&#21270;&#22294;&#24418;">&#22522;&#30990;&#35222;&#35258;&#21270;&#22294;&#24418;<a class="anchor-link" href="#&#22522;&#30990;&#35222;&#35258;&#21270;&#22294;&#24418;">&#182;</a></h2><ul>
+<li>觀察資料相關性的散佈圖（Scatter Plot）</li>
+<li>觀察類別型資料的長條圖（Bar Plot）</li>
+<li>觀察資料散佈的直方圖（Histogram）</li>
+<li>觀察數值變化趨勢的線圖（Line Plot）</li>
+<li>觀察不同類別資料散佈的盒鬚圖（Boxplot）</li>
 </ul>
 
 </div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<div class="highlight"><pre><span></span><span class="c1"># single branch</span>
-<span class="nf">if </span><span class="p">(</span><span class="n">CONDITION</span><span class="p">)</span> <span class="p">{</span>
-  <span class="c1"># do something when CONDITION is evaluated as TRUE</span>
-<span class="p">}</span>
-</pre></div>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#22914;&#26524;&#19968;&#20491;&#25972;&#25976;&#38500;&#20197;-2-&#30340;&#39192;&#25976;&#28858;-1-&#23601;&#26159;&#22855;&#25976;&#65292;&#21542;&#21063;&#26159;&#20598;&#25976;">&#22914;&#26524;&#19968;&#20491;&#25972;&#25976;&#38500;&#20197; 2 &#30340;&#39192;&#25976;&#28858; 1 &#23601;&#26159;&#22855;&#25976;&#65292;&#21542;&#21063;&#26159;&#20598;&#25976;<a class="anchor-link" href="#&#22914;&#26524;&#19968;&#20491;&#25972;&#25976;&#38500;&#20197;-2-&#30340;&#39192;&#25976;&#28858;-1-&#23601;&#26159;&#22855;&#25976;&#65292;&#21542;&#21063;&#26159;&#20598;&#25976;">&#182;</a></h2>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">odd_or_even</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nf">if </span><span class="p">(</span><span class="n">x</span> <span class="o">%%</span> <span class="m">2</span> <span class="o">==</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">msg</span> <span class="o">&lt;-</span> <span class="nf">sprintf</span><span class="p">(</span><span class="s">&quot;%s是偶數&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-        <span class="nf">return</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-    <span class="p">}</span>
-    <span class="nf">if </span><span class="p">(</span><span class="n">x</span> <span class="o">%%</span> <span class="m">2</span> <span class="o">==</span> <span class="m">1</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">msg</span> <span class="o">&lt;-</span> <span class="nf">sprintf</span><span class="p">(</span><span class="s">&quot;%s是奇數&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-        <span class="nf">return</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="nf">odd_or_even</span><span class="p">(</span><span class="m">0</span><span class="p">))</span>
-<span class="nf">print</span><span class="p">(</span><span class="nf">odd_or_even</span><span class="p">(</span><span class="m">1</span><span class="p">))</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[1] &#34;0是偶數&#34;
-[1] &#34;1是奇數&#34;
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="if-else-&#20570;&#20841;&#20491;&#31243;&#24335;&#20998;&#25903;&#30340;&#21312;&#22602;"><code>if else</code> &#20570;&#20841;&#20491;&#31243;&#24335;&#20998;&#25903;&#30340;&#21312;&#22602;<a class="anchor-link" href="#if-else-&#20570;&#20841;&#20491;&#31243;&#24335;&#20998;&#25903;&#30340;&#21312;&#22602;">&#182;</a></h2><ul>
-<li><code>if</code>, <code>else</code> 保留字。</li>
-<li><code>CONDITION</code> 是一段能產生邏輯值向量的敘述。</li>
+<h2 id="&#22914;&#20309;&#21109;&#24314;&#19968;&#20491;-ggplot2-&#22294;&#24418;">&#22914;&#20309;&#21109;&#24314;&#19968;&#20491; <code>ggplot2</code> &#22294;&#24418;<a class="anchor-link" href="#&#22914;&#20309;&#21109;&#24314;&#19968;&#20491;-ggplot2-&#22294;&#24418;">&#182;</a></h2><ul>
+<li>使用 <code>ggplot()</code> 函數做資料映射</li>
+<li>使用 <code>geom_()</code> 函數調整圖形種類</li>
+<li>使用 <code>+</code> 連結不同的函數，堆疊圖層</li>
 </ul>
 
 </div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<div class="highlight"><pre><span></span><span class="c1"># 2 branches</span>
-<span class="nf">if </span><span class="p">(</span><span class="n">CONDITION</span><span class="p">)</span> <span class="p">{</span>
-  <span class="c1"># do something when CONDITION is evaluated as TRUE</span>
-<span class="p">}</span> <span class="n">else</span> <span class="p">{</span>
-  <span class="c1"># do something when CONDITION is evaluated as FALSE</span>
-<span class="p">}</span>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="s">&quot;gapminder&quot;</span><span class="p">)</span> <span class="c1"># data</span>
+<span class="nf">library</span><span class="p">(</span><span class="s">&quot;ggplot2&quot;</span><span class="p">)</span>   <span class="c1"># plotting</span>
+<span class="nf">library</span><span class="p">(</span><span class="s">&quot;dplyr&quot;</span><span class="p">)</span>     <span class="c1"># data manipulations</span>
 </pre></div>
 
+     </div>
 </div>
+</div>
+</div>
+
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#22914;&#26524;&#19968;&#20491;&#25972;&#25976;&#38500;&#20197;-2-&#30340;&#39192;&#25976;&#28858;-1-&#23601;&#26159;&#22855;&#25976;&#65292;&#21542;&#21063;&#26159;&#20598;&#25976;">&#22914;&#26524;&#19968;&#20491;&#25972;&#25976;&#38500;&#20197; 2 &#30340;&#39192;&#25976;&#28858; 1 &#23601;&#26159;&#22855;&#25976;&#65292;&#21542;&#21063;&#26159;&#20598;&#25976;<a class="anchor-link" href="#&#22914;&#26524;&#19968;&#20491;&#25972;&#25976;&#38500;&#20197;-2-&#30340;&#39192;&#25976;&#28858;-1-&#23601;&#26159;&#22855;&#25976;&#65292;&#21542;&#21063;&#26159;&#20598;&#25976;">&#182;</a></h2>
+<h2 id="&#35264;&#23519;&#36039;&#26009;&#30456;&#38364;&#24615;&#30340;&#25955;&#20296;&#22294;&#65288;Scatter-Plot&#65289;">&#35264;&#23519;&#36039;&#26009;&#30456;&#38364;&#24615;&#30340;&#25955;&#20296;&#22294;&#65288;Scatter Plot&#65289;<a class="anchor-link" href="#&#35264;&#23519;&#36039;&#26009;&#30456;&#38364;&#24615;&#30340;&#25955;&#20296;&#22294;&#65288;Scatter-Plot&#65289;">&#182;</a></h2><p>使用 <code>ggplot(aes(x, y)) + geom_point()</code></p>
+
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">odd_or_even</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nf">if </span><span class="p">(</span><span class="n">x</span> <span class="o">%%</span> <span class="m">2</span> <span class="o">==</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">msg</span> <span class="o">&lt;-</span> <span class="nf">sprintf</span><span class="p">(</span><span class="s">&quot;%s是偶數&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-        <span class="nf">return</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-    <span class="p">}</span> <span class="n">else</span> <span class="p">{</span>
-        <span class="n">msg</span> <span class="o">&lt;-</span> <span class="nf">sprintf</span><span class="p">(</span><span class="s">&quot;%s是奇數&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-        <span class="nf">return</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">gapminder</span> <span class="o">%&gt;%</span> 
+  <span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">gdpPercap</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">lifeExp</span><span class="p">))</span> <span class="o">+</span>
+    <span class="nf">geom_point</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -14552,89 +14668,22 @@ div.jp-OutputPrompt {
 </div>
 </div>
 
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="nf">odd_or_even</span><span class="p">(</span><span class="m">0</span><span class="p">))</span>
-<span class="nf">print</span><span class="p">(</span><span class="nf">odd_or_even</span><span class="p">(</span><span class="m">1</span><span class="p">))</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[1] &#34;0是偶數&#34;
-[1] &#34;1是奇數&#34;
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="if-else-if-else-&#20570;&#19977;&#20491;&#20197;&#19978;&#31243;&#24335;&#20998;&#25903;&#30340;&#21312;&#22602;"><code>if-else if-else</code> &#20570;&#19977;&#20491;&#20197;&#19978;&#31243;&#24335;&#20998;&#25903;&#30340;&#21312;&#22602;<a class="anchor-link" href="#if-else-if-else-&#20570;&#19977;&#20491;&#20197;&#19978;&#31243;&#24335;&#20998;&#25903;&#30340;&#21312;&#22602;">&#182;</a></h2><ul>
-<li><code>if</code>, <code>else if</code>, <code>else</code> 保留字。</li>
-<li><code>CONDITION_1</code>、<code>CONDITION_2</code> 皆是能產生邏輯值向量的敘述。</li>
-</ul>
+<h2 id="&#35264;&#23519;&#39006;&#21029;&#22411;&#36039;&#26009;&#30340;&#38263;&#26781;&#22294;&#65288;Bar-Plot&#65289;&#65306;&#38263;&#26781;&#39640;&#24230;&#28858;&#35264;&#28204;&#20540;&#20491;&#25976;">&#35264;&#23519;&#39006;&#21029;&#22411;&#36039;&#26009;&#30340;&#38263;&#26781;&#22294;&#65288;Bar Plot&#65289;&#65306;&#38263;&#26781;&#39640;&#24230;&#28858;&#35264;&#28204;&#20540;&#20491;&#25976;<a class="anchor-link" href="#&#35264;&#23519;&#39006;&#21029;&#22411;&#36039;&#26009;&#30340;&#38263;&#26781;&#22294;&#65288;Bar-Plot&#65289;&#65306;&#38263;&#26781;&#39640;&#24230;&#28858;&#35264;&#28204;&#20540;&#20491;&#25976;">&#182;</a></h2><p>使用 <code>ggplot(aes(x)) + geom_bar()</code></p>
 
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<div class="highlight"><pre><span></span><span class="c1"># 3 branches</span>
-<span class="nf">if </span><span class="p">(</span><span class="n">CONDITION_1</span><span class="p">)</span> <span class="p">{</span>
-  <span class="c1"># do something when CONDITION_1 is evaluated as TRUE</span>
-<span class="p">}</span> <span class="n">else</span> <span class="nf">if </span><span class="p">(</span><span class="n">CONDITION_2</span><span class="p">)</span> <span class="p">{</span>
-  <span class="c1"># do something when CONDITION_2 is evaluated as TRUE</span>
-<span class="p">}</span> <span class="n">else</span> <span class="p">{</span>
-  <span class="c1"># do something when CONDITION_1 &amp; CONDITION_2 are both evaluated as FALSE</span>
-<span class="p">}</span>
-</pre></div>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#19968;&#20491;&#25972;&#25976;&#38500;&#20197;-3-&#30340;&#39192;&#25976;&#21487;&#33021;&#28858;-0&#12289;1-&#25110;-2">&#19968;&#20491;&#25972;&#25976;&#38500;&#20197; 3 &#30340;&#39192;&#25976;&#21487;&#33021;&#28858; 0&#12289;1 &#25110; 2<a class="anchor-link" href="#&#19968;&#20491;&#25972;&#25976;&#38500;&#20197;-3-&#30340;&#39192;&#25976;&#21487;&#33021;&#28858;-0&#12289;1-&#25110;-2">&#182;</a></h2>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">modulo_divided_by_three</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nf">if </span><span class="p">(</span><span class="n">x</span> <span class="o">%%</span> <span class="m">3</span> <span class="o">==</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">msg</span> <span class="o">&lt;-</span> <span class="nf">sprintf</span><span class="p">(</span><span class="s">&quot;%s除以3的餘數為0&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-        <span class="nf">return</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-    <span class="p">}</span> <span class="n">else</span> <span class="nf">if </span><span class="p">(</span><span class="n">x</span> <span class="o">%%</span> <span class="m">3</span> <span class="o">==</span> <span class="m">1</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">msg</span> <span class="o">&lt;-</span> <span class="nf">sprintf</span><span class="p">(</span><span class="s">&quot;%s除以3的餘數為1&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-        <span class="nf">return</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-    <span class="p">}</span> <span class="n">else</span> <span class="p">{</span>
-        <span class="n">msg</span> <span class="o">&lt;-</span> <span class="nf">sprintf</span><span class="p">(</span><span class="s">&quot;%s除以3的餘數為2&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-        <span class="nf">return</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">gapminder</span> <span class="o">%&gt;%</span> 
+  <span class="nf">filter</span><span class="p">(</span><span class="n">year</span> <span class="o">==</span> <span class="m">2007</span><span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">continent</span><span class="p">))</span> <span class="o">+</span>
+    <span class="nf">geom_bar</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -14642,15 +14691,25 @@ div.jp-OutputPrompt {
 </div>
 </div>
 
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#35264;&#23519;&#39006;&#21029;&#22411;&#36039;&#26009;&#30340;&#38263;&#26781;&#22294;&#65288;Bar-Plot&#65289;&#65306;&#38263;&#26781;&#39640;&#24230;&#28858;&#25688;&#35201;&#25976;&#20540;">&#35264;&#23519;&#39006;&#21029;&#22411;&#36039;&#26009;&#30340;&#38263;&#26781;&#22294;&#65288;Bar Plot&#65289;&#65306;&#38263;&#26781;&#39640;&#24230;&#28858;&#25688;&#35201;&#25976;&#20540;<a class="anchor-link" href="#&#35264;&#23519;&#39006;&#21029;&#22411;&#36039;&#26009;&#30340;&#38263;&#26781;&#22294;&#65288;Bar-Plot&#65289;&#65306;&#38263;&#26781;&#39640;&#24230;&#28858;&#25688;&#35201;&#25976;&#20540;">&#182;</a></h2><p>使用 <code>ggplot(aes(x, y)) + geom_bar(stat = "identity")</code></p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="nf">modulo_divided_by_three</span><span class="p">(</span><span class="m">4</span><span class="p">))</span>
-<span class="nf">print</span><span class="p">(</span><span class="nf">modulo_divided_by_three</span><span class="p">(</span><span class="m">5</span><span class="p">))</span>
-<span class="nf">print</span><span class="p">(</span><span class="nf">modulo_divided_by_three</span><span class="p">(</span><span class="m">6</span><span class="p">))</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">gapminder</span> <span class="o">%&gt;%</span> 
+  <span class="nf">filter</span><span class="p">(</span><span class="n">year</span> <span class="o">==</span> <span class="m">2007</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+  <span class="nf">mutate</span><span class="p">(</span><span class="n">pop_numeric</span> <span class="o">=</span> <span class="nf">as.numeric</span><span class="p">(</span><span class="n">pop</span><span class="p">))</span> <span class="o">%&gt;%</span>
+  <span class="nf">group_by</span><span class="p">(</span><span class="n">continent</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+  <span class="nf">summarise</span><span class="p">(</span><span class="n">ttl_pop</span> <span class="o">=</span> <span class="nf">sum</span><span class="p">(</span><span class="n">pop_numeric</span><span class="p">))</span> <span class="o">%&gt;%</span> 
+  <span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">continent</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">ttl_pop</span><span class="p">))</span> <span class="o">+</span>
+    <span class="nf">geom_bar</span><span class="p">(</span><span class="n">stat</span> <span class="o">=</span> <span class="s">&quot;identity&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14658,524 +14717,135 @@ div.jp-OutputPrompt {
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[1] &#34;4除以3的餘數為1&#34;
-[1] &#34;5除以3的餘數為2&#34;
-[1] &#34;6除以3的餘數為0&#34;
-</pre>
-</div>
-</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#35264;&#23519;&#36039;&#26009;&#25955;&#20296;&#30340;&#30452;&#26041;&#22294;&#65288;Histogram&#65289;">&#35264;&#23519;&#36039;&#26009;&#25955;&#20296;&#30340;&#30452;&#26041;&#22294;&#65288;Histogram&#65289;<a class="anchor-link" href="#&#35264;&#23519;&#36039;&#26009;&#25955;&#20296;&#30340;&#30452;&#26041;&#22294;&#65288;Histogram&#65289;">&#182;</a></h2><p>使用 <code>ggplot(aes(x)) + geom_histogram()</code></p>
 
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="n">gapminder</span> <span class="o">%&gt;%</span> 
+  <span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">gdpPercap</span><span class="p">))</span> <span class="o">+</span>
+    <span class="nf">geom_histogram</span><span class="p">(</span><span class="n">bins</span> <span class="o">=</span> <span class="m">40</span><span class="p">)</span>
+</pre></div>
 
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#35264;&#23519;&#25976;&#20540;&#35722;&#21270;&#36264;&#21218;&#30340;&#32218;&#22294;&#65288;Line-Plot&#65289;">&#35264;&#23519;&#25976;&#20540;&#35722;&#21270;&#36264;&#21218;&#30340;&#32218;&#22294;&#65288;Line Plot&#65289;<a class="anchor-link" href="#&#35264;&#23519;&#25976;&#20540;&#35722;&#21270;&#36264;&#21218;&#30340;&#32218;&#22294;&#65288;Line-Plot&#65289;">&#182;</a></h2><p>使用 <code>ggplot(aes(x, y)) + geom_line()</code></p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="n">gapminder</span> <span class="o">%&gt;%</span> 
+  <span class="nf">filter</span><span class="p">(</span><span class="n">country</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Taiwan&quot;</span><span class="p">,</span> <span class="s">&quot;Japan&quot;</span><span class="p">,</span> <span class="s">&quot;China&quot;</span><span class="p">))</span> <span class="o">%&gt;%</span> 
+  <span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">year</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">gdpPercap</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">country</span><span class="p">))</span> <span class="o">+</span>
+    <span class="nf">geom_line</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#35264;&#23519;&#19981;&#21516;&#39006;&#21029;&#36039;&#26009;&#25955;&#20296;&#30340;&#30418;&#39706;&#22294;&#65288;Boxplot&#65289;">&#35264;&#23519;&#19981;&#21516;&#39006;&#21029;&#36039;&#26009;&#25955;&#20296;&#30340;&#30418;&#39706;&#22294;&#65288;Boxplot&#65289;<a class="anchor-link" href="#&#35264;&#23519;&#19981;&#21516;&#39006;&#21029;&#36039;&#26009;&#25955;&#20296;&#30340;&#30418;&#39706;&#22294;&#65288;Boxplot&#65289;">&#182;</a></h2><p>使用 <code>ggplot(aes(x, y)) + geom_boxplot()</code></p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="n">gapminder</span> <span class="o">%&gt;%</span> 
+  <span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">continent</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">gdpPercap</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">continent</span><span class="p">))</span> <span class="o">+</span>
+    <span class="nf">geom_boxplot</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
 </div>
 
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#36852;&#22280;">&#36852;&#22280;<a class="anchor-link" href="#&#36852;&#22280;">&#182;</a></h2>
+<h2 id="ggplot2-&#25216;&#24039;"><code>ggplot2</code> &#25216;&#24039;<a class="anchor-link" href="#ggplot2-&#25216;&#24039;">&#182;</a></h2>
 </div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#20160;&#40636;&#26159;&#36852;&#22280;">&#20160;&#40636;&#26159;&#36852;&#22280;<a class="anchor-link" href="#&#20160;&#40636;&#26159;&#36852;&#22280;">&#182;</a></h2><blockquote><p>迴圈是一種常見的流程控制，雖然在程式中只會出現一次、但卻可能被連續執行多次的程式碼，迴圈中的程式碼會執行特定的次數、執行到特定條件成立時結束或者針對資料結構中的所有內容遍歷。</p>
-</blockquote>
-<p>Source: <a href="https://en.wikipedia.org/wiki/Control_flow#Loops">https://en.wikipedia.org/wiki/Control_flow#Loops</a></p>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#36852;&#22280;&#33021;&#22816;&#24171;&#25105;&#20497;&#23559;&#36039;&#26009;&#32080;&#27083;&#20013;&#30340;&#36039;&#26009;&#19968;&#31558;&#19968;&#31558;&#21462;&#20986;&#20358;&#65292;&#20063;&#23601;&#26159;&#20439;&#31281;&#30340;&#36208;&#35370;&#65288;&#25110;&#32773;&#36941;&#27511;&#12289;&#36845;&#20195;&#65289;">&#36852;&#22280;&#33021;&#22816;&#24171;&#25105;&#20497;&#23559;&#36039;&#26009;&#32080;&#27083;&#20013;&#30340;&#36039;&#26009;&#19968;&#31558;&#19968;&#31558;&#21462;&#20986;&#20358;&#65292;&#20063;&#23601;&#26159;&#20439;&#31281;&#30340;&#36208;&#35370;&#65288;&#25110;&#32773;&#36941;&#27511;&#12289;&#36845;&#20195;&#65289;<a class="anchor-link" href="#&#36852;&#22280;&#33021;&#22816;&#24171;&#25105;&#20497;&#23559;&#36039;&#26009;&#32080;&#27083;&#20013;&#30340;&#36039;&#26009;&#19968;&#31558;&#19968;&#31558;&#21462;&#20986;&#20358;&#65292;&#20063;&#23601;&#26159;&#20439;&#31281;&#30340;&#36208;&#35370;&#65288;&#25110;&#32773;&#36941;&#27511;&#12289;&#36845;&#20195;&#65289;">&#182;</a></h2>
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#20841;&#31278;&#36852;&#22280;&#30340;&#35486;&#27861;&#32080;&#27083;">&#20841;&#31278;&#36852;&#22280;&#30340;&#35486;&#27861;&#32080;&#27083;<a class="anchor-link" href="#&#20841;&#31278;&#36852;&#22280;&#30340;&#35486;&#27861;&#32080;&#27083;">&#182;</a></h2><ul>
-<li><code>while</code> 迴圈。</li>
-<li><code>for</code> 迴圈。</li>
+<h2 id="&#24120;&#29992;&#30340;-ggplot2-&#25216;&#24039;">&#24120;&#29992;&#30340; ggplot2 &#25216;&#24039;<a class="anchor-link" href="#&#24120;&#29992;&#30340;-ggplot2-&#25216;&#24039;">&#182;</a></h2><ul>
+<li>加入圖標題與軸標籤</li>
+<li>加入註釋</li>
+<li>加入中文字（macOS 使用者會遭遇的問題）</li>
+<li>調整座標軸</li>
+<li>在一個畫布上繪製多個子圖形</li>
 </ul>
 
 </div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#32068;&#25104;&#36852;&#22280;&#30340;&#19977;&#20491;&#35201;&#20214;">&#32068;&#25104;&#36852;&#22280;&#30340;&#19977;&#20491;&#35201;&#20214;<a class="anchor-link" href="#&#32068;&#25104;&#36852;&#22280;&#30340;&#19977;&#20491;&#35201;&#20214;">&#182;</a></h2><ul>
-<li>起始值（start）：走訪資料的起點在哪裡？</li>
-<li>終止值（stop）：迭代資料的終點在哪裡？</li>
-<li>間隔（step）：從起點移動到終點的步幅為多少？</li>
-</ul>
+<h2 id="&#21152;&#20837;&#22294;&#27161;&#38988;&#33287;&#36600;&#27161;&#31844;">&#21152;&#20837;&#22294;&#27161;&#38988;&#33287;&#36600;&#27161;&#31844;<a class="anchor-link" href="#&#21152;&#20837;&#22294;&#27161;&#38988;&#33287;&#36600;&#27161;&#31844;">&#182;</a></h2><p>使用 <code>ggtitle() + xlab() + ylab()</code></p>
 
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="while-&#36852;&#22280;&#30340;&#31243;&#24335;&#21312;&#22602;"><code>while</code> &#36852;&#22280;&#30340;&#31243;&#24335;&#21312;&#22602;<a class="anchor-link" href="#while-&#36852;&#22280;&#30340;&#31243;&#24335;&#21312;&#22602;">&#182;</a></h2><ul>
-<li>保留字 <code>while</code></li>
-<li>起始值（start）</li>
-<li>終止值（stop）：被評估為邏輯值向量的敘述 <code>CONDITION</code></li>
-<li>間隔（step）</li>
-</ul>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">&lt;-</span> <span class="n">start</span> <span class="c1"># start</span>
-<span class="nf">while </span><span class="p">(</span><span class="n">CONDITION</span><span class="p">)</span> <span class="p">{</span>  <span class="c1"># stop</span>
-  <span class="c1"># Codes written here will be ran repeatedly</span>
-  <span class="c1"># until EXPR is evaluated as FALSE</span>
-  <span class="n">i</span> <span class="o">&lt;-</span> <span class="n">i</span> <span class="o">+</span> <span class="n">step</span> <span class="c1"># step</span>
-<span class="p">}</span>
-</pre></div>
-
-</div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">i</span> <span class="o">&lt;-</span> <span class="m">1</span>
-<span class="nf">while </span><span class="p">(</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="m">10</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nf">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-    <span class="n">i</span> <span class="o">&lt;-</span> <span class="n">i</span> <span class="o">+</span> <span class="m">2</span>
-<span class="p">}</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[1] 1
-[1] 3
-[1] 5
-[1] 7
-[1] 9
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="for-&#36852;&#22280;&#30340;&#31243;&#24335;&#21312;&#22602;"><code>for</code> &#36852;&#22280;&#30340;&#31243;&#24335;&#21312;&#22602;<a class="anchor-link" href="#for-&#36852;&#22280;&#30340;&#31243;&#24335;&#21312;&#22602;">&#182;</a></h2><ul>
-<li>保留字 <code>for</code> 與 <code>in</code>。</li>
-<li>迭代變數。</li>
-<li>可被走訪的物件（指派了 start、stop 與 step）。</li>
-<li>重複執行的程式碼。</li>
-</ul>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<div class="highlight"><pre><span></span><span class="nf">for </span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="n">ITERABLE</span><span class="p">)</span> <span class="p">{</span> <span class="c1"># start/stop/step</span>
-  <span class="c1"># Codes written here will be ran repeatedly</span>
-  <span class="c1"># until i reaches the end of ITERABLE</span>
-<span class="p">}</span>
-</pre></div>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">for </span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="nf">seq</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">10</span><span class="p">,</span> <span class="m">2</span><span class="p">))</span> <span class="p">{</span>
-    <span class="nf">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-<span class="p">}</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[1] 1
-[1] 3
-[1] 5
-[1] 7
-[1] 9
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#24120;&#35211;&#30340;&#36852;&#22280;&#20219;&#21209;">&#24120;&#35211;&#30340;&#36852;&#22280;&#20219;&#21209;<a class="anchor-link" href="#&#24120;&#35211;&#30340;&#36852;&#22280;&#20219;&#21209;">&#182;</a></h2><ul>
-<li><code>print()</code></li>
-<li>加總（Summation）</li>
-<li>計數（Counter）</li>
-<li>乘積（Product）</li>
-<li>合併（Combine）</li>
-</ul>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#22196;&#26684;&#35498;&#20358;&#65292;&#22914;&#26524;&#25105;&#20497;&#38754;&#23565;&#30340;&#26159;&#21521;&#37327;&#65292;&#22810;&#25976;&#30340;&#20219;&#21209;&#19981;&#38656;&#35201;&#25776;&#23531;&#36852;&#22280;">&#22196;&#26684;&#35498;&#20358;&#65292;&#22914;&#26524;&#25105;&#20497;&#38754;&#23565;&#30340;&#26159;&#21521;&#37327;&#65292;&#22810;&#25976;&#30340;&#20219;&#21209;&#19981;&#38656;&#35201;&#25776;&#23531;&#36852;&#22280;<a class="anchor-link" href="#&#22196;&#26684;&#35498;&#20358;&#65292;&#22914;&#26524;&#25105;&#20497;&#38754;&#23565;&#30340;&#26159;&#21521;&#37327;&#65292;&#22810;&#25976;&#30340;&#20219;&#21209;&#19981;&#38656;&#35201;&#25776;&#23531;&#36852;&#22280;">&#182;</a></h2><ul>
-<li>加總（Summation）</li>
-<li>計數（Counter）</li>
-<li>乘積（Product）</li>
-</ul>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#38754;&#23565;&#21521;&#37327;&#65292;&#25105;&#20497;&#23563;&#25214;&#30340;&#26159;&#20989;&#25976;">&#38754;&#23565;&#21521;&#37327;&#65292;&#25105;&#20497;&#23563;&#25214;&#30340;&#26159;&#20989;&#25976;<a class="anchor-link" href="#&#38754;&#23565;&#21521;&#37327;&#65292;&#25105;&#20497;&#23563;&#25214;&#30340;&#26159;&#20989;&#25976;">&#182;</a></h2>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># 加總（Summation）</span>
-<span class="n">vec</span> <span class="o">&lt;-</span> <span class="m">6</span><span class="o">:</span><span class="m">10</span>
-<span class="nf">sum</span><span class="p">(</span><span class="n">vec</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-40
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># 計數（Counter）</span>
-<span class="n">vec</span> <span class="o">&lt;-</span> <span class="m">6</span><span class="o">:</span><span class="m">10</span>
-<span class="nf">length</span><span class="p">(</span><span class="n">vec</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-5
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># 乘積（Product）</span>
-<span class="n">vec</span> <span class="o">&lt;-</span> <span class="m">6</span><span class="o">:</span><span class="m">10</span>
-<span class="nf">prod</span><span class="p">(</span><span class="n">vec</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-30240
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#22810;&#25976;&#24773;&#27841;&#38656;&#35201;&#25105;&#20497;&#21435;&#36208;&#35370;&#30340;&#23565;&#35937;&#26159;&#65306;">&#22810;&#25976;&#24773;&#27841;&#38656;&#35201;&#25105;&#20497;&#21435;&#36208;&#35370;&#30340;&#23565;&#35937;&#26159;&#65306;<a class="anchor-link" href="#&#22810;&#25976;&#24773;&#27841;&#38656;&#35201;&#25105;&#20497;&#21435;&#36208;&#35370;&#30340;&#23565;&#35937;&#26159;&#65306;">&#182;</a></h2><ul>
-<li><code>list</code></li>
-<li><code>data.frame</code></li>
-</ul>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#22914;&#20309;&#20197;-while-&#36208;&#35370;&#19968;&#20491;-list">&#22914;&#20309;&#20197; <code>while</code> &#36208;&#35370;&#19968;&#20491; <code>list</code><a class="anchor-link" href="#&#22914;&#20309;&#20197;-while-&#36208;&#35370;&#19968;&#20491;-list">&#182;</a></h2>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">a_list</span> <span class="o">&lt;-</span> <span class="nf">list</span><span class="p">(</span><span class="m">6</span><span class="p">,</span> <span class="m">7</span><span class="p">,</span> <span class="m">8</span><span class="p">,</span> <span class="m">9</span><span class="p">,</span> <span class="m">10</span><span class="p">)</span>
-<span class="n">i</span> <span class="o">&lt;-</span> <span class="m">1</span>
-<span class="nf">while </span><span class="p">(</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="nf">length</span><span class="p">(</span><span class="n">a_list</span><span class="p">))</span> <span class="p">{</span>
-    <span class="nf">print</span><span class="p">(</span><span class="n">a_list</span><span class="p">[[</span><span class="n">i</span><span class="p">]])</span>
-    <span class="n">i</span> <span class="o">&lt;-</span> <span class="n">i</span> <span class="o">+</span> <span class="m">1</span>
-<span class="p">}</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[1] 6
-[1] 7
-[1] 8
-[1] 9
-[1] 10
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#22914;&#20309;&#20197;-for-&#36208;&#35370;&#19968;&#20491;-list">&#22914;&#20309;&#20197; <code>for</code> &#36208;&#35370;&#19968;&#20491; <code>list</code><a class="anchor-link" href="#&#22914;&#20309;&#20197;-for-&#36208;&#35370;&#19968;&#20491;-list">&#182;</a></h2>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">a_list</span> <span class="o">&lt;-</span> <span class="nf">list</span><span class="p">(</span><span class="m">6</span><span class="p">,</span> <span class="m">7</span><span class="p">,</span> <span class="m">8</span><span class="p">,</span> <span class="m">9</span><span class="p">,</span> <span class="m">10</span><span class="p">)</span>
-<span class="nf">for </span><span class="p">(</span><span class="n">item</span> <span class="n">in</span> <span class="n">a_list</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nf">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
-<span class="p">}</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[1] 6
-[1] 7
-[1] 8
-[1] 9
-[1] 10
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#22914;&#20309;&#20197;-while-&#36208;&#35370;&#19968;&#20491;-data.frame-&#30340;&#21015;&#65288;rows&#65289;">&#22914;&#20309;&#20197; <code>while</code> &#36208;&#35370;&#19968;&#20491; <code>data.frame</code> &#30340;&#21015;&#65288;rows&#65289;<a class="anchor-link" href="#&#22914;&#20309;&#20197;-while-&#36208;&#35370;&#19968;&#20491;-data.frame-&#30340;&#21015;&#65288;rows&#65289;">&#182;</a></h2>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">avengers</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;The Avengers&quot;</span><span class="p">,</span> <span class="s">&quot;Avengers: Age of Ultron&quot;</span><span class="p">,</span> <span class="s">&quot;Avengers: Infinity War&quot;</span><span class="p">,</span> <span class="s">&quot;Avengers: Endgame&quot;</span><span class="p">)</span>
-<span class="n">ratings</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">8.0</span><span class="p">,</span> <span class="m">7.3</span><span class="p">,</span> <span class="m">8.4</span><span class="p">,</span> <span class="m">8.4</span><span class="p">)</span>
-<span class="n">release_year</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">2012</span><span class="p">,</span> <span class="m">2015</span><span class="p">,</span> <span class="m">2018</span><span class="p">,</span> <span class="m">2019</span><span class="p">)</span>
-<span class="n">avengers_df</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span> <span class="n">avengers</span><span class="p">,</span> <span class="n">rating</span> <span class="o">=</span> <span class="n">ratings</span><span class="p">,</span> <span class="n">release_year</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">gapminder</span> <span class="o">%&gt;%</span> 
+  <span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">gdpPercap</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">lifeExp</span><span class="p">))</span> <span class="o">+</span>
+    <span class="nf">geom_point</span><span class="p">()</span> <span class="o">+</span>
+    <span class="nf">ggtitle</span><span class="p">(</span><span class="s">&quot;Wealth vs. Health&quot;</span><span class="p">)</span> <span class="o">+</span>
+    <span class="nf">xlab</span><span class="p">(</span><span class="s">&quot;GDP Per Capita&quot;</span><span class="p">)</span> <span class="o">+</span>
+    <span class="nf">ylab</span><span class="p">(</span><span class="s">&quot;Life Expectancy&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
-</div>
-
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">i</span> <span class="o">&lt;-</span> <span class="m">1</span>
-<span class="nf">while </span><span class="p">(</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="nf">nrow</span><span class="p">(</span><span class="n">avengers_df</span><span class="p">))</span> <span class="p">{</span>
-    <span class="nf">print</span><span class="p">(</span><span class="n">avengers_df</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">])</span>
-    <span class="n">i</span> <span class="o">&lt;-</span> <span class="n">i</span> <span class="o">+</span> <span class="m">1</span>
-<span class="p">}</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>         title rating release_year
-1 The Avengers      8         2012
-                    title rating release_year
-2 Avengers: Age of Ultron    7.3         2015
-                   title rating release_year
-3 Avengers: Infinity War    8.4         2018
-              title rating release_year
-4 Avengers: Endgame    8.4         2019
-</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#22914;&#20309;&#20197;-while-&#36208;&#35370;&#19968;&#20491;-data.frame-&#30340;&#27396;&#65288;columns&#65289;">&#22914;&#20309;&#20197; <code>while</code> &#36208;&#35370;&#19968;&#20491; <code>data.frame</code> &#30340;&#27396;&#65288;columns&#65289;<a class="anchor-link" href="#&#22914;&#20309;&#20197;-while-&#36208;&#35370;&#19968;&#20491;-data.frame-&#30340;&#27396;&#65288;columns&#65289;">&#182;</a></h2>
+<h2 id="&#21152;&#20837;&#35387;&#37323;">&#21152;&#20837;&#35387;&#37323;<a class="anchor-link" href="#&#21152;&#20837;&#35387;&#37323;">&#182;</a></h2><p>使用 <code>geom_text()</code></p>
+
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">i</span> <span class="o">&lt;-</span> <span class="m">1</span>
-<span class="nf">while </span><span class="p">(</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="nf">ncol</span><span class="p">(</span><span class="n">avengers_df</span><span class="p">))</span> <span class="p">{</span>
-    <span class="nf">print</span><span class="p">(</span><span class="n">avengers_df</span><span class="p">[,</span> <span class="n">i</span><span class="p">])</span>
-    <span class="n">i</span> <span class="o">&lt;-</span> <span class="n">i</span> <span class="o">+</span> <span class="m">1</span>
-<span class="p">}</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">n_obs</span> <span class="o">&lt;-</span> <span class="n">gapminder</span> <span class="o">%&gt;%</span> 
+  <span class="nf">group_by</span><span class="p">(</span><span class="n">continent</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+  <span class="nf">summarise</span><span class="p">(</span><span class="n">nrows</span> <span class="o">=</span> <span class="nf">n</span><span class="p">())</span>
+
+<span class="n">n_obs</span> <span class="o">%&gt;%</span> 
+  <span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">continent</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">nrows</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">geom_bar</span><span class="p">(</span><span class="n">stat</span> <span class="o">=</span> <span class="s">&quot;identity&quot;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="nf">geom_text</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">label</span> <span class="o">=</span> <span class="n">n_obs</span><span class="o">$</span><span class="n">nrows</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">n_obs</span><span class="o">$</span><span class="n">nrows</span><span class="p">),</span> <span class="n">vjust</span> <span class="o">=</span> <span class="m">-1</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15183,44 +14853,25 @@ div.jp-OutputPrompt {
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[1] &#34;The Avengers&#34;            &#34;Avengers: Age of Ultron&#34;
-[3] &#34;Avengers: Infinity War&#34;  &#34;Avengers: Endgame&#34;      
-[1] 8.0 7.3 8.4 8.4
-[1] 2012 2015 2018 2019
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#22914;&#20309;&#20197;-for-&#36208;&#35370;&#19968;&#20491;-data.frame-&#30340;&#21015;">&#22914;&#20309;&#20197; <code>for</code> &#36208;&#35370;&#19968;&#20491; <code>data.frame</code> &#30340;&#21015;<a class="anchor-link" href="#&#22914;&#20309;&#20197;-for-&#36208;&#35370;&#19968;&#20491;-data.frame-&#30340;&#21015;">&#182;</a></h2>
+<h2 id="&#21152;&#20837;&#20013;&#25991;&#23383;&#65288;macOS-&#20351;&#29992;&#32773;&#26371;&#36973;&#36935;&#30340;&#21839;&#38988;&#65289;">&#21152;&#20837;&#20013;&#25991;&#23383;&#65288;macOS &#20351;&#29992;&#32773;&#26371;&#36973;&#36935;&#30340;&#21839;&#38988;&#65289;<a class="anchor-link" href="#&#21152;&#20837;&#20013;&#25991;&#23383;&#65288;macOS-&#20351;&#29992;&#32773;&#26371;&#36973;&#36935;&#30340;&#21839;&#38988;&#65289;">&#182;</a></h2><p>使用 <code>theme(text = element_text(family = FONTS_SUPPORT_TC))</code></p>
+
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">for </span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="m">1</span><span class="o">:</span><span class="nf">nrow</span><span class="p">(</span><span class="n">avengers_df</span><span class="p">))</span> <span class="p">{</span>
-    <span class="nf">print</span><span class="p">(</span><span class="n">avengers_df</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">])</span>
-<span class="p">}</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">gapminder</span> <span class="o">%&gt;%</span> 
+  <span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">gdpPercap</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">lifeExp</span><span class="p">))</span> <span class="o">+</span>
+    <span class="nf">geom_point</span><span class="p">()</span> <span class="o">+</span>
+    <span class="nf">ggtitle</span><span class="p">(</span><span class="s">&quot;財富與健康&quot;</span><span class="p">)</span> <span class="o">+</span>
+    <span class="nf">xlab</span><span class="p">(</span><span class="s">&quot;人均 GDP&quot;</span><span class="p">)</span> <span class="o">+</span>
+    <span class="nf">ylab</span><span class="p">(</span><span class="s">&quot;預期壽命&quot;</span><span class="p">)</span> <span class="o">+</span>
+    <span class="nf">theme</span><span class="p">(</span><span class="n">text</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">family</span> <span class="o">=</span> <span class="s">&quot;Heiti TC Light&quot;</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -15228,48 +14879,22 @@ div.jp-OutputPrompt {
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>         title rating release_year
-1 The Avengers      8         2012
-                    title rating release_year
-2 Avengers: Age of Ultron    7.3         2015
-                   title rating release_year
-3 Avengers: Infinity War    8.4         2018
-              title rating release_year
-4 Avengers: Endgame    8.4         2019
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#22914;&#20309;&#20197;-for-&#36208;&#35370;&#19968;&#20491;-data.frame-&#30340;&#27396;">&#22914;&#20309;&#20197; <code>for</code> &#36208;&#35370;&#19968;&#20491; <code>data.frame</code> &#30340;&#27396;<a class="anchor-link" href="#&#22914;&#20309;&#20197;-for-&#36208;&#35370;&#19968;&#20491;-data.frame-&#30340;&#27396;">&#182;</a></h2>
+<h2 id="&#35519;&#25972;&#24231;&#27161;&#36600;">&#35519;&#25972;&#24231;&#27161;&#36600;<a class="anchor-link" href="#&#35519;&#25972;&#24231;&#27161;&#36600;">&#182;</a></h2><p>使用 <code>scale_x_continuous()</code> 與 <code>scale_y_continuous()</code> 調整座標軸上下界與量尺</p>
+
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">for </span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="m">1</span><span class="o">:</span><span class="nf">ncol</span><span class="p">(</span><span class="n">avengers_df</span><span class="p">))</span> <span class="p">{</span>
-    <span class="nf">print</span><span class="p">(</span><span class="n">avengers_df</span><span class="p">[,</span> <span class="n">i</span><span class="p">])</span>
-<span class="p">}</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">gapminder</span> <span class="o">%&gt;%</span> 
+  <span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">gdpPercap</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">lifeExp</span><span class="p">))</span> <span class="o">+</span>
+    <span class="nf">geom_point</span><span class="p">()</span> <span class="o">+</span>
+    <span class="nf">scale_x_continuous</span><span class="p">(</span><span class="n">limits</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">50000</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -15277,146 +14902,121 @@ div.jp-OutputPrompt {
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="n">gapminder</span> <span class="o">%&gt;%</span> 
+  <span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">gdpPercap</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">lifeExp</span><span class="p">))</span> <span class="o">+</span>
+    <span class="nf">geom_point</span><span class="p">()</span> <span class="o">+</span>
+    <span class="nf">scale_x_continuous</span><span class="p">(</span><span class="n">trans</span> <span class="o">=</span> <span class="s">&quot;log10&quot;</span><span class="p">)</span>
+</pre></div>
 
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[1] &#34;The Avengers&#34;            &#34;Avengers: Age of Ultron&#34;
-[3] &#34;Avengers: Infinity War&#34;  &#34;Avengers: Endgame&#34;      
-[1] 8.0 7.3 8.4 8.4
-[1] 2012 2015 2018 2019
-</pre>
+     </div>
 </div>
 </div>
-
-</div>
-
 </div>
 
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#21487;&#20197;&#22312;&#36852;&#22280;&#20013;&#28155;&#21152;&#30340;&#20445;&#30041;&#23383;">&#21487;&#20197;&#22312;&#36852;&#22280;&#20013;&#28155;&#21152;&#30340;&#20445;&#30041;&#23383;<a class="anchor-link" href="#&#21487;&#20197;&#22312;&#36852;&#22280;&#20013;&#28155;&#21152;&#30340;&#20445;&#30041;&#23383;">&#182;</a></h2><ul>
-<li><code>break</code> 符合條件時終止迴圈。</li>
-<li><code>next</code> 符合條件時略過當次的走訪。</li>
+<h2 id="&#22312;&#19968;&#20491;&#30059;&#24067;&#19978;&#32362;&#35069;&#22810;&#20491;&#23376;&#22294;&#24418;">&#22312;&#19968;&#20491;&#30059;&#24067;&#19978;&#32362;&#35069;&#22810;&#20491;&#23376;&#22294;&#24418;<a class="anchor-link" href="#&#22312;&#19968;&#20491;&#30059;&#24067;&#19978;&#32362;&#35069;&#22810;&#20491;&#23376;&#22294;&#24418;">&#182;</a></h2><p>使用 <code>facet_wrap(vars(CATEGORICAL_COLUMN))</code></p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="n">gapminder</span> <span class="o">%&gt;%</span> 
+  <span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">gdpPercap</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">lifeExp</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">continent</span><span class="p">))</span> <span class="o">+</span>
+    <span class="nf">geom_point</span><span class="p">()</span> <span class="o">+</span>
+    <span class="nf">facet_wrap</span><span class="p">(</span><span class="nf">vars</span><span class="p">(</span><span class="n">continent</span><span class="p">))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#20351;&#29992;-plotly-&#20570;&#19968;&#20491;-gapminder-replica">&#20351;&#29992; <code>plotly</code> &#20570;&#19968;&#20491; <code>gapminder</code> replica<a class="anchor-link" href="#&#20351;&#29992;-plotly-&#20570;&#19968;&#20491;-gapminder-replica">&#182;</a></h2>
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#38364;&#26044;-plotly-&#22871;&#20214;">&#38364;&#26044; <code>plotly</code> &#22871;&#20214;<a class="anchor-link" href="#&#38364;&#26044;-plotly-&#22871;&#20214;">&#182;</a></h2><p>幫助 R 語言使用者不需要額外去學習 JavaScript 就能夠建立出互動性、具備 D3.js 及 WebGL 特性的圖表</p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#23433;&#35037;-plotly-&#22871;&#20214;">&#23433;&#35037; <code>plotly</code> &#22871;&#20214;<a class="anchor-link" href="#&#23433;&#35037;-plotly-&#22871;&#20214;">&#182;</a></h2><ul>
+<li>透過 RStudio 的 <code>Packages</code> 功能頁籤</li>
+<li>透過 <code>install.packages()</code> 函數</li>
 </ul>
-
-</div>
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">for </span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="m">1</span><span class="o">:</span><span class="m">6</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nf">if </span><span class="p">(</span><span class="n">i</span> <span class="o">%%</span> <span class="m">2</span> <span class="o">==</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">break</span>
-    <span class="p">}</span>
-    <span class="nf">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;plotly&quot;</span><span class="p">)</span>
 </pre></div>
 
-     </div>
 </div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[1] 1
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">for </span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="m">1</span><span class="o">:</span><span class="m">6</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nf">if </span><span class="p">(</span><span class="n">i</span> <span class="o">%%</span> <span class="m">2</span> <span class="o">==</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">next</span>
-    <span class="p">}</span>
-    <span class="nf">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-<span class="p">}</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[1] 1
-[1] 3
-[1] 5
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#25152;&#26377;&#30340;-for-&#37117;&#21487;&#20197;&#29992;-while-&#37325;&#29694;&#65292;&#20294;&#21453;&#20043;&#19981;&#28982;">&#25152;&#26377;&#30340; <code>for</code> &#37117;&#21487;&#20197;&#29992; <code>while</code> &#37325;&#29694;&#65292;&#20294;&#21453;&#20043;&#19981;&#28982;<a class="anchor-link" href="#&#25152;&#26377;&#30340;-for-&#37117;&#21487;&#20197;&#29992;-while-&#37325;&#29694;&#65292;&#20294;&#21453;&#20043;&#19981;&#28982;">&#182;</a></h2><ul>
-<li>確定重複運行次數的情境：採用 <code>for</code></li>
-<li>不確定重複運行次數，包含隨機性的情境：採用 <code>while</code></li>
+<h2 id="&#36617;&#20837;-plotly-&#22871;&#20214;">&#36617;&#20837; <code>plotly</code> &#22871;&#20214;<a class="anchor-link" href="#&#36617;&#20837;-plotly-&#22871;&#20214;">&#182;</a></h2><ul>
+<li>透過 RStudio 的 <code>Packages</code> 功能頁籤</li>
+<li>透過 <code>library()</code> 函數</li>
 </ul>
+<div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="s">&quot;plotly&quot;</span><span class="p">)</span>
+</pre></div>
 
 </div>
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">rolling_two_six</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nf">while </span><span class="p">(</span><span class="kc">TRUE</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">two_dice</span> <span class="o">&lt;-</span> <span class="nf">sample</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">6</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="m">2</span><span class="p">,</span> <span class="n">replace</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
-        <span class="n">sum_two_dice</span> <span class="o">&lt;-</span> <span class="nf">sum</span><span class="p">(</span><span class="n">two_dice</span><span class="p">)</span>
-        <span class="nf">print</span><span class="p">(</span><span class="n">two_dice</span><span class="p">)</span>
-        <span class="nf">if </span><span class="p">(</span><span class="n">sum_two_dice</span> <span class="o">==</span> <span class="m">12</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">break</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+<div class=" highlight hl-r"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="s">&quot;plotly&quot;</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="s">&quot;gapminder&quot;</span><span class="p">)</span>
+<span class="n">radius</span> <span class="o">&lt;-</span> <span class="nf">sqrt</span><span class="p">((</span><span class="n">gapminder</span><span class="o">$</span><span class="n">pop</span><span class="p">)</span><span class="o">/</span><span class="kc">pi</span><span class="p">)</span>
+
+<span class="n">p</span> <span class="o">&lt;-</span> <span class="n">gapminder</span> <span class="o">%&gt;%</span>
+  <span class="nf">plot_ly</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="o">~</span><span class="n">gdpPercap</span><span class="p">,</span> 
+    <span class="n">y</span> <span class="o">=</span> <span class="o">~</span><span class="n">lifeExp</span><span class="p">,</span> 
+    <span class="n">size</span> <span class="o">=</span> <span class="o">~</span><span class="n">pop</span><span class="p">,</span> 
+    <span class="n">color</span> <span class="o">=</span> <span class="o">~</span><span class="n">continent</span><span class="p">,</span> 
+    <span class="n">frame</span> <span class="o">=</span> <span class="o">~</span><span class="n">year</span><span class="p">,</span> 
+    <span class="n">text</span> <span class="o">=</span> <span class="o">~</span><span class="n">country</span><span class="p">,</span> 
+    <span class="n">hoverinfo</span> <span class="o">=</span> <span class="s">&quot;text&quot;</span><span class="p">,</span>
+    <span class="n">type</span> <span class="o">=</span> <span class="s">&#39;scatter&#39;</span><span class="p">,</span>
+    <span class="n">mode</span> <span class="o">=</span> <span class="s">&#39;markers&#39;</span><span class="p">,</span>
+    <span class="n">sizes</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="nf">min</span><span class="p">(</span><span class="n">radius</span><span class="p">),</span> <span class="nf">max</span><span class="p">(</span><span class="n">radius</span><span class="p">))</span>
+  <span class="p">)</span> <span class="o">%&gt;%</span>
+  <span class="nf">layout</span><span class="p">(</span>
+    <span class="n">xaxis</span> <span class="o">=</span> <span class="nf">list</span><span class="p">(</span>
+      <span class="n">type</span> <span class="o">=</span> <span class="s">&quot;log&quot;</span>
+    <span class="p">)</span>
+  <span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="n">p</span>
 </pre></div>
 
      </div>

@@ -14385,17 +14385,9 @@ div.jp-OutputPrompt {
 <div class="slides"><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="R-&#31243;&#24335;&#35373;&#35336;">R &#31243;&#24335;&#35373;&#35336;<a class="anchor-link" href="#R-&#31243;&#24335;&#35373;&#35336;">&#182;</a></h1><blockquote><p>載入資料</p>
+<h1 id="R-&#35486;&#35328;&#30340;&#20116;&#21313;&#36947;&#32244;&#32722;">R &#35486;&#35328;&#30340;&#20116;&#21313;&#36947;&#32244;&#32722;<a class="anchor-link" href="#R-&#35486;&#35328;&#30340;&#20116;&#21313;&#36947;&#32244;&#32722;">&#182;</a></h1><blockquote><p>如何載入資料</p>
 </blockquote>
-<p><a href="https://www.datainpoint.com/">數據交點</a> | 郭耀仁 <a href="mailto:yaojenkuo@datainpoint.com">yaojenkuo@datainpoint.com</a></p>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<blockquote><p>Working with data provided by R packages is a great way to learn the tools of data science, but at some point you want to stop learning and start working with your own data.</p>
-<p>Hadley Wickham</p>
-</blockquote>
+<p><a href="https://www.datainpoint.com">數據交點</a> | 郭耀仁 <a href="mailto:yaojenkuo@datainpoint.com">yaojenkuo@datainpoint.com</a></p>
 
 </div>
 </div></section></section><section><section>
@@ -14454,7 +14446,7 @@ div.jp-OutputPrompt {
 <h2 id="&#24120;&#35211;&#30340;&#34920;&#26684;&#24335;&#65288;tabular&#65289;&#36039;&#26009;&#26377;&#21738;&#20123;&#65311;">&#24120;&#35211;&#30340;&#34920;&#26684;&#24335;&#65288;tabular&#65289;&#36039;&#26009;&#26377;&#21738;&#20123;&#65311;<a class="anchor-link" href="#&#24120;&#35211;&#30340;&#34920;&#26684;&#24335;&#65288;tabular&#65289;&#36039;&#26009;&#26377;&#21738;&#20123;&#65311;">&#182;</a></h2><ul>
 <li>以不同符號分隔變數的文字檔（<code>.txt</code>、<code>.csv</code>）</li>
 <li>Excel 試算表（<code>.xlsx</code>）</li>
-<li>Array of JSONs（<code>.json</code>）</li>
+<li>JSON（<code>.json</code>）</li>
 <li>資料庫表格（<code>.db</code>）</li>
 </ul>
 
@@ -14462,22 +14454,25 @@ div.jp-OutputPrompt {
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#20197;&#36887;&#34399;&#20998;&#38548;&#35722;&#25976;&#30340;&#25991;&#23383;&#27284;&#65306;.csv">&#20197;&#36887;&#34399;&#20998;&#38548;&#35722;&#25976;&#30340;&#25991;&#23383;&#27284;&#65306;<code>.csv</code><a class="anchor-link" href="#&#20197;&#36887;&#34399;&#20998;&#38548;&#35722;&#25976;&#30340;&#25991;&#23383;&#27284;&#65306;.csv">&#182;</a></h2><p><code>imdb_top_rated.csv</code></p>
+<h2 id="&#20197;&#36887;&#34399;&#20998;&#38548;&#20540;&#30340;&#25991;&#23383;&#27284;&#65306;.csv">&#20197;&#36887;&#34399;&#20998;&#38548;&#20540;&#30340;&#25991;&#23383;&#27284;&#65306;<code>.csv</code><a class="anchor-link" href="#&#20197;&#36887;&#34399;&#20998;&#38548;&#20540;&#30340;&#25991;&#23383;&#27284;&#65306;.csv">&#182;</a></h2><p>Comma-Separated Values，CSV，有時也稱為字元分隔值，因為分隔字元也可以不是逗號，其檔案以純文字形式儲存表格資料。</p>
+<p>來源：<a href="https://en.wikipedia.org/wiki/Comma-separated_values">https://en.wikipedia.org/wiki/Comma-separated_values</a></p>
 
 </div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#36617;&#20837;-the_avengers.csv">&#36617;&#20837; <code>the_avengers.csv</code><a class="anchor-link" href="#&#36617;&#20837;-the_avengers.csv">&#182;</a></h2><p>使用 <code>read.csv()</code> 函數</p>
+<h2 id="&#36617;&#20837;&#24037;&#20316;&#30446;&#37636;&#20013;&#30340;-imdb_top_rated.csv">&#36617;&#20837;&#24037;&#20316;&#30446;&#37636;&#20013;&#30340; <code>imdb_top_rated.csv</code><a class="anchor-link" href="#&#36617;&#20837;&#24037;&#20316;&#30446;&#37636;&#20013;&#30340;-imdb_top_rated.csv">&#182;</a></h2><p>使用 <code>read.csv()</code> 函數。</p>
+<div class="highlight"><pre><span></span><span class="nf">read.csv</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&quot;,&quot;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+</pre></div>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">imdb_top_rated_csv</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span><span class="s">&quot;imdb_top_rated.csv&quot;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&quot;,&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">imdb_top_rated_csv</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span><span class="s">&quot;imdb_top_rated.csv&quot;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&quot;,&quot;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
 <span class="nf">head</span><span class="p">(</span><span class="n">imdb_top_rated_csv</span><span class="p">)</span>
 </pre></div>
 
@@ -14526,16 +14521,83 @@ div.jp-OutputPrompt {
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Excel-&#35430;&#31639;&#34920;">Excel &#35430;&#31639;&#34920;<a class="anchor-link" href="#Excel-&#35430;&#31639;&#34920;">&#182;</a></h2><p><code>imdb_top_rated.xlsx</code></p>
+<h2 id="&#25991;&#23383;&#27284;&#65306;.txt">&#25991;&#23383;&#27284;&#65306;<code>.txt</code><a class="anchor-link" href="#&#25991;&#23383;&#27284;&#65306;.txt">&#182;</a></h2><p>文字檔（text file）是不包含樣式的控制元素、只有字元構成的檔案，能夠被最簡單的文字編輯器直接讀取。</p>
+<p>來源：<a href="https://en.wikipedia.org/wiki/Text_file">https://en.wikipedia.org/wiki/Text_file</a></p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#36617;&#20837;&#24037;&#20316;&#30446;&#37636;&#20013;&#30340;-imdb_top_rated.txt">&#36617;&#20837;&#24037;&#20316;&#30446;&#37636;&#20013;&#30340; <code>imdb_top_rated.txt</code><a class="anchor-link" href="#&#36617;&#20837;&#24037;&#20316;&#30446;&#37636;&#20013;&#30340;-imdb_top_rated.txt">&#182;</a></h2><p>使用 <code>read.csv()</code> 函數。</p>
+<div class="highlight"><pre><span></span><span class="nf">read.csv</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&quot;;&quot;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="n">imdb_top_rated_txt</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span><span class="s">&quot;imdb_top_rated.txt&quot;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&quot;;&quot;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">imdb_top_rated_txt</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 6 × 3</caption>
+<thead>
+	<tr><th></th><th scope=col>title</th><th scope=col>release_year</th><th scope=col>imdb_rating</th></tr>
+	<tr><th></th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>The Shawshank Redemption</td><td>1994</td><td>9.2</td></tr>
+	<tr><th scope=row>2</th><td>The Godfather           </td><td>1972</td><td>9.1</td></tr>
+	<tr><th scope=row>3</th><td>The Godfather: Part II  </td><td>1974</td><td>9.0</td></tr>
+	<tr><th scope=row>4</th><td>The Dark Knight         </td><td>2008</td><td>9.0</td></tr>
+	<tr><th scope=row>5</th><td>12 Angry Men            </td><td>1957</td><td>8.9</td></tr>
+	<tr><th scope=row>6</th><td>Schindler's List        </td><td>1993</td><td>8.9</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Excel-&#35430;&#31639;&#34920;">Excel &#35430;&#31639;&#34920;<a class="anchor-link" href="#Excel-&#35430;&#31639;&#34920;">&#182;</a></h2><p>工作目錄的 <code>imdb_top_rated.xlsx</code>。</p>
 
 </div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="&#20351;&#29992;-readxl-&#22871;&#20214;&#20013;&#30340;-read_excel()-&#20989;&#25976;">&#20351;&#29992; <code>readxl</code> &#22871;&#20214;&#20013;&#30340; <code>read_excel()</code> &#20989;&#25976;<a class="anchor-link" href="#&#20351;&#29992;-readxl-&#22871;&#20214;&#20013;&#30340;-read_excel()-&#20989;&#25976;">&#182;</a></h2><ul>
-<li>安裝 <code>readxl</code> 套件</li>
-<li>載入 <code>readxl</code> 套件</li>
-<li>使用 <code>readxl::read_excel()</code> 函數</li>
+<li>安裝 <code>readxl</code> 套件。</li>
+<li>載入 <code>readxl</code> 套件。</li>
+<li>使用 <code>readxl</code> 套件的 <code>read_excel()</code> 函數。</li>
 </ul>
 
 </div>
@@ -14543,8 +14605,8 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="&#23433;&#35037;-readxl-&#22871;&#20214;">&#23433;&#35037; <code>readxl</code> &#22871;&#20214;<a class="anchor-link" href="#&#23433;&#35037;-readxl-&#22871;&#20214;">&#182;</a></h2><ul>
-<li>透過 RStudio 的 <code>Packages</code> 功能頁籤</li>
-<li>透過 <code>install.packages()</code> 函數</li>
+<li>透過 RStudio 的 <code>Packages</code> 功能頁籤。</li>
+<li>透過 <code>install.packages()</code> 函數。</li>
 </ul>
 <div class="highlight"><pre><span></span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;readxl&quot;</span><span class="p">)</span>
 </pre></div>
@@ -14554,8 +14616,8 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="&#36617;&#20837;-readxl-&#22871;&#20214;">&#36617;&#20837; <code>readxl</code> &#22871;&#20214;<a class="anchor-link" href="#&#36617;&#20837;-readxl-&#22871;&#20214;">&#182;</a></h2><ul>
-<li>透過 RStudio 的 <code>Packages</code> 功能頁籤</li>
-<li>透過 <code>library()</code> 函數</li>
+<li>透過 RStudio 的 <code>Packages</code> 功能頁籤。</li>
+<li>透過 <code>library()</code> 函數。</li>
 </ul>
 <div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="s">&quot;readxl&quot;</span><span class="p">)</span>
 </pre></div>
@@ -14564,15 +14626,15 @@ div.jp-OutputPrompt {
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#36617;&#20837;-imdb_top_rated.xlsx">&#36617;&#20837; <code>imdb_top_rated.xlsx</code><a class="anchor-link" href="#&#36617;&#20837;-imdb_top_rated.xlsx">&#182;</a></h2>
+<h2 id="&#36617;&#20837;&#24037;&#20316;&#30446;&#37636;&#30340;-imdb_top_rated.xlsx">&#36617;&#20837;&#24037;&#20316;&#30446;&#37636;&#30340; <code>imdb_top_rated.xlsx</code><a class="anchor-link" href="#&#36617;&#20837;&#24037;&#20316;&#30446;&#37636;&#30340;-imdb_top_rated.xlsx">&#182;</a></h2>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">readxl</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="s">&quot;readxl&quot;</span><span class="p">)</span>
 
 <span class="n">imdb_top_rated_xlsx</span> <span class="o">&lt;-</span> <span class="nf">read_excel</span><span class="p">(</span><span class="s">&quot;imdb_top_rated.xlsx&quot;</span><span class="p">)</span>
 <span class="nf">head</span><span class="p">(</span><span class="n">imdb_top_rated_xlsx</span><span class="p">)</span>
@@ -14623,26 +14685,17 @@ div.jp-OutputPrompt {
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Array-of-JSONs">Array of JSONs<a class="anchor-link" href="#Array-of-JSONs">&#182;</a></h2><p><code>imdb_top_rated.json</code></p>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#20160;&#40636;&#26159;-JSON">&#20160;&#40636;&#26159; JSON<a class="anchor-link" href="#&#20160;&#40636;&#26159;-JSON">&#182;</a></h2><ul>
-<li>JavaScript Object Notation</li>
-<li>彈性很大且常見於網站資料傳輸的檔案格式</li>
-<li>它的特性是可以容納不同長度、型別並且巢狀式地（nested）包容資料</li>
-</ul>
+<h2 id="JSON">JSON<a class="anchor-link" href="#JSON">&#182;</a></h2><p>JSON (JavaScript Object Notation) 是一種輕量的資料交換格式，是一種文字檔案但是其格式能夠被輕易地被 C, C++, C#, Java, JavaScript, Perl, Python 等程式語言解析與生成，主要的 JSON 格式有兩種：具有鍵和值的結構與具有順序性的結構，其中具有鍵和值的結構常被稱為 dict、hash table 等，具有順序性的結構常被稱為 array、list 等。</p>
+<p>來源：<a href="https://www.json.org/json-en.html">https://www.json.org/json-en.html</a></p>
 
 </div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="&#20351;&#29992;-jsonlite-&#22871;&#20214;&#20013;&#30340;-fromJSON()-&#20989;&#25976;">&#20351;&#29992; <code>jsonlite</code> &#22871;&#20214;&#20013;&#30340; <code>fromJSON()</code> &#20989;&#25976;<a class="anchor-link" href="#&#20351;&#29992;-jsonlite-&#22871;&#20214;&#20013;&#30340;-fromJSON()-&#20989;&#25976;">&#182;</a></h2><ul>
-<li>安裝 <code>jsonlite</code> 套件</li>
-<li>載入 <code>jsonlite</code> 套件</li>
-<li>使用 <code>jsonlite::fromJSON()</code> 函數</li>
+<li>安裝 <code>jsonlite</code> 套件。</li>
+<li>載入 <code>jsonlite</code> 套件。</li>
+<li>使用 <code>jsonlite</code> 套件中的 <code>fromJSON()</code> 函數。</li>
 </ul>
 
 </div>
@@ -14650,8 +14703,8 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="&#23433;&#35037;-jsonlite-&#22871;&#20214;">&#23433;&#35037; <code>jsonlite</code> &#22871;&#20214;<a class="anchor-link" href="#&#23433;&#35037;-jsonlite-&#22871;&#20214;">&#182;</a></h2><ul>
-<li>透過 RStudio 的 <code>Packages</code> 功能頁籤</li>
-<li>透過 <code>install.packages()</code> 函數</li>
+<li>透過 RStudio 的 <code>Packages</code> 功能頁籤。</li>
+<li>透過 <code>install.packages()</code> 函數。</li>
 </ul>
 <div class="highlight"><pre><span></span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;jsonlite&quot;</span><span class="p">)</span>
 </pre></div>
@@ -14671,15 +14724,15 @@ div.jp-OutputPrompt {
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#36617;&#20837;-imdb_top_rated.json">&#36617;&#20837; <code>imdb_top_rated.json</code><a class="anchor-link" href="#&#36617;&#20837;-imdb_top_rated.json">&#182;</a></h2>
+<h2 id="&#36617;&#20837;&#24037;&#20316;&#30446;&#37636;&#30340;-imdb_top_rated.json">&#36617;&#20837;&#24037;&#20316;&#30446;&#37636;&#30340; <code>imdb_top_rated.json</code><a class="anchor-link" href="#&#36617;&#20837;&#24037;&#20316;&#30446;&#37636;&#30340;-imdb_top_rated.json">&#182;</a></h2>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">jsonlite</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="s">&quot;jsonlite&quot;</span><span class="p">)</span>
 
 <span class="n">imdb_top_rated_json</span> <span class="o">&lt;-</span> <span class="nf">fromJSON</span><span class="p">(</span><span class="s">&quot;imdb_top_rated.json&quot;</span><span class="p">)</span>
 <span class="nf">head</span><span class="p">(</span><span class="n">imdb_top_rated_json</span><span class="p">)</span>
@@ -14730,19 +14783,28 @@ div.jp-OutputPrompt {
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#36039;&#26009;&#24235;&#34920;&#26684;">&#36039;&#26009;&#24235;&#34920;&#26684;<a class="anchor-link" href="#&#36039;&#26009;&#24235;&#34920;&#26684;">&#182;</a></h2><p>儲存於 <code>imdb.db</code> 的資料庫表格 <code>top_rated</code>。</p>
+<h2 id="&#36039;&#26009;&#24235;&#34920;&#26684;">&#36039;&#26009;&#24235;&#34920;&#26684;<a class="anchor-link" href="#&#36039;&#26009;&#24235;&#34920;&#26684;">&#182;</a></h2><p>在關聯式資料庫中，資料表又稱表格，是一個二維的資料結構，由水平的列和垂直的欄組成。</p>
+<p>來源：<a href="https://en.wikipedia.org/wiki/Table_(database)">https://en.wikipedia.org/wiki/Table_(database)</a></p>
 
 </div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#20351;&#29992;-RSQLite-&#22871;&#20214;">&#20351;&#29992; <code>RSQLite</code> &#22871;&#20214;<a class="anchor-link" href="#&#20351;&#29992;-RSQLite-&#22871;&#20214;">&#182;</a></h2><ul>
-<li>安裝 <code>RSQLite</code> 套件</li>
-<li>載入 <code>DBI</code> 套件</li>
-<li>使用 <code>DBI::dbReadTable()</code> 函數載入表格</li>
-<li>使用 <code>DBI::dbSendQuery()</code> 搭配 <code>DBI::dbFetch()</code> 函數查詢表格</li>
-<li>使用 <code>DBI::dbClearResult()</code> 函數清除查詢結果</li>
-<li>使用 <code>DBI::dbDisconnect()</code> 函數關閉資料庫連線</li>
+<h2 id="&#20351;&#29992;-RSQLite-&#22871;&#20214;&#33287;-DBI-&#22871;&#20214;">&#20351;&#29992; <code>RSQLite</code> &#22871;&#20214;&#33287; <code>DBI</code> &#22871;&#20214;<a class="anchor-link" href="#&#20351;&#29992;-RSQLite-&#22871;&#20214;&#33287;-DBI-&#22871;&#20214;">&#182;</a></h2><ul>
+<li>安裝 <code>RSQLite</code> 套件。</li>
+<li>載入 <code>DBI</code> 套件。</li>
+<li>使用 <code>RSQLite::SQLite()</code> 建立連線。</li>
+</ul>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#20351;&#29992;-RSQLite-&#22871;&#20214;&#33287;-DBI-&#22871;&#20214;&#65288;&#32396;&#65289;">&#20351;&#29992; <code>RSQLite</code> &#22871;&#20214;&#33287; <code>DBI</code> &#22871;&#20214;&#65288;&#32396;&#65289;<a class="anchor-link" href="#&#20351;&#29992;-RSQLite-&#22871;&#20214;&#33287;-DBI-&#22871;&#20214;&#65288;&#32396;&#65289;">&#182;</a></h2><ul>
+<li>使用 <code>DBI</code> 套件的 <code>dbReadTable()</code> 函數載入表格。</li>
+<li>使用 <code>DBI</code> 套件的 <code>dbSendQuery()</code> 搭配 <code>dbFetch()</code> 函數查詢表格。</li>
+<li>使用 <code>DBI</code> 套件的 <code>dbClearResult()</code> 函數清除查詢結果。</li>
+<li>使用 <code>DBI</code> 套件的 <code>dbDisconnect()</code> 函數關閉資料庫連線。</li>
 </ul>
 
 </div>
@@ -14771,15 +14833,15 @@ div.jp-OutputPrompt {
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#20351;&#29992;-DBI::dbConnect()-&#20989;&#25976;&#24314;&#31435;&#36899;&#32218;">&#20351;&#29992; <code>DBI::dbConnect()</code> &#20989;&#25976;&#24314;&#31435;&#36899;&#32218;<a class="anchor-link" href="#&#20351;&#29992;-DBI::dbConnect()-&#20989;&#25976;&#24314;&#31435;&#36899;&#32218;">&#182;</a></h2>
+<h2 id="&#20351;&#29992;-DBI-&#22871;&#20214;&#30340;-dbConnect()-&#20989;&#25976;&#24314;&#31435;&#36899;&#32218;">&#20351;&#29992; <code>DBI</code> &#22871;&#20214;&#30340; <code>dbConnect()</code> &#20989;&#25976;&#24314;&#31435;&#36899;&#32218;<a class="anchor-link" href="#&#20351;&#29992;-DBI-&#22871;&#20214;&#30340;-dbConnect()-&#20989;&#25976;&#24314;&#31435;&#36899;&#32218;">&#182;</a></h2>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">DBI</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="s">&quot;DBI&quot;</span><span class="p">)</span>
 
 <span class="n">con</span> <span class="o">&lt;-</span> <span class="nf">dbConnect</span><span class="p">(</span><span class="n">RSQLite</span><span class="o">::</span><span class="nf">SQLite</span><span class="p">(),</span> <span class="s">&quot;imdb.db&quot;</span><span class="p">)</span>
 <span class="nf">dbListTables</span><span class="p">(</span><span class="n">con</span><span class="p">)</span>
@@ -14815,12 +14877,12 @@ div.jp-OutputPrompt {
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#20351;&#29992;-DBI::dbReadTable()-&#20989;&#25976;&#36617;&#20837;&#34920;&#26684;">&#20351;&#29992; <code>DBI::dbReadTable()</code> &#20989;&#25976;&#36617;&#20837;&#34920;&#26684;<a class="anchor-link" href="#&#20351;&#29992;-DBI::dbReadTable()-&#20989;&#25976;&#36617;&#20837;&#34920;&#26684;">&#182;</a></h2>
+<h2 id="&#20351;&#29992;-DBI-&#22871;&#20214;&#30340;-dbReadTable()-&#20989;&#25976;&#36617;&#20837;&#34920;&#26684;">&#20351;&#29992; <code>DBI</code> &#22871;&#20214;&#30340; <code>dbReadTable()</code> &#20989;&#25976;&#36617;&#20837;&#34920;&#26684;<a class="anchor-link" href="#&#20351;&#29992;-DBI-&#22871;&#20214;&#30340;-dbReadTable()-&#20989;&#25976;&#36617;&#20837;&#34920;&#26684;">&#182;</a></h2>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="n">imdb_top_rated_db</span> <span class="o">&lt;-</span> <span class="nf">dbReadTable</span><span class="p">(</span><span class="n">con</span><span class="p">,</span> <span class="s">&quot;top_rated&quot;</span><span class="p">)</span>
@@ -14872,12 +14934,12 @@ div.jp-OutputPrompt {
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#20351;&#29992;-DBI::dbSendQuery()-&#25645;&#37197;-DBI::dbFetch()-&#20989;&#25976;&#26597;&#35426;&#34920;&#26684;">&#20351;&#29992; <code>DBI::dbSendQuery()</code> &#25645;&#37197; <code>DBI::dbFetch()</code> &#20989;&#25976;&#26597;&#35426;&#34920;&#26684;<a class="anchor-link" href="#&#20351;&#29992;-DBI::dbSendQuery()-&#25645;&#37197;-DBI::dbFetch()-&#20989;&#25976;&#26597;&#35426;&#34920;&#26684;">&#182;</a></h2>
+<h2 id="&#20351;&#29992;-DBI-&#22871;&#20214;&#30340;-dbSendQuery()-&#25645;&#37197;-dbFetch()-&#20989;&#25976;&#26597;&#35426;&#34920;&#26684;">&#20351;&#29992; <code>DBI</code> &#22871;&#20214;&#30340; <code>dbSendQuery()</code> &#25645;&#37197; <code>dbFetch()</code> &#20989;&#25976;&#26597;&#35426;&#34920;&#26684;<a class="anchor-link" href="#&#20351;&#29992;-DBI-&#22871;&#20214;&#30340;-dbSendQuery()-&#25645;&#37197;-dbFetch()-&#20989;&#25976;&#26597;&#35426;&#34920;&#26684;">&#182;</a></h2>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="n">sql_query</span> <span class="o">&lt;-</span> <span class="s">&quot;SELECT * FROM top_rated WHERE release_year = 1994;&quot;</span>
@@ -14930,15 +14992,15 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="&#23436;&#25104;&#26597;&#35426;&#20043;&#24460;">&#23436;&#25104;&#26597;&#35426;&#20043;&#24460;<a class="anchor-link" href="#&#23436;&#25104;&#26597;&#35426;&#20043;&#24460;">&#182;</a></h2><ul>
-<li>使用 <code>DBI::dbClearResult()</code> 函數清除查詢結果</li>
-<li>使用 <code>DBI::dbDisconnect()</code> 函數關閉資料庫連線</li>
+<li>使用 <code>DBI</code> 套件的 <code>dbClearResult()</code> 函數清除查詢結果。</li>
+<li>使用 <code>DBI</code> 套件的 <code>dbDisconnect()</code> 函數關閉資料庫連線。</li>
 </ul>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">dbClearResult</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
@@ -14960,7 +15022,7 @@ div.jp-OutputPrompt {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="&#24120;&#29992;&#20316;&#34920;&#26684;&#24335;&#36039;&#26009;&#36664;&#20986;&#30340;&#27284;&#26696;&#26684;&#24335;">&#24120;&#29992;&#20316;&#34920;&#26684;&#24335;&#36039;&#26009;&#36664;&#20986;&#30340;&#27284;&#26696;&#26684;&#24335;<a class="anchor-link" href="#&#24120;&#29992;&#20316;&#34920;&#26684;&#24335;&#36039;&#26009;&#36664;&#20986;&#30340;&#27284;&#26696;&#26684;&#24335;">&#182;</a></h2><ul>
 <li>表格式文字檔 <code>.txt</code> 或 <code>.csv</code></li>
-<li>Array of JSONs <code>.json</code></li>
+<li>JSON <code>.json</code></li>
 </ul>
 
 </div>
@@ -14973,11 +15035,11 @@ div.jp-OutputPrompt {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">write.table</span><span class="p">(</span><span class="n">iris</span><span class="p">,</span> <span class="n">file</span> <span class="o">=</span> <span class="s">&quot;iris.txt&quot;</span><span class="p">,</span> <span class="n">row.names</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span> <span class="c1"># 不輸出資料框的列索引</span>
-<span class="nf">write.table</span><span class="p">(</span><span class="n">iris</span><span class="p">,</span> <span class="n">file</span> <span class="o">=</span> <span class="s">&quot;iris.csv&quot;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&quot;,&quot;</span><span class="p">,</span> <span class="n">row.names</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span> <span class="c1"># 指定分隔符號為 ,</span>
+<div class=" highlight hl-r"><pre><span></span><span class="nf">write.table</span><span class="p">(</span><span class="n">iris</span><span class="p">,</span> <span class="n">file</span> <span class="o">=</span> <span class="s">&quot;iris.txt&quot;</span><span class="p">,</span> <span class="n">row.names</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span> <span class="c1"># do not output row names</span>
+<span class="nf">write.table</span><span class="p">(</span><span class="n">iris</span><span class="p">,</span> <span class="n">file</span> <span class="o">=</span> <span class="s">&quot;iris.csv&quot;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&quot;,&quot;</span><span class="p">,</span> <span class="n">row.names</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span> <span class="c1"># &quot;,&quot; as the separator</span>
 </pre></div>
 
      </div>
@@ -14988,16 +15050,16 @@ div.jp-OutputPrompt {
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Array-of-JSONs-.json">Array of JSONs <code>.json</code><a class="anchor-link" href="#Array-of-JSONs-.json">&#182;</a></h2><p>使用 <code>jsonlite::toJSON()</code> 搭配 <code>writeLines()</code> 函數。</p>
+<h2 id="JSON-.json">JSON <code>.json</code><a class="anchor-link" href="#JSON-.json">&#182;</a></h2><p>使用 <code>jsonlite</code> 的 <code>toJSON()</code> 函數搭配 <code>writeLines()</code> 函數。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">jsonlite</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="s">&quot;jsonlite&quot;</span><span class="p">)</span>
 
 <span class="n">json_char</span> <span class="o">&lt;-</span> <span class="nf">toJSON</span><span class="p">(</span><span class="n">iris</span><span class="p">)</span>
 <span class="nf">writeLines</span><span class="p">(</span><span class="n">json_char</span><span class="p">,</span> <span class="s">&quot;iris.json&quot;</span><span class="p">)</span>
