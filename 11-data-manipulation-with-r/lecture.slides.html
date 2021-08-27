@@ -14399,21 +14399,37 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="&#24120;&#35211;&#27298;&#35222;&#36039;&#26009;&#26694;&#30340;&#20989;&#25976;&#19968;&#35261;">&#24120;&#35211;&#27298;&#35222;&#36039;&#26009;&#26694;&#30340;&#20989;&#25976;&#19968;&#35261;<a class="anchor-link" href="#&#24120;&#35211;&#27298;&#35222;&#36039;&#26009;&#26694;&#30340;&#20989;&#25976;&#19968;&#35261;">&#182;</a></h2><ul>
-<li><code>dim()</code>、<code>nrow()</code> 與 <code>ncol()</code> 檢視外觀</li>
-<li><code>summary()</code> 描述性統計</li>
-<li><code>str()</code> 詳細資訊</li>
-<li><code>View()</code>、<code>head()</code> 與 <code>tail()</code> 顯示資料框</li>
+<li><code>dim()</code>、<code>nrow()</code> 與 <code>ncol()</code> 檢視外觀。</li>
+<li><code>colnames()</code> 與 <code>row.names()</code> 檢視變數名稱與觀測值索引。</li>
+<li><code>summary()</code> 描述性統計。</li>
+<li><code>str()</code> 詳細資訊。</li>
+<li><code>View()</code>、<code>head()</code> 與 <code>tail()</code> 顯示資料框。</li>
 </ul>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#31684;&#20363;&#36039;&#26009;&#20358;&#28304;">&#31684;&#20363;&#36039;&#26009;&#20358;&#28304;<a class="anchor-link" href="#&#31684;&#20363;&#36039;&#26009;&#20358;&#28304;">&#182;</a></h2><p><a href="https://github.com/CSSEGISandData/COVID-19">COVID-19 Data Repository by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University</a></p>
+
+</div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">csv_url</span> <span class="o">&lt;-</span> <span class="s">&quot;https://s3-ap-northeast-1.amazonaws.com/r-essentials/chicago_bulls_1995_1996.csv&quot;</span>
-<span class="n">chicago_bulls</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span><span class="n">csv_url</span><span class="p">,</span> <span class="n">stringsAsFactors</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">get_daily_report</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">file_date</span> <span class="o">&lt;-</span> <span class="nf">format</span><span class="p">(</span><span class="nf">Sys.Date</span><span class="p">()</span> <span class="o">-</span> <span class="m">2</span><span class="p">,</span> <span class="s">&quot;%m-%d-%Y&quot;</span><span class="p">)</span>
+    <span class="n">csv_url</span> <span class="o">&lt;-</span> <span class="nf">paste0</span><span class="p">(</span><span class="s">&quot;https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/&quot;</span><span class="p">,</span>
+                      <span class="s">&quot;csse_covid_19_daily_reports/&quot;</span><span class="p">,</span>
+                      <span class="n">file_date</span><span class="p">,</span>
+                      <span class="s">&quot;.csv&quot;</span>
+                     <span class="p">)</span>
+    <span class="n">daily_report</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span><span class="n">csv_url</span><span class="p">)</span>
+    <span class="nf">return</span><span class="p">(</span><span class="n">daily_report</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="n">daily_report</span> <span class="o">&lt;-</span> <span class="nf">get_daily_report</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -14427,14 +14443,87 @@ div.jp-OutputPrompt {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">nrow</span><span class="p">(</span><span class="n">chicago_bulls</span><span class="p">)</span>
-<span class="nf">ncol</span><span class="p">(</span><span class="n">chicago_bulls</span><span class="p">)</span>
-<span class="nf">dim</span><span class="p">(</span><span class="n">chicago_bulls</span><span class="p">)</span>
-<span class="nf">summary</span><span class="p">(</span><span class="n">chicago_bulls</span><span class="p">)</span>
-<span class="nf">str</span><span class="p">(</span><span class="n">chicago_bulls</span><span class="p">)</span>
-<span class="nf">head</span><span class="p">(</span><span class="n">chicago_bulls</span><span class="p">)</span>
-<span class="nf">tail</span><span class="p">(</span><span class="n">chicago_bulls</span><span class="p">)</span>
-<span class="c1">#View(chicago_bulls)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="nf">nrow</span><span class="p">(</span><span class="n">daily_report</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">ncol</span><span class="p">(</span><span class="n">daily_report</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">dim</span><span class="p">(</span><span class="n">daily_report</span><span class="p">))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[1] 3987
+[1] 14
+[1] 3987   14
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="nf">colnames</span><span class="p">(</span><span class="n">daily_report</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">row.names</span><span class="p">(</span><span class="n">daily_report</span><span class="p">)[</span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">])</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre> [1] &#34;FIPS&#34;                &#34;Admin2&#34;              &#34;Province_State&#34;     
+ [4] &#34;Country_Region&#34;      &#34;Last_Update&#34;         &#34;Lat&#34;                
+ [7] &#34;Long_&#34;               &#34;Confirmed&#34;           &#34;Deaths&#34;             
+[10] &#34;Recovered&#34;           &#34;Active&#34;              &#34;Combined_Key&#34;       
+[13] &#34;Incident_Rate&#34;       &#34;Case_Fatality_Ratio&#34;
+ [1] &#34;1&#34;  &#34;2&#34;  &#34;3&#34;  &#34;4&#34;  &#34;5&#34;  &#34;6&#34;  &#34;7&#34;  &#34;8&#34;  &#34;9&#34;  &#34;10&#34;
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">summary</span><span class="p">(</span><span class="n">daily_report</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14454,68 +14543,66 @@ div.jp-OutputPrompt {
 
 
 
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-15
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-7
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<ol class=list-inline>
-	<li>15</li>
-	<li>7</li>
-</ol>
-
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
 
 <div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
-<pre>      No.           Player              Pos                 Ht           
- Min.   : 0.00   Length:15          Length:15          Length:15         
- 1st Qu.:11.00   Class :character   Class :character   Class :character  
- Median :25.00   Mode  :character   Mode  :character   Mode  :character  
- Mean   :29.13                                                           
- 3rd Qu.:34.50                                                           
- Max.   :91.00                                                           
-       Wt         Birth.Date          College         
- Min.   :175.0   Length:15          Length:15         
- 1st Qu.:193.5   Class :character   Class :character  
- Median :220.0   Mode  :character   Mode  :character  
- Mean   :219.0                                        
- 3rd Qu.:242.5                                        
- Max.   :265.0                                        </pre>
+<pre>      FIPS          Admin2          Province_State     Country_Region    
+ Min.   :   66   Length:3987        Length:3987        Length:3987       
+ 1st Qu.:19050   Class :character   Class :character   Class :character  
+ Median :30068   Mode  :character   Mode  :character   Mode  :character  
+ Mean   :32401                                                           
+ 3rd Qu.:47040                                                           
+ Max.   :99999                                                           
+ NA&#39;s   :721                                                             
+ Last_Update             Lat             Long_           Confirmed      
+ Length:3987        Min.   :-52.37   Min.   :-178.12   Min.   :      0  
+ Class :character   1st Qu.: 33.27   1st Qu.: -96.62   1st Qu.:   1346  
+ Mode  :character   Median : 37.94   Median : -86.85   Median :   3808  
+                    Mean   : 35.95   Mean   : -71.98   Mean   :  53653  
+                    3rd Qu.: 42.22   3rd Qu.: -77.49   3rd Qu.:  15766  
+                    Max.   : 71.71   Max.   : 178.06   Max.   :6537883  
+                    NA&#39;s   :88       NA&#39;s   :88                         
+     Deaths         Recovered       Active        Combined_Key      
+ Min.   :     0.0   Mode:logical   Mode:logical   Length:3987       
+ 1st Qu.:    21.0   NA&#39;s:3987      NA&#39;s:3987      Class :character  
+ Median :    63.0                                 Mode  :character  
+ Mean   :  1119.6                                                   
+ 3rd Qu.:   229.5                                                   
+ Max.   :144767.0                                                   
+                                                                    
+ Incident_Rate   Case_Fatality_Ratio
+ Min.   :    0   Min.   :   0.000   
+ 1st Qu.: 7977   1st Qu.:   1.154   
+ Median :10996   Median :   1.668   
+ Mean   :10399   Mean   :   2.664   
+ 3rd Qu.:13281   3rd Qu.:   2.329   
+ Max.   :66658   Max.   :2672.528   
+ NA&#39;s   :89      NA&#39;s   :38         </pre>
 </div>
 
 </div>
+
+</div>
+
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">str</span><span class="p">(</span><span class="n">daily_report</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
 
 <div class="jp-OutputArea-child">
 
@@ -14524,64 +14611,101 @@ div.jp-OutputPrompt {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>&#39;data.frame&#39;:	15 obs. of  7 variables:
- $ No.       : int  0 30 35 53 54 9 23 25 7 13 ...
- $ Player    : chr  &#34;Randy Brown&#34; &#34;Jud Buechler&#34; &#34;Jason Caffey&#34; &#34;James Edwards&#34; ...
- $ Pos       : chr  &#34;PG&#34; &#34;SF&#34; &#34;PF&#34; &#34;C&#34; ...
- $ Ht        : chr  &#34;6-2&#34; &#34;6-6&#34; &#34;6-8&#34; &#34;7-0&#34; ...
- $ Wt        : int  190 220 255 225 240 185 195 175 192 265 ...
- $ Birth.Date: chr  &#34;May 22, 1968&#34; &#34;June 19, 1968&#34; &#34;June 12, 1973&#34; &#34;November 22, 1955&#34; ...
- $ College   : chr  &#34;University of Houston, New Mexico State University&#34; &#34;University of Arizona&#34; &#34;University of Alabama&#34; &#34;University of Washington&#34; ...
+<pre>&#39;data.frame&#39;:	3987 obs. of  14 variables:
+ $ FIPS               : int  NA NA NA NA NA NA NA NA NA NA ...
+ $ Admin2             : chr  &#34;&#34; &#34;&#34; &#34;&#34; &#34;&#34; ...
+ $ Province_State     : chr  &#34;&#34; &#34;&#34; &#34;&#34; &#34;&#34; ...
+ $ Country_Region     : chr  &#34;Afghanistan&#34; &#34;Albania&#34; &#34;Algeria&#34; &#34;Andorra&#34; ...
+ $ Last_Update        : chr  &#34;2021-08-26 04:21:28&#34; &#34;2021-08-26 04:21:28&#34; &#34;2021-08-26 04:21:28&#34; &#34;2021-08-26 04:21:28&#34; ...
+ $ Lat                : num  33.9 41.2 28 42.5 -11.2 ...
+ $ Long_              : num  67.71 20.17 1.66 1.52 17.87 ...
+ $ Confirmed          : int  152722 141365 193171 15014 46539 1598 5155079 239056 314 21471 ...
+ $ Deaths             : int  7090 2483 5096 130 1176 43 110966 4778 3 133 ...
+ $ Recovered          : logi  NA NA NA NA NA NA ...
+ $ Active             : logi  NA NA NA NA NA NA ...
+ $ Combined_Key       : chr  &#34;Afghanistan&#34; &#34;Albania&#34; &#34;Algeria&#34; &#34;Andorra&#34; ...
+ $ Incident_Rate      : num  392 4912 441 19432 142 ...
+ $ Case_Fatality_Ratio: num  4.642 1.756 2.638 0.866 2.527 ...
 </pre>
 </div>
 </div>
 
+</div>
+
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="nf">head</span><span class="p">(</span><span class="n">daily_report</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">tail</span><span class="p">(</span><span class="n">daily_report</span><span class="p">))</span>
+<span class="c1">#View(daily_report)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
 <div class="jp-OutputArea-child">
 
     
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<table>
-<thead><tr><th scope=col>No.</th><th scope=col>Player</th><th scope=col>Pos</th><th scope=col>Ht</th><th scope=col>Wt</th><th scope=col>Birth.Date</th><th scope=col>College</th></tr></thead>
-<tbody>
-	<tr><td> 0                                                </td><td>Randy Brown                                       </td><td>PG                                                </td><td>6-2                                               </td><td>190                                               </td><td>May 22, 1968                                      </td><td>University of Houston, New Mexico State University</td></tr>
-	<tr><td>30                                                </td><td>Jud Buechler                                      </td><td>SF                                                </td><td>6-6                                               </td><td>220                                               </td><td>June 19, 1968                                     </td><td>University of Arizona                             </td></tr>
-	<tr><td>35                                                </td><td>Jason Caffey                                      </td><td>PF                                                </td><td>6-8                                               </td><td>255                                               </td><td>June 12, 1973                                     </td><td>University of Alabama                             </td></tr>
-	<tr><td>53                                                </td><td>James Edwards                                     </td><td>C                                                 </td><td>7-0                                               </td><td>225                                               </td><td>November 22, 1955                                 </td><td>University of Washington                          </td></tr>
-	<tr><td>54                                                </td><td>Jack Haley                                        </td><td>C                                                 </td><td>6-10                                              </td><td>240                                               </td><td>January 27, 1964                                  </td><td>University of California, Los Angeles             </td></tr>
-	<tr><td> 9                                                </td><td>Ron Harper                                        </td><td>PG                                                </td><td>6-6                                               </td><td>185                                               </td><td>January 20, 1964                                  </td><td>Miami University                                  </td></tr>
-</tbody>
-</table>
-
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>  FIPS Admin2 Province_State      Country_Region         Last_Update       Lat
+1   NA                               Afghanistan 2021-08-26 04:21:28  33.93911
+2   NA                                   Albania 2021-08-26 04:21:28  41.15330
+3   NA                                   Algeria 2021-08-26 04:21:28  28.03390
+4   NA                                   Andorra 2021-08-26 04:21:28  42.50630
+5   NA                                    Angola 2021-08-26 04:21:28 -11.20270
+6   NA                       Antigua and Barbuda 2021-08-26 04:21:28  17.06080
+      Long_ Confirmed Deaths Recovered Active        Combined_Key Incident_Rate
+1  67.70995    152722   7090        NA     NA         Afghanistan      392.3157
+2  20.16830    141365   2483        NA     NA             Albania     4912.2594
+3   1.65960    193171   5096        NA     NA             Algeria      440.5163
+4   1.52180     15014    130        NA     NA             Andorra    19431.8255
+5  17.87390     46539   1176        NA     NA              Angola      141.6011
+6 -61.79640      1598     43        NA     NA Antigua and Barbuda     1631.8111
+  Case_Fatality_Ratio
+1           4.6424222
+2           1.7564461
+3           2.6380771
+4           0.8658585
+5           2.5269129
+6           2.6908636
+     FIPS Admin2 Province_State     Country_Region         Last_Update
+3982   NA                                Venezuela 2021-08-26 04:21:28
+3983   NA                                  Vietnam 2021-08-26 04:21:28
+3984   NA                       West Bank and Gaza 2021-08-26 04:21:28
+3985   NA                                    Yemen 2021-08-26 04:21:28
+3986   NA                                   Zambia 2021-08-26 04:21:28
+3987   NA                                 Zimbabwe 2021-08-26 04:21:28
+           Lat     Long_ Confirmed Deaths Recovered Active       Combined_Key
+3982   6.42380 -66.58970    328550   3940        NA     NA          Venezuela
+3983  14.05832 108.27720    381363   9349        NA     NA            Vietnam
+3984  31.95220  35.23320    330821   3654        NA     NA West Bank and Gaza
+3985  15.55273  48.51639      7625   1438        NA     NA              Yemen
+3986 -13.13390  27.84933    205107   3586        NA     NA             Zambia
+3987 -19.01544  29.15486    123711   4338        NA     NA           Zimbabwe
+     Incident_Rate Case_Fatality_Ratio
+3982    1155.40392            1.199209
+3983     391.79017            2.451470
+3984    6484.88577            1.104525
+3985      25.56497           18.859016
+3986    1115.68479            1.748356
+3987     832.34615            3.506560
+</pre>
 </div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<table>
-<thead><tr><th></th><th scope=col>No.</th><th scope=col>Player</th><th scope=col>Pos</th><th scope=col>Ht</th><th scope=col>Wt</th><th scope=col>Birth.Date</th><th scope=col>College</th></tr></thead>
-<tbody>
-	<tr><th scope=row>10</th><td>13                                    </td><td>Luc Longley                           </td><td>C                                     </td><td>7-2                                   </td><td>265                                   </td><td>January 19, 1969                      </td><td>University of New Mexico              </td></tr>
-	<tr><th scope=row>11</th><td>33                                    </td><td>Scottie Pippen                        </td><td>SF                                    </td><td>6-8                                   </td><td>210                                   </td><td>September 25, 1965                    </td><td>University of Central Arkansas        </td></tr>
-	<tr><th scope=row>12</th><td>91                                    </td><td>Dennis Rodman                         </td><td>PF                                    </td><td>6-7                                   </td><td>210                                   </td><td>May 13, 1961                          </td><td>Southeastern Oklahoma State University</td></tr>
-	<tr><th scope=row>13</th><td>22                                    </td><td>John Salley                           </td><td>PF                                    </td><td>6-11                                  </td><td>230                                   </td><td>May 16, 1964                          </td><td>Georgia Institute of Technology       </td></tr>
-	<tr><th scope=row>14</th><td> 8                                    </td><td>Dickey Simpkins                       </td><td>PF                                    </td><td>6-9                                   </td><td>248                                   </td><td>April 6, 1972                         </td><td>Providence College                    </td></tr>
-	<tr><th scope=row>15</th><td>34                                    </td><td>Bill Wennington                       </td><td>C                                     </td><td>7-0                                   </td><td>245                                   </td><td>April 26, 1963                        </td><td>St. John's University                 </td></tr>
-</tbody>
-</table>
-
-</div>
-
 </div>
 
 </div>
@@ -14597,245 +14721,73 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="&#22522;&#30990;&#36039;&#26009;&#26694;&#34389;&#29702;&#30340;&#25216;&#24039;">&#22522;&#30990;&#36039;&#26009;&#26694;&#34389;&#29702;&#30340;&#25216;&#24039;<a class="anchor-link" href="#&#22522;&#30990;&#36039;&#26009;&#26694;&#34389;&#29702;&#30340;&#25216;&#24039;">&#182;</a></h2><ul>
-<li>解構資料框<ul>
-<li>選擇</li>
-<li>篩選</li>
-<li>選擇與篩選</li>
+<li>解構資料框。<ul>
+<li>選擇。</li>
+<li>篩選。</li>
+<li>選擇與篩選。</li>
 </ul>
 </li>
-<li>排序資料框</li>
-<li>新增變數</li>
-<li>摘要</li>
-<li>分組摘要</li>
+<li>排序資料框。</li>
+<li>新增變數。</li>
+<li>摘要。</li>
 </ul>
 
 </div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#35299;&#27083;&#36039;&#26009;&#26694;&#65306;&#36984;&#25799;">&#35299;&#27083;&#36039;&#26009;&#26694;&#65306;&#36984;&#25799;<a class="anchor-link" href="#&#35299;&#27083;&#36039;&#26009;&#26694;&#65306;&#36984;&#25799;">&#182;</a></h2><p>使用 <code>df[, COLUMN_NAME]</code> 或 <code>df$COLUMN_NAME</code></p>
+<h2 id="&#35299;&#27083;&#36039;&#26009;&#26694;&#65306;&#36984;&#25799;">&#35299;&#27083;&#36039;&#26009;&#26694;&#65306;&#36984;&#25799;<a class="anchor-link" href="#&#35299;&#27083;&#36039;&#26009;&#26694;&#65306;&#36984;&#25799;">&#182;</a></h2><p>使用 <code>df[["COLUMN_NAME"]]</code>、<code>df[, c("COLUMN_NAMES")]</code> 或 <code>df$COLUMN_NAME</code> 語法。</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">chicago_bulls</span><span class="p">[,</span> <span class="s">&quot;Player&quot;</span><span class="p">]</span>
-<span class="n">chicago_bulls</span><span class="o">$</span><span class="n">Player</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<ol class=list-inline>
-	<li>'Randy Brown'</li>
-	<li>'Jud Buechler'</li>
-	<li>'Jason Caffey'</li>
-	<li>'James Edwards'</li>
-	<li>'Jack Haley'</li>
-	<li>'Ron Harper'</li>
-	<li>'Michael Jordan'</li>
-	<li>'Steve Kerr'</li>
-	<li>'Toni Kukoc'</li>
-	<li>'Luc Longley'</li>
-	<li>'Scottie Pippen'</li>
-	<li>'Dennis Rodman'</li>
-	<li>'John Salley'</li>
-	<li>'Dickey Simpkins'</li>
-	<li>'Bill Wennington'</li>
-</ol>
-
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<ol class=list-inline>
-	<li>'Randy Brown'</li>
-	<li>'Jud Buechler'</li>
-	<li>'Jason Caffey'</li>
-	<li>'James Edwards'</li>
-	<li>'Jack Haley'</li>
-	<li>'Ron Harper'</li>
-	<li>'Michael Jordan'</li>
-	<li>'Steve Kerr'</li>
-	<li>'Toni Kukoc'</li>
-	<li>'Luc Longley'</li>
-	<li>'Scottie Pippen'</li>
-	<li>'Dennis Rodman'</li>
-	<li>'John Salley'</li>
-	<li>'Dickey Simpkins'</li>
-	<li>'Bill Wennington'</li>
-</ol>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#35299;&#27083;&#36039;&#26009;&#26694;&#65306;&#31721;&#36984;">&#35299;&#27083;&#36039;&#26009;&#26694;&#65306;&#31721;&#36984;<a class="anchor-link" href="#&#35299;&#27083;&#36039;&#26009;&#26694;&#65306;&#31721;&#36984;">&#182;</a></h2><p>使用 <code>df[EXPR, ]</code> 或 <code>df[ROW_INDICES, ]</code></p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">chicago_bulls</span><span class="p">[</span><span class="n">chicago_bulls</span><span class="o">$</span><span class="n">Player</span> <span class="o">==</span> <span class="s">&quot;Michael Jordan&quot;</span><span class="p">,]</span>
-<span class="n">chicago_bulls</span><span class="p">[</span><span class="m">7</span><span class="p">,</span> <span class="p">]</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<table>
-<thead><tr><th></th><th scope=col>No.</th><th scope=col>Player</th><th scope=col>Pos</th><th scope=col>Ht</th><th scope=col>Wt</th><th scope=col>Birth.Date</th><th scope=col>College</th></tr></thead>
-<tbody>
-	<tr><th scope=row>7</th><td>23                          </td><td>Michael Jordan              </td><td>SG                          </td><td>6-6                         </td><td>195                         </td><td>February 17, 1963           </td><td>University of North Carolina</td></tr>
-</tbody>
-</table>
-
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<table>
-<thead><tr><th></th><th scope=col>No.</th><th scope=col>Player</th><th scope=col>Pos</th><th scope=col>Ht</th><th scope=col>Wt</th><th scope=col>Birth.Date</th><th scope=col>College</th></tr></thead>
-<tbody>
-	<tr><th scope=row>7</th><td>23                          </td><td>Michael Jordan              </td><td>SG                          </td><td>6-6                         </td><td>195                         </td><td>February 17, 1963           </td><td>University of North Carolina</td></tr>
-</tbody>
-</table>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#35299;&#27083;&#36039;&#26009;&#26694;&#65306;&#36984;&#25799;&#33287;&#31721;&#36984;">&#35299;&#27083;&#36039;&#26009;&#26694;&#65306;&#36984;&#25799;&#33287;&#31721;&#36984;<a class="anchor-link" href="#&#35299;&#27083;&#36039;&#26009;&#26694;&#65306;&#36984;&#25799;&#33287;&#31721;&#36984;">&#182;</a></h2><p>使用 <code>df[EXPR, COLUMN_NAME]</code> 或 <code>df[ROW_INDICES, COLUMN_NAME]</code></p>
-
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">chicago_bulls</span><span class="p">[</span><span class="n">chicago_bulls</span><span class="o">$</span><span class="n">Player</span> <span class="o">==</span> <span class="s">&quot;Michael Jordan&quot;</span><span class="p">,</span> <span class="s">&quot;Player&quot;</span><span class="p">]</span>
-<span class="n">chicago_bulls</span><span class="p">[</span><span class="m">7</span><span class="p">,</span> <span class="s">&quot;Player&quot;</span><span class="p">]</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-'Michael Jordan'
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-'Michael Jordan'
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#37941;&#19977;&#35282;-Michael-Jordan,-Scottie-Pippen-&#33287;-Dennis-Rodman">&#38568;&#22530;&#32244;&#32722;&#65306;&#37941;&#19977;&#35282; Michael Jordan, Scottie Pippen &#33287; Dennis Rodman<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#37941;&#19977;&#35282;-Michael-Jordan,-Scottie-Pippen-&#33287;-Dennis-Rodman">&#182;</a></h2>
-</div>
-</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">trio</span>
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># selecting a column</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">daily_report</span><span class="p">[[</span><span class="s">&quot;Country_Region&quot;</span><span class="p">]][</span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">])</span>
+<span class="c1">#print(daily_report[, &quot;Country_Region&quot;])</span>
+<span class="c1">#print(daily_report$Country_Region)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre> [1] &#34;Afghanistan&#34;         &#34;Albania&#34;             &#34;Algeria&#34;            
+ [4] &#34;Andorra&#34;             &#34;Angola&#34;              &#34;Antigua and Barbuda&#34;
+ [7] &#34;Argentina&#34;           &#34;Armenia&#34;             &#34;Australia&#34;          
+[10] &#34;Australia&#34;          
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># selecting columns</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">daily_report</span><span class="p">[,</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Combined_Key&quot;</span><span class="p">,</span> <span class="s">&quot;Confirmed&quot;</span><span class="p">)])</span>
 </pre></div>
 
      </div>
@@ -14857,11 +14809,18 @@ div.jp-OutputPrompt {
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
 <table>
-<thead><tr><th></th><th scope=col>No.</th><th scope=col>Player</th></tr></thead>
+<caption>A data.frame: 6 × 2</caption>
+<thead>
+	<tr><th></th><th scope=col>Combined_Key</th><th scope=col>Confirmed</th></tr>
+	<tr><th></th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
 <tbody>
-	<tr><th scope=row>7</th><td>23            </td><td>Michael Jordan</td></tr>
-	<tr><th scope=row>11</th><td>33            </td><td>Scottie Pippen</td></tr>
-	<tr><th scope=row>12</th><td>91            </td><td>Dennis Rodman </td></tr>
+	<tr><th scope=row>1</th><td>Afghanistan        </td><td>152722</td></tr>
+	<tr><th scope=row>2</th><td>Albania            </td><td>141365</td></tr>
+	<tr><th scope=row>3</th><td>Algeria            </td><td>193171</td></tr>
+	<tr><th scope=row>4</th><td>Andorra            </td><td> 15014</td></tr>
+	<tr><th scope=row>5</th><td>Angola             </td><td> 46539</td></tr>
+	<tr><th scope=row>6</th><td>Antigua and Barbuda</td><td>  1598</td></tr>
 </tbody>
 </table>
 
@@ -14873,20 +14832,20 @@ div.jp-OutputPrompt {
 
 </div>
 
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#25490;&#24207;&#36039;&#26009;&#26694;">&#25490;&#24207;&#36039;&#26009;&#26694;<a class="anchor-link" href="#&#25490;&#24207;&#36039;&#26009;&#26694;">&#182;</a></h2><p>利用 <code>order()</code> 函數取得排序後的列索引</p>
+<h2 id="&#35299;&#27083;&#36039;&#26009;&#26694;&#65306;&#31721;&#36984;">&#35299;&#27083;&#36039;&#26009;&#26694;&#65306;&#31721;&#36984;<a class="anchor-link" href="#&#35299;&#27083;&#36039;&#26009;&#26694;&#65306;&#31721;&#36984;">&#182;</a></h2><p>使用 <code>df[CONDITION, ]</code> 或 <code>df[ROW_INDEX, ]</code> 語法。</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">ordered_indices</span> <span class="o">&lt;-</span> <span class="nf">order</span><span class="p">(</span><span class="n">chicago_bulls</span><span class="p">[,</span> <span class="s">&quot;No.&quot;</span><span class="p">])</span>
-<span class="n">chicago_bulls</span><span class="p">[</span><span class="n">ordered_indices</span><span class="p">,</span> <span class="p">]</span>
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># filtering a row</span>
+<span class="n">daily_report</span><span class="p">[</span><span class="n">daily_report</span><span class="o">$</span><span class="n">Country_Region</span> <span class="o">==</span> <span class="s">&quot;Taiwan*&quot;</span><span class="p">,</span> <span class="p">]</span>
 </pre></div>
 
      </div>
@@ -14908,23 +14867,250 @@ div.jp-OutputPrompt {
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
 <table>
-<thead><tr><th></th><th scope=col>No.</th><th scope=col>Player</th><th scope=col>Pos</th><th scope=col>Ht</th><th scope=col>Wt</th><th scope=col>Birth.Date</th><th scope=col>College</th></tr></thead>
+<caption>A data.frame: 1 × 14</caption>
+<thead>
+	<tr><th></th><th scope=col>FIPS</th><th scope=col>Admin2</th><th scope=col>Province_State</th><th scope=col>Country_Region</th><th scope=col>Last_Update</th><th scope=col>Lat</th><th scope=col>Long_</th><th scope=col>Confirmed</th><th scope=col>Deaths</th><th scope=col>Recovered</th><th scope=col>Active</th><th scope=col>Combined_Key</th><th scope=col>Incident_Rate</th><th scope=col>Case_Fatality_Ratio</th></tr>
+	<tr><th></th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;lgl&gt;</th><th scope=col>&lt;lgl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
 <tbody>
-	<tr><th scope=row>1</th><td> 0                                                </td><td>Randy Brown                                       </td><td>PG                                                </td><td>6-2                                               </td><td>190                                               </td><td>May 22, 1968                                      </td><td>University of Houston, New Mexico State University</td></tr>
-	<tr><th scope=row>9</th><td> 7                                                </td><td>Toni Kukoc                                        </td><td>SF                                                </td><td>6-10                                              </td><td>192                                               </td><td>September 18, 1968                                </td><td>                                                  </td></tr>
-	<tr><th scope=row>14</th><td> 8                                                </td><td>Dickey Simpkins                                   </td><td>PF                                                </td><td>6-9                                               </td><td>248                                               </td><td>April 6, 1972                                     </td><td>Providence College                                </td></tr>
-	<tr><th scope=row>6</th><td> 9                                                </td><td>Ron Harper                                        </td><td>PG                                                </td><td>6-6                                               </td><td>185                                               </td><td>January 20, 1964                                  </td><td>Miami University                                  </td></tr>
-	<tr><th scope=row>10</th><td>13                                                </td><td>Luc Longley                                       </td><td>C                                                 </td><td>7-2                                               </td><td>265                                               </td><td>January 19, 1969                                  </td><td>University of New Mexico                          </td></tr>
-	<tr><th scope=row>13</th><td>22                                                </td><td>John Salley                                       </td><td>PF                                                </td><td>6-11                                              </td><td>230                                               </td><td>May 16, 1964                                      </td><td>Georgia Institute of Technology                   </td></tr>
-	<tr><th scope=row>7</th><td>23                                                </td><td>Michael Jordan                                    </td><td>SG                                                </td><td>6-6                                               </td><td>195                                               </td><td>February 17, 1963                                 </td><td>University of North Carolina                      </td></tr>
-	<tr><th scope=row>8</th><td>25                                                </td><td>Steve Kerr                                        </td><td>PG                                                </td><td>6-3                                               </td><td>175                                               </td><td>September 27, 1965                                </td><td>University of Arizona                             </td></tr>
-	<tr><th scope=row>2</th><td>30                                                </td><td>Jud Buechler                                      </td><td>SF                                                </td><td>6-6                                               </td><td>220                                               </td><td>June 19, 1968                                     </td><td>University of Arizona                             </td></tr>
-	<tr><th scope=row>11</th><td>33                                                </td><td>Scottie Pippen                                    </td><td>SF                                                </td><td>6-8                                               </td><td>210                                               </td><td>September 25, 1965                                </td><td>University of Central Arkansas                    </td></tr>
-	<tr><th scope=row>15</th><td>34                                                </td><td>Bill Wennington                                   </td><td>C                                                 </td><td>7-0                                               </td><td>245                                               </td><td>April 26, 1963                                    </td><td>St. John's University                             </td></tr>
-	<tr><th scope=row>3</th><td>35                                                </td><td>Jason Caffey                                      </td><td>PF                                                </td><td>6-8                                               </td><td>255                                               </td><td>June 12, 1973                                     </td><td>University of Alabama                             </td></tr>
-	<tr><th scope=row>4</th><td>53                                                </td><td>James Edwards                                     </td><td>C                                                 </td><td>7-0                                               </td><td>225                                               </td><td>November 22, 1955                                 </td><td>University of Washington                          </td></tr>
-	<tr><th scope=row>5</th><td>54                                                </td><td>Jack Haley                                        </td><td>C                                                 </td><td>6-10                                              </td><td>240                                               </td><td>January 27, 1964                                  </td><td>University of California, Los Angeles             </td></tr>
-	<tr><th scope=row>12</th><td>91                                                </td><td>Dennis Rodman                                     </td><td>PF                                                </td><td>6-7                                               </td><td>210                                               </td><td>May 13, 1961                                      </td><td>Southeastern Oklahoma State University            </td></tr>
+	<tr><th scope=row>648</th><td>NA</td><td></td><td></td><td>Taiwan*</td><td>2021-08-26 04:21:28</td><td>23.7</td><td>121</td><td>15939</td><td>830</td><td>NA</td><td>NA</td><td>Taiwan*</td><td>66.92342</td><td>5.207353</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># filtering a row</span>
+<span class="n">tw_row_index</span> <span class="o">&lt;-</span> <span class="nf">row.names</span><span class="p">(</span><span class="n">daily_report</span><span class="p">[</span><span class="n">daily_report</span><span class="o">$</span><span class="n">Country_Region</span> <span class="o">==</span> <span class="s">&quot;Taiwan*&quot;</span><span class="p">,</span> <span class="p">])</span>
+<span class="n">daily_report</span><span class="p">[</span><span class="nf">as.integer</span><span class="p">(</span><span class="n">tw_row_index</span><span class="p">),</span> <span class="p">]</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 1 × 14</caption>
+<thead>
+	<tr><th></th><th scope=col>FIPS</th><th scope=col>Admin2</th><th scope=col>Province_State</th><th scope=col>Country_Region</th><th scope=col>Last_Update</th><th scope=col>Lat</th><th scope=col>Long_</th><th scope=col>Confirmed</th><th scope=col>Deaths</th><th scope=col>Recovered</th><th scope=col>Active</th><th scope=col>Combined_Key</th><th scope=col>Incident_Rate</th><th scope=col>Case_Fatality_Ratio</th></tr>
+	<tr><th></th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;lgl&gt;</th><th scope=col>&lt;lgl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>648</th><td>NA</td><td></td><td></td><td>Taiwan*</td><td>2021-08-26 04:21:28</td><td>23.7</td><td>121</td><td>15939</td><td>830</td><td>NA</td><td>NA</td><td>Taiwan*</td><td>66.92342</td><td>5.207353</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># filtering rows</span>
+<span class="n">daily_report</span><span class="p">[</span><span class="n">daily_report</span><span class="o">$</span><span class="n">Country_Region</span> <span class="o">==</span> <span class="s">&quot;Australia&quot;</span><span class="p">,</span> <span class="p">]</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 8 × 14</caption>
+<thead>
+	<tr><th></th><th scope=col>FIPS</th><th scope=col>Admin2</th><th scope=col>Province_State</th><th scope=col>Country_Region</th><th scope=col>Last_Update</th><th scope=col>Lat</th><th scope=col>Long_</th><th scope=col>Confirmed</th><th scope=col>Deaths</th><th scope=col>Recovered</th><th scope=col>Active</th><th scope=col>Combined_Key</th><th scope=col>Incident_Rate</th><th scope=col>Case_Fatality_Ratio</th></tr>
+	<tr><th></th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;lgl&gt;</th><th scope=col>&lt;lgl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>9</th><td>NA</td><td></td><td>Australian Capital Territory</td><td>Australia</td><td>2021-08-26 04:21:28</td><td>-35.4735</td><td>149.0124</td><td>  314</td><td>  3</td><td>NA</td><td>NA</td><td>Australian Capital Territory, Australia</td><td> 73.34735</td><td>0.9554140</td></tr>
+	<tr><th scope=row>10</th><td>NA</td><td></td><td>New South Wales             </td><td>Australia</td><td>2021-08-26 04:21:28</td><td>-33.8688</td><td>151.2093</td><td>21471</td><td>133</td><td>NA</td><td>NA</td><td>New South Wales, Australia             </td><td>264.48633</td><td>0.6194402</td></tr>
+	<tr><th scope=row>11</th><td>NA</td><td></td><td>Northern Territory          </td><td>Australia</td><td>2021-08-26 04:21:28</td><td>-12.4634</td><td>130.8456</td><td>  200</td><td>  0</td><td>NA</td><td>NA</td><td>Northern Territory, Australia          </td><td> 81.43322</td><td>0.0000000</td></tr>
+	<tr><th scope=row>12</th><td>NA</td><td></td><td>Queensland                  </td><td>Australia</td><td>2021-08-26 04:21:28</td><td>-27.4698</td><td>153.0251</td><td> 1972</td><td>  7</td><td>NA</td><td>NA</td><td>Queensland, Australia                  </td><td> 38.54951</td><td>0.3549696</td></tr>
+	<tr><th scope=row>13</th><td>NA</td><td></td><td>South Australia             </td><td>Australia</td><td>2021-08-26 04:21:28</td><td>-34.9285</td><td>138.6007</td><td>  870</td><td>  4</td><td>NA</td><td>NA</td><td>South Australia, Australia             </td><td> 49.53032</td><td>0.4597701</td></tr>
+	<tr><th scope=row>14</th><td>NA</td><td></td><td>Tasmania                    </td><td>Australia</td><td>2021-08-26 04:21:28</td><td>-42.8821</td><td>147.3272</td><td>  235</td><td> 13</td><td>NA</td><td>NA</td><td>Tasmania, Australia                    </td><td> 43.88422</td><td>5.5319149</td></tr>
+	<tr><th scope=row>15</th><td>NA</td><td></td><td>Victoria                    </td><td>Australia</td><td>2021-08-26 04:21:28</td><td>-37.8136</td><td>144.9631</td><td>21694</td><td>820</td><td>NA</td><td>NA</td><td>Victoria, Australia                    </td><td>327.21459</td><td>3.7798470</td></tr>
+	<tr><th scope=row>16</th><td>NA</td><td></td><td>Western Australia           </td><td>Australia</td><td>2021-08-26 04:21:28</td><td>-31.9505</td><td>115.8605</td><td> 1084</td><td>  9</td><td>NA</td><td>NA</td><td>Western Australia, Australia           </td><td> 41.20733</td><td>0.8302583</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#35299;&#27083;&#36039;&#26009;&#26694;&#65306;&#36984;&#25799;&#33287;&#31721;&#36984;">&#35299;&#27083;&#36039;&#26009;&#26694;&#65306;&#36984;&#25799;&#33287;&#31721;&#36984;<a class="anchor-link" href="#&#35299;&#27083;&#36039;&#26009;&#26694;&#65306;&#36984;&#25799;&#33287;&#31721;&#36984;">&#182;</a></h2><p>使用 <code>df[CONDITION, COLUMN_NAMES]</code> 或 <code>df[ROW_INDEX, COLUMN_NAMES]</code> 語法。</p>
+
+</div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="n">daily_report</span><span class="p">[</span><span class="n">daily_report</span><span class="o">$</span><span class="n">Country_Region</span> <span class="o">==</span> <span class="s">&quot;Taiwan*&quot;</span><span class="p">,</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Country_Region&quot;</span><span class="p">,</span> <span class="s">&quot;Confirmed&quot;</span><span class="p">)]</span>
+<span class="n">daily_report</span><span class="p">[</span><span class="n">tw_row_index</span><span class="p">,</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Country_Region&quot;</span><span class="p">,</span> <span class="s">&quot;Confirmed&quot;</span><span class="p">)]</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 1 × 2</caption>
+<thead>
+	<tr><th></th><th scope=col>Country_Region</th><th scope=col>Confirmed</th></tr>
+	<tr><th></th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>648</th><td>Taiwan*</td><td>15939</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 1 × 2</caption>
+<thead>
+	<tr><th></th><th scope=col>Country_Region</th><th scope=col>Confirmed</th></tr>
+	<tr><th></th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>648</th><td>Taiwan*</td><td>15939</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#25490;&#24207;&#36039;&#26009;&#26694;">&#25490;&#24207;&#36039;&#26009;&#26694;<a class="anchor-link" href="#&#25490;&#24207;&#36039;&#26009;&#26694;">&#182;</a></h2><p>利用 <code>order()</code> 函數取得排序後的列索引。</p>
+
+</div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># ordering dataframe</span>
+<span class="n">ordered_index</span> <span class="o">&lt;-</span> <span class="nf">order</span><span class="p">(</span><span class="n">daily_report</span><span class="o">$</span><span class="n">Deaths</span><span class="p">)</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">daily_report</span><span class="p">[</span><span class="n">ordered_index</span><span class="p">,</span> <span class="p">])</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 6 × 14</caption>
+<thead>
+	<tr><th></th><th scope=col>FIPS</th><th scope=col>Admin2</th><th scope=col>Province_State</th><th scope=col>Country_Region</th><th scope=col>Last_Update</th><th scope=col>Lat</th><th scope=col>Long_</th><th scope=col>Confirmed</th><th scope=col>Deaths</th><th scope=col>Recovered</th><th scope=col>Active</th><th scope=col>Combined_Key</th><th scope=col>Incident_Rate</th><th scope=col>Case_Fatality_Ratio</th></tr>
+	<tr><th></th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;lgl&gt;</th><th scope=col>&lt;lgl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>11</th><td>NA</td><td></td><td>Northern Territory</td><td>Australia</td><td>2021-08-26 04:21:28</td><td>-12.4634</td><td>130.8456</td><td>   200</td><td>0</td><td>NA</td><td>NA</td><td>Northern Territory, Australia</td><td>   81.43322</td><td>0</td></tr>
+	<tr><th scope=row>24</th><td>NA</td><td></td><td>Antwerp           </td><td>Belgium  </td><td>2021-08-26 04:21:28</td><td> 51.2195</td><td>  4.4024</td><td>155068</td><td>0</td><td>NA</td><td>NA</td><td>Antwerp, Belgium             </td><td> 8346.02629</td><td>0</td></tr>
+	<tr><th scope=row>25</th><td>NA</td><td></td><td>Brussels          </td><td>Belgium  </td><td>2021-08-26 04:21:28</td><td> 50.8503</td><td>  4.3517</td><td>150646</td><td>0</td><td>NA</td><td>NA</td><td>Brussels, Belgium            </td><td>12465.10258</td><td>0</td></tr>
+	<tr><th scope=row>26</th><td>NA</td><td></td><td>East Flanders     </td><td>Belgium  </td><td>2021-08-26 04:21:28</td><td> 51.0362</td><td>  3.7373</td><td>134713</td><td>0</td><td>NA</td><td>NA</td><td>East Flanders, Belgium       </td><td> 8891.57158</td><td>0</td></tr>
+	<tr><th scope=row>27</th><td>NA</td><td></td><td>Flemish Brabant   </td><td>Belgium  </td><td>2021-08-26 04:21:28</td><td> 50.9167</td><td>  4.5833</td><td> 92561</td><td>0</td><td>NA</td><td>NA</td><td>Flemish Brabant, Belgium     </td><td> 8075.64290</td><td>0</td></tr>
+	<tr><th scope=row>28</th><td>NA</td><td></td><td>Hainaut           </td><td>Belgium  </td><td>2021-08-26 04:21:28</td><td> 50.5257</td><td>  4.0621</td><td>167561</td><td>0</td><td>NA</td><td>NA</td><td>Hainaut, Belgium             </td><td>12465.10112</td><td>0</td></tr>
 </tbody>
 </table>
 
@@ -14941,14 +15127,15 @@ div.jp-OutputPrompt {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="&#26032;&#22686;&#35722;&#25976;">&#26032;&#22686;&#35722;&#25976;<a class="anchor-link" href="#&#26032;&#22686;&#35722;&#25976;">&#182;</a></h2>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">chicago_bulls</span><span class="o">$</span><span class="n">Wt_kg</span> <span class="o">&lt;-</span> <span class="n">chicago_bulls</span><span class="o">$</span><span class="n">Wt</span> <span class="o">*</span> <span class="m">0.45359</span>
-<span class="nf">head</span><span class="p">(</span><span class="n">chicago_bulls</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">daily_report</span><span class="o">$</span><span class="n">Death_Rate</span> <span class="o">&lt;-</span> <span class="n">daily_report</span><span class="o">$</span><span class="n">Deaths</span> <span class="o">/</span> <span class="n">daily_report</span><span class="o">$</span><span class="n">Confirmed</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">&quot;Death_Rate&quot;</span> <span class="o">%in%</span> <span class="nf">colnames</span><span class="p">(</span><span class="n">daily_report</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">daily_report</span><span class="o">$</span><span class="n">Death_Rate</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">])</span>
 </pre></div>
 
      </div>
@@ -14967,22 +15154,12 @@ div.jp-OutputPrompt {
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<table>
-<thead><tr><th scope=col>No.</th><th scope=col>Player</th><th scope=col>Pos</th><th scope=col>Ht</th><th scope=col>Wt</th><th scope=col>Birth.Date</th><th scope=col>College</th><th scope=col>Wt_kg</th></tr></thead>
-<tbody>
-	<tr><td> 0                                                </td><td>Randy Brown                                       </td><td>PG                                                </td><td>6-2                                               </td><td>190                                               </td><td>May 22, 1968                                      </td><td>University of Houston, New Mexico State University</td><td> 86.18210                                         </td></tr>
-	<tr><td>30                                                </td><td>Jud Buechler                                      </td><td>SF                                                </td><td>6-6                                               </td><td>220                                               </td><td>June 19, 1968                                     </td><td>University of Arizona                             </td><td> 99.78980                                         </td></tr>
-	<tr><td>35                                                </td><td>Jason Caffey                                      </td><td>PF                                                </td><td>6-8                                               </td><td>255                                               </td><td>June 12, 1973                                     </td><td>University of Alabama                             </td><td>115.66545                                         </td></tr>
-	<tr><td>53                                                </td><td>James Edwards                                     </td><td>C                                                 </td><td>7-0                                               </td><td>225                                               </td><td>November 22, 1955                                 </td><td>University of Washington                          </td><td>102.05775                                         </td></tr>
-	<tr><td>54                                                </td><td>Jack Haley                                        </td><td>C                                                 </td><td>6-10                                              </td><td>240                                               </td><td>January 27, 1964                                  </td><td>University of California, Los Angeles             </td><td>108.86160                                         </td></tr>
-	<tr><td> 9                                                </td><td>Ron Harper                                        </td><td>PG                                                </td><td>6-6                                               </td><td>185                                               </td><td>January 20, 1964                                  </td><td>Miami University                                  </td><td> 83.91415                                         </td></tr>
-</tbody>
-</table>
-
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[1] TRUE
+ [1] 0.046424222 0.017564461 0.026380771 0.008658585 0.025269129 0.026908636
+ [7] 0.021525567 0.019986949 0.009554140 0.006194402
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -14992,72 +15169,16 @@ div.jp-OutputPrompt {
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#26032;&#22686;&#35722;&#25976;-Ht_cm">&#38568;&#22530;&#32244;&#32722;&#65306;&#26032;&#22686;&#35722;&#25976; <code>Ht_cm</code><a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#26032;&#22686;&#35722;&#25976;-Ht_cm">&#182;</a></h2><ul>
-<li>1 feet = 30.48 cm</li>
-<li>1 inch = 2.54 cm</li>
-</ul>
-
-</div>
-</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="n">chicago_bulls</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<table>
-<thead><tr><th scope=col>No.</th><th scope=col>Player</th><th scope=col>Pos</th><th scope=col>Ht</th><th scope=col>Wt</th><th scope=col>Birth.Date</th><th scope=col>College</th><th scope=col>Wt_kg</th><th scope=col>Ht_cm</th></tr></thead>
-<tbody>
-	<tr><td> 0                                                </td><td>Randy Brown                                       </td><td>PG                                                </td><td>6-2                                               </td><td>190                                               </td><td>May 22, 1968                                      </td><td>University of Houston, New Mexico State University</td><td> 86.18210                                         </td><td>187.96                                            </td></tr>
-	<tr><td>30                                                </td><td>Jud Buechler                                      </td><td>SF                                                </td><td>6-6                                               </td><td>220                                               </td><td>June 19, 1968                                     </td><td>University of Arizona                             </td><td> 99.78980                                         </td><td>198.12                                            </td></tr>
-	<tr><td>35                                                </td><td>Jason Caffey                                      </td><td>PF                                                </td><td>6-8                                               </td><td>255                                               </td><td>June 12, 1973                                     </td><td>University of Alabama                             </td><td>115.66545                                         </td><td>203.20                                            </td></tr>
-	<tr><td>53                                                </td><td>James Edwards                                     </td><td>C                                                 </td><td>7-0                                               </td><td>225                                               </td><td>November 22, 1955                                 </td><td>University of Washington                          </td><td>102.05775                                         </td><td>213.36                                            </td></tr>
-	<tr><td>54                                                </td><td>Jack Haley                                        </td><td>C                                                 </td><td>6-10                                              </td><td>240                                               </td><td>January 27, 1964                                  </td><td>University of California, Los Angeles             </td><td>108.86160                                         </td><td>208.28                                            </td></tr>
-	<tr><td> 9                                                </td><td>Ron Harper                                        </td><td>PG                                                </td><td>6-6                                               </td><td>185                                               </td><td>January 20, 1964                                  </td><td>Miami University                                  </td><td> 83.91415                                         </td><td>198.12                                            </td></tr>
-</tbody>
-</table>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div></div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#25688;&#35201;">&#25688;&#35201;<a class="anchor-link" href="#&#25688;&#35201;">&#182;</a></h2><p>針對欲摘要的變數使用敘述性統計函數</p>
+<h2 id="&#25688;&#35201;">&#25688;&#35201;<a class="anchor-link" href="#&#25688;&#35201;">&#182;</a></h2><p>針對欲摘要的變數使用敘述性統計函數。</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">mean</span><span class="p">(</span><span class="n">chicago_bulls</span><span class="o">$</span><span class="n">Ht_cm</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="nf">mean</span><span class="p">(</span><span class="n">daily_report</span><span class="o">$</span><span class="n">Deaths</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -15076,11 +15197,10 @@ div.jp-OutputPrompt {
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-203.877333333333
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[1] 1119.572
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -15090,14 +15210,14 @@ div.jp-OutputPrompt {
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#20351;&#29992;-dplyr-&#34389;&#29702;&#36039;&#26009;&#26694;">&#20351;&#29992; <code>dplyr</code> &#34389;&#29702;&#36039;&#26009;&#26694;<a class="anchor-link" href="#&#20351;&#29992;-dplyr-&#34389;&#29702;&#36039;&#26009;&#26694;">&#182;</a></h2>
+<h2 id="&#20197;-dplyr-&#20989;&#25976;&#34389;&#29702;&#36039;&#26009;&#26694;">&#20197; <code>dplyr</code> &#20989;&#25976;&#34389;&#29702;&#36039;&#26009;&#26694;<a class="anchor-link" href="#&#20197;-dplyr-&#20989;&#25976;&#34389;&#29702;&#36039;&#26009;&#26694;">&#182;</a></h2>
 </div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="&#20351;&#29992;-dplyr-&#34389;&#29702;&#36039;&#26009;&#26694;">&#20351;&#29992; <code>dplyr</code> &#34389;&#29702;&#36039;&#26009;&#26694;<a class="anchor-link" href="#&#20351;&#29992;-dplyr-&#34389;&#29702;&#36039;&#26009;&#26694;">&#182;</a></h2><ul>
-<li>安裝 <code>dplyr</code> 套件 </li>
-<li>載入 <code>dplyr</code> 套件</li>
+<li>安裝 <code>dplyr</code> 套件。</li>
+<li>載入 <code>dplyr</code> 套件。</li>
 </ul>
 
 </div>
@@ -15105,8 +15225,8 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="&#23433;&#35037;-dplyr-&#22871;&#20214;">&#23433;&#35037; <code>dplyr</code> &#22871;&#20214;<a class="anchor-link" href="#&#23433;&#35037;-dplyr-&#22871;&#20214;">&#182;</a></h2><ul>
-<li>透過 RStudio 的 <code>Packages</code> 功能頁籤</li>
-<li>透過 <code>install.packages()</code> 函數</li>
+<li>透過 RStudio 的 <code>Packages</code> 功能頁籤。</li>
+<li>透過 <code>install.packages()</code> 函數。</li>
 </ul>
 <div class="highlight"><pre><span></span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;dplyr&quot;</span><span class="p">)</span>
 </pre></div>
@@ -15116,18 +15236,441 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="&#36617;&#20837;-dplyr-&#22871;&#20214;">&#36617;&#20837; <code>dplyr</code> &#22871;&#20214;<a class="anchor-link" href="#&#36617;&#20837;-dplyr-&#22871;&#20214;">&#182;</a></h2><ul>
-<li>透過 RStudio 的 <code>Packages</code> 功能頁籤</li>
-<li>透過 <code>library()</code> 函數</li>
+<li>透過 RStudio 的 <code>Packages</code> 功能頁籤。</li>
+<li>透過 <code>library()</code> 函數。</li>
 </ul>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="s">&quot;dplyr&quot;</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="nf">suppressMessages</span><span class="p">(</span><span class="nf">library</span><span class="p">(</span><span class="s">&quot;dplyr&quot;</span><span class="p">))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#20351;&#29992;-%&gt;%-pipe-&#36939;&#31639;&#31526;&#37832;&#32080;&#20989;&#25976;">&#20351;&#29992; <code>%&gt;%</code> pipe &#36939;&#31639;&#31526;&#37832;&#32080;&#20989;&#25976;<a class="anchor-link" href="#&#20351;&#29992;-%&gt;%-pipe-&#36939;&#31639;&#31526;&#37832;&#32080;&#20989;&#25976;">&#182;</a></h2><ul>
+<li><code>%&gt;%</code> 運算符來自 <code>magrittr</code>，會隨著 <code>dplyr</code> 一起被安裝。</li>
+<li>讓需要鏈結函數的資料操作可讀性更高。</li>
+<li>在 RStudio 中使用 <code>Ctrl-Shift-M</code> 快捷鍵可以叫出 <code>%&gt;%</code> 運算符。</li>
+</ul>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#20351;&#29992;-dplyr-&#36914;&#34892;&#22522;&#30990;&#36039;&#26009;&#26694;&#34389;&#29702;">&#20351;&#29992; <code>dplyr</code> &#36914;&#34892;&#22522;&#30990;&#36039;&#26009;&#26694;&#34389;&#29702;<a class="anchor-link" href="#&#20351;&#29992;-dplyr-&#36914;&#34892;&#22522;&#30990;&#36039;&#26009;&#26694;&#34389;&#29702;">&#182;</a></h2><ul>
+<li>解構資料框。<ul>
+<li>選擇與篩選。</li>
+</ul>
+</li>
+<li>排序資料框。</li>
+<li>新增變數。</li>
+<li>摘要。</li>
+<li>分組摘要。</li>
+</ul>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#35299;&#27083;&#36039;&#26009;&#26694;&#65306;&#36984;&#25799;&#33287;&#31721;&#36984;">&#35299;&#27083;&#36039;&#26009;&#26694;&#65306;&#36984;&#25799;&#33287;&#31721;&#36984;<a class="anchor-link" href="#&#35299;&#27083;&#36039;&#26009;&#26694;&#65306;&#36984;&#25799;&#33287;&#31721;&#36984;">&#182;</a></h2><ul>
+<li>使用 <code>dplyr::select()</code> 函數選擇。</li>
+<li>使用 <code>dplyr::filter()</code> 函數篩選。</li>
+</ul>
+
+</div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="nf">select</span><span class="p">(</span><span class="n">daily_report</span><span class="p">,</span> <span class="nf">c</span><span class="p">(</span><span class="n">Country_Region</span><span class="p">,</span> <span class="n">Confirmed</span><span class="p">,</span> <span class="n">Deaths</span><span class="p">)))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 6 × 3</caption>
+<thead>
+	<tr><th></th><th scope=col>Country_Region</th><th scope=col>Confirmed</th><th scope=col>Deaths</th></tr>
+	<tr><th></th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>Afghanistan        </td><td>152722</td><td>7090</td></tr>
+	<tr><th scope=row>2</th><td>Albania            </td><td>141365</td><td>2483</td></tr>
+	<tr><th scope=row>3</th><td>Algeria            </td><td>193171</td><td>5096</td></tr>
+	<tr><th scope=row>4</th><td>Andorra            </td><td> 15014</td><td> 130</td></tr>
+	<tr><th scope=row>5</th><td>Angola             </td><td> 46539</td><td>1176</td></tr>
+	<tr><th scope=row>6</th><td>Antigua and Barbuda</td><td>  1598</td><td>  43</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">filter</span><span class="p">(</span><span class="n">daily_report</span><span class="p">,</span> <span class="n">Country_Region</span> <span class="o">==</span> <span class="s">&quot;Taiwan*&quot;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 1 × 15</caption>
+<thead>
+	<tr><th scope=col>FIPS</th><th scope=col>Admin2</th><th scope=col>Province_State</th><th scope=col>Country_Region</th><th scope=col>Last_Update</th><th scope=col>Lat</th><th scope=col>Long_</th><th scope=col>Confirmed</th><th scope=col>Deaths</th><th scope=col>Recovered</th><th scope=col>Active</th><th scope=col>Combined_Key</th><th scope=col>Incident_Rate</th><th scope=col>Case_Fatality_Ratio</th><th scope=col>Death_Rate</th></tr>
+	<tr><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;lgl&gt;</th><th scope=col>&lt;lgl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>NA</td><td></td><td></td><td>Taiwan*</td><td>2021-08-26 04:21:28</td><td>23.7</td><td>121</td><td>15939</td><td>830</td><td>NA</td><td>NA</td><td>Taiwan*</td><td>66.92342</td><td>5.207353</td><td>0.05207353</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># without using %&gt;%</span>
+<span class="nf">filter</span><span class="p">(</span><span class="nf">select</span><span class="p">(</span><span class="n">daily_report</span><span class="p">,</span> <span class="nf">c</span><span class="p">(</span><span class="n">Country_Region</span><span class="p">,</span> <span class="n">Confirmed</span><span class="p">,</span> <span class="n">Deaths</span><span class="p">)),</span> <span class="n">Country_Region</span> <span class="o">==</span> <span class="s">&quot;Taiwan*&quot;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 1 × 3</caption>
+<thead>
+	<tr><th scope=col>Country_Region</th><th scope=col>Confirmed</th><th scope=col>Deaths</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Taiwan*</td><td>15939</td><td>830</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># using %&gt;%</span>
+<span class="n">daily_report</span> <span class="o">%&gt;%</span> 
+    <span class="nf">select</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="n">Country_Region</span><span class="p">,</span> <span class="n">Confirmed</span><span class="p">,</span> <span class="n">Deaths</span><span class="p">))</span> <span class="o">%&gt;%</span> 
+    <span class="nf">filter</span><span class="p">(</span><span class="n">Country_Region</span> <span class="o">==</span> <span class="s">&quot;Taiwan*&quot;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 1 × 3</caption>
+<thead>
+	<tr><th scope=col>Country_Region</th><th scope=col>Confirmed</th><th scope=col>Deaths</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Taiwan*</td><td>15939</td><td>830</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#25490;&#24207;&#36039;&#26009;&#26694;">&#25490;&#24207;&#36039;&#26009;&#26694;<a class="anchor-link" href="#&#25490;&#24207;&#36039;&#26009;&#26694;">&#182;</a></h2><p>使用 <code>dplyr::arrange()</code> 函數排序。</p>
+
+</div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="n">daily_report</span> <span class="o">%&gt;%</span> 
+    <span class="nf">arrange</span><span class="p">(</span><span class="n">Deaths</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+    <span class="nf">head</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 6 × 15</caption>
+<thead>
+	<tr><th></th><th scope=col>FIPS</th><th scope=col>Admin2</th><th scope=col>Province_State</th><th scope=col>Country_Region</th><th scope=col>Last_Update</th><th scope=col>Lat</th><th scope=col>Long_</th><th scope=col>Confirmed</th><th scope=col>Deaths</th><th scope=col>Recovered</th><th scope=col>Active</th><th scope=col>Combined_Key</th><th scope=col>Incident_Rate</th><th scope=col>Case_Fatality_Ratio</th><th scope=col>Death_Rate</th></tr>
+	<tr><th></th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;lgl&gt;</th><th scope=col>&lt;lgl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>NA</td><td></td><td>Northern Territory</td><td>Australia</td><td>2021-08-26 04:21:28</td><td>-12.4634</td><td>130.8456</td><td>   200</td><td>0</td><td>NA</td><td>NA</td><td>Northern Territory, Australia</td><td>   81.43322</td><td>0</td><td>0</td></tr>
+	<tr><th scope=row>2</th><td>NA</td><td></td><td>Antwerp           </td><td>Belgium  </td><td>2021-08-26 04:21:28</td><td> 51.2195</td><td>  4.4024</td><td>155068</td><td>0</td><td>NA</td><td>NA</td><td>Antwerp, Belgium             </td><td> 8346.02629</td><td>0</td><td>0</td></tr>
+	<tr><th scope=row>3</th><td>NA</td><td></td><td>Brussels          </td><td>Belgium  </td><td>2021-08-26 04:21:28</td><td> 50.8503</td><td>  4.3517</td><td>150646</td><td>0</td><td>NA</td><td>NA</td><td>Brussels, Belgium            </td><td>12465.10258</td><td>0</td><td>0</td></tr>
+	<tr><th scope=row>4</th><td>NA</td><td></td><td>East Flanders     </td><td>Belgium  </td><td>2021-08-26 04:21:28</td><td> 51.0362</td><td>  3.7373</td><td>134713</td><td>0</td><td>NA</td><td>NA</td><td>East Flanders, Belgium       </td><td> 8891.57158</td><td>0</td><td>0</td></tr>
+	<tr><th scope=row>5</th><td>NA</td><td></td><td>Flemish Brabant   </td><td>Belgium  </td><td>2021-08-26 04:21:28</td><td> 50.9167</td><td>  4.5833</td><td> 92561</td><td>0</td><td>NA</td><td>NA</td><td>Flemish Brabant, Belgium     </td><td> 8075.64290</td><td>0</td><td>0</td></tr>
+	<tr><th scope=row>6</th><td>NA</td><td></td><td>Hainaut           </td><td>Belgium  </td><td>2021-08-26 04:21:28</td><td> 50.5257</td><td>  4.0621</td><td>167561</td><td>0</td><td>NA</td><td>NA</td><td>Hainaut, Belgium             </td><td>12465.10112</td><td>0</td><td>0</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#26032;&#22686;&#35722;&#25976;">&#26032;&#22686;&#35722;&#25976;<a class="anchor-link" href="#&#26032;&#22686;&#35722;&#25976;">&#182;</a></h2><p>使用 <code>dplyr::mutate()</code> 函數新增變數。</p>
+
+</div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="n">daily_report</span> <span class="o">&lt;-</span> <span class="nf">get_daily_report</span><span class="p">()</span>
+<span class="n">daily_report</span> <span class="o">%&gt;%</span> 
+    <span class="nf">mutate</span><span class="p">(</span><span class="n">Death_Rate</span> <span class="o">=</span> <span class="n">Deaths</span> <span class="o">/</span> <span class="n">Confirmed</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+    <span class="nf">select</span><span class="p">(</span><span class="n">Country_Region</span><span class="p">,</span> <span class="n">Death_Rate</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+    <span class="nf">head</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 6 × 2</caption>
+<thead>
+	<tr><th></th><th scope=col>Country_Region</th><th scope=col>Death_Rate</th></tr>
+	<tr><th></th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>Afghanistan        </td><td>0.046424222</td></tr>
+	<tr><th scope=row>2</th><td>Albania            </td><td>0.017564461</td></tr>
+	<tr><th scope=row>3</th><td>Algeria            </td><td>0.026380771</td></tr>
+	<tr><th scope=row>4</th><td>Andorra            </td><td>0.008658585</td></tr>
+	<tr><th scope=row>5</th><td>Angola             </td><td>0.025269129</td></tr>
+	<tr><th scope=row>6</th><td>Antigua and Barbuda</td><td>0.026908636</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#25688;&#35201;">&#25688;&#35201;<a class="anchor-link" href="#&#25688;&#35201;">&#182;</a></h2><p>使用 <code>dplyr::summarise()</code> 函數摘要。</p>
+
+</div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="n">daily_report</span> <span class="o">%&gt;%</span> 
+    <span class="nf">summarise</span><span class="p">(</span><span class="n">avg_deaths</span> <span class="o">=</span> <span class="nf">mean</span><span class="p">(</span><span class="n">Deaths</span><span class="p">))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 1 × 1</caption>
+<thead>
+	<tr><th scope=col>avg_deaths</th></tr>
+	<tr><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>1119.572</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#20998;&#32068;&#25688;&#35201;">&#20998;&#32068;&#25688;&#35201;<a class="anchor-link" href="#&#20998;&#32068;&#25688;&#35201;">&#182;</a></h2><p>使用 <code>dplyr::group_by()</code> 搭配 <code>dplyr::summarise()</code> 函數分組摘要。</p>
+
+</div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="n">daily_report</span> <span class="o">%&gt;%</span> 
+    <span class="nf">group_by</span><span class="p">(</span><span class="n">Country_Region</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+    <span class="nf">summarise</span><span class="p">(</span><span class="n">avg_deaths</span> <span class="o">=</span> <span class="nf">mean</span><span class="p">(</span><span class="n">Deaths</span><span class="p">))</span> <span class="o">%&gt;%</span> 
+    <span class="nf">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -15147,68 +15690,146 @@ div.jp-OutputPrompt {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-Attaching package: ‘dplyr’
-
-The following objects are masked from ‘package:stats’:
-
-    filter, lag
-
-The following objects are masked from ‘package:base’:
-
-    intersect, setdiff, setequal, union
+<pre>`summarise()` ungrouping output (override with `.groups` argument)
 
 </pre>
 </div>
 </div>
 
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A tibble: 6 × 2</caption>
+<thead>
+	<tr><th scope=col>Country_Region</th><th scope=col>avg_deaths</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Afghanistan        </td><td>7090</td></tr>
+	<tr><td>Albania            </td><td>2483</td></tr>
+	<tr><td>Algeria            </td><td>5096</td></tr>
+	<tr><td>Andorra            </td><td> 130</td></tr>
+	<tr><td>Angola             </td><td>1176</td></tr>
+	<tr><td>Antigua and Barbuda</td><td>  43</td></tr>
+</tbody>
+</table>
+
+</div>
+
 </div>
 
 </div>
 
+</div>
+
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#36914;&#38542;&#36039;&#26009;&#26694;&#34389;&#29702;">&#36914;&#38542;&#36039;&#26009;&#26694;&#34389;&#29702;<a class="anchor-link" href="#&#36914;&#38542;&#36039;&#26009;&#26694;&#34389;&#29702;">&#182;</a></h2>
+</div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#20351;&#29992;-%&gt;%-&#37832;&#32080;&#20989;&#25976;&#65288;chaining-functions&#65289;">&#20351;&#29992; <code>%&gt;%</code> &#37832;&#32080;&#20989;&#25976;&#65288;chaining functions&#65289;<a class="anchor-link" href="#&#20351;&#29992;-%&gt;%-&#37832;&#32080;&#20989;&#25976;&#65288;chaining-functions&#65289;">&#182;</a></h2><ul>
-<li><code>%&gt;%</code> 運算符來自 <code>magrittr</code>，會隨著 <code>dplyr</code> 一起被安裝</li>
-<li>讓需要鏈結函數的資料操作可讀性更高</li>
-<li>在 RStudio 中使用 <code>Ctrl-Shift-M</code> 快捷鍵可以叫出 <code>%&gt;%</code> 運算符</li>
-</ul>
-
-</div>
-</div></section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#20351;&#29992;-dplyr-&#36914;&#34892;&#22522;&#30990;&#36039;&#26009;&#26694;&#34389;&#29702;">&#20351;&#29992; <code>dplyr</code> &#36914;&#34892;&#22522;&#30990;&#36039;&#26009;&#26694;&#34389;&#29702;<a class="anchor-link" href="#&#20351;&#29992;-dplyr-&#36914;&#34892;&#22522;&#30990;&#36039;&#26009;&#26694;&#34389;&#29702;">&#182;</a></h2><ul>
-<li>解構資料框<ul>
-<li>選擇與篩選</li>
+<h2 id="&#36914;&#38542;&#36039;&#26009;&#26694;&#34389;&#29702;&#21253;&#21547;">&#36914;&#38542;&#36039;&#26009;&#26694;&#34389;&#29702;&#21253;&#21547;<a class="anchor-link" href="#&#36914;&#38542;&#36039;&#26009;&#26694;&#34389;&#29702;&#21253;&#21547;">&#182;</a></h2><ul>
+<li>轉置資料框。<ul>
+<li>寬格式轉長格式。</li>
+<li>長格式轉寬格式。</li>
 </ul>
 </li>
-<li>排序資料框</li>
-<li>新增變數</li>
-<li>摘要</li>
-<li>分組摘要</li>
+<li>垂直合併資料框。</li>
+<li>水平合併資料框。</li>
 </ul>
 
 </div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#35299;&#27083;&#36039;&#26009;&#26694;&#65306;&#36984;&#25799;&#33287;&#31721;&#36984;">&#35299;&#27083;&#36039;&#26009;&#26694;&#65306;&#36984;&#25799;&#33287;&#31721;&#36984;<a class="anchor-link" href="#&#35299;&#27083;&#36039;&#26009;&#26694;&#65306;&#36984;&#25799;&#33287;&#31721;&#36984;">&#182;</a></h2><ul>
-<li>使用 <code>dplyr::select()</code> 函數選擇</li>
-<li>使用 <code>dplyr::filter()</code> 函數篩選</li>
+<h2 id="&#20351;&#29992;-tidyr-&#36681;&#32622;&#36039;&#26009;&#26694;">&#20351;&#29992; <code>tidyr</code> &#36681;&#32622;&#36039;&#26009;&#26694;<a class="anchor-link" href="#&#20351;&#29992;-tidyr-&#36681;&#32622;&#36039;&#26009;&#26694;">&#182;</a></h2><ul>
+<li>安裝 <code>tidyr</code> 套件。</li>
+<li>載入 <code>tidyr</code> 套件。</li>
 </ul>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#23433;&#35037;-tidyr-&#22871;&#20214;">&#23433;&#35037; <code>tidyr</code> &#22871;&#20214;<a class="anchor-link" href="#&#23433;&#35037;-tidyr-&#22871;&#20214;">&#182;</a></h2><ul>
+<li>透過 RStudio 的 <code>Packages</code> 功能頁籤。</li>
+<li>透過 <code>install.packages()</code> 函數。</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;tidyr&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#36617;&#20837;-tidyr-&#22871;&#20214;">&#36617;&#20837; <code>tidyr</code> &#22871;&#20214;<a class="anchor-link" href="#&#36617;&#20837;-tidyr-&#22871;&#20214;">&#182;</a></h2><ul>
+<li>透過 RStudio 的 <code>Packages</code> 功能頁籤。</li>
+<li>透過 <code>library()</code> 函數。</li>
+</ul>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Without %&gt;%</span>
-<span class="nf">select</span><span class="p">(</span><span class="n">chicago_bulls</span><span class="p">,</span> <span class="n">Player</span><span class="p">)</span>
-<span class="nf">filter</span><span class="p">(</span><span class="nf">select</span><span class="p">(</span><span class="n">chicago_bulls</span><span class="p">,</span> <span class="n">Player</span><span class="p">),</span> <span class="n">Player</span> <span class="o">==</span> <span class="s">&quot;Michael Jordan&quot;</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="s">&quot;tidyr&quot;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="tidyr-&#26368;&#37325;&#35201;&#30340;&#20841;&#20491;&#20989;&#25976;"><code>tidyr</code> &#26368;&#37325;&#35201;&#30340;&#20841;&#20491;&#20989;&#25976;<a class="anchor-link" href="#tidyr-&#26368;&#37325;&#35201;&#30340;&#20841;&#20491;&#20989;&#25976;">&#182;</a></h2><ul>
+<li><code>tidyr::pivot_longer()</code> 寬格式轉長格式。</li>
+<li><code>tidyr::pivot_wider()</code> 長格式轉寬格式。</li>
+</ul>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#20160;&#40636;&#26159;&#23532;&#26684;&#24335;&#12289;&#38263;&#26684;&#24335;&#65311;">&#20160;&#40636;&#26159;&#23532;&#26684;&#24335;&#12289;&#38263;&#26684;&#24335;&#65311;<a class="anchor-link" href="#&#20160;&#40636;&#26159;&#23532;&#26684;&#24335;&#12289;&#38263;&#26684;&#24335;&#65311;">&#182;</a></h2><ul>
+<li>寬格式使用一個欄位，欄位名稱記錄變數類別、觀測值記錄其數值。 </li>
+<li>長格式使用兩個欄位，一個記錄變數類別、一個記錄數值。</li>
+</ul>
+<p>來源：<a href="https://en.wikipedia.org/wiki/Wide_and_narrow_data">https://en.wikipedia.org/wiki/Wide_and_narrow_data</a></p>
+
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#28858;&#20309;&#38656;&#35201;&#36681;&#32622;&#36039;&#26009;&#26694;&#65311;">&#28858;&#20309;&#38656;&#35201;&#36681;&#32622;&#36039;&#26009;&#26694;&#65311;<a class="anchor-link" href="#&#28858;&#20309;&#38656;&#35201;&#36681;&#32622;&#36039;&#26009;&#26694;&#65311;">&#182;</a></h2><p>資料框的欄位名稱含有使用者需要的資料值或者儲存格式與應用情境不符。</p>
+
+</div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="n">get_time_series_confirmed</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">csv_url</span> <span class="o">&lt;-</span> <span class="nf">paste0</span><span class="p">(</span><span class="s">&quot;https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/&quot;</span><span class="p">,</span>
+                      <span class="s">&quot;csse_covid_19_data/csse_covid_19_time_series/&quot;</span><span class="p">,</span>
+                      <span class="s">&quot;time_series_covid19_confirmed_global.csv&quot;</span><span class="p">)</span>
+    <span class="n">time_series_confirmed</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span><span class="n">csv_url</span><span class="p">)</span>
+    <span class="nf">return</span><span class="p">(</span><span class="n">time_series_confirmed</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="n">time_series_confirmed</span> <span class="o">&lt;-</span> <span class="nf">get_time_series_confirmed</span><span class="p">()</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">dim</span><span class="p">(</span><span class="n">time_series_confirmed</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -15227,31 +15848,75 @@ The following objects are masked from ‘package:base’:
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<table>
-<thead><tr><th scope=col>Player</th></tr></thead>
-<tbody>
-	<tr><td>Randy Brown    </td></tr>
-	<tr><td>Jud Buechler   </td></tr>
-	<tr><td>Jason Caffey   </td></tr>
-	<tr><td>James Edwards  </td></tr>
-	<tr><td>Jack Haley     </td></tr>
-	<tr><td>Ron Harper     </td></tr>
-	<tr><td>Michael Jordan </td></tr>
-	<tr><td>Steve Kerr     </td></tr>
-	<tr><td>Toni Kukoc     </td></tr>
-	<tr><td>Luc Longley    </td></tr>
-	<tr><td>Scottie Pippen </td></tr>
-	<tr><td>Dennis Rodman  </td></tr>
-	<tr><td>John Salley    </td></tr>
-	<tr><td>Dickey Simpkins</td></tr>
-	<tr><td>Bill Wennington</td></tr>
-</tbody>
-</table>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[1] 279 587
+</pre>
+</div>
+</div>
 
 </div>
 
+</div>
+
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#20351;&#29992;-tidyr-&#30340;-pivot_longer()-&#20989;&#25976;&#23532;&#36681;&#38263;">&#20351;&#29992; <code>tidyr</code> &#30340; <code>pivot_longer()</code> &#20989;&#25976;&#23532;&#36681;&#38263;<a class="anchor-link" href="#&#20351;&#29992;-tidyr-&#30340;-pivot_longer()-&#20989;&#25976;&#23532;&#36681;&#38263;">&#182;</a></h2><ul>
+<li><code>cols</code>: 欲轉置的變數。</li>
+<li><code>names_to</code>: 自訂為 <code>Date</code>。</li>
+<li><code>values_to</code>: 自訂為 <code>Confirmed</code>。</li>
+</ul>
+
+</div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="n">cols_to_pivot_longer</span> <span class="o">&lt;-</span> <span class="nf">colnames</span><span class="p">(</span><span class="n">time_series_confirmed</span><span class="p">)[</span><span class="m">5</span><span class="o">:</span><span class="nf">length</span><span class="p">(</span><span class="n">time_series_confirmed</span><span class="p">)]</span>
+<span class="n">time_series_confirmed_long</span> <span class="o">&lt;-</span> <span class="n">time_series_confirmed</span><span class="p">[,</span> <span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">5</span><span class="o">:</span><span class="nf">ncol</span><span class="p">(</span><span class="n">time_series_confirmed</span><span class="p">))]</span> <span class="o">%&gt;%</span> 
+    <span class="nf">pivot_longer</span><span class="p">(</span><span class="n">cols</span> <span class="o">=</span> <span class="nf">all_of</span><span class="p">(</span><span class="n">cols_to_pivot_longer</span><span class="p">),</span>
+                 <span class="n">names_to</span> <span class="o">=</span> <span class="s">&quot;Date&quot;</span><span class="p">,</span>
+                 <span class="n">values_to</span> <span class="o">=</span> <span class="s">&quot;Confirmed&quot;</span>
+                <span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="nf">dim</span><span class="p">(</span><span class="n">time_series_confirmed_long</span><span class="p">))</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">time_series_confirmed_long</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[1] 162657      3
+</pre>
+</div>
 </div>
 
 <div class="jp-OutputArea-child">
@@ -15263,9 +15928,18 @@ The following objects are masked from ‘package:base’:
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
 <table>
-<thead><tr><th scope=col>Player</th></tr></thead>
+<caption>A tibble: 6 × 3</caption>
+<thead>
+	<tr><th scope=col>Country.Region</th><th scope=col>Date</th><th scope=col>Confirmed</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
 <tbody>
-	<tr><td>Michael Jordan</td></tr>
+	<tr><td>Afghanistan</td><td>X1.22.20</td><td>0</td></tr>
+	<tr><td>Afghanistan</td><td>X1.23.20</td><td>0</td></tr>
+	<tr><td>Afghanistan</td><td>X1.24.20</td><td>0</td></tr>
+	<tr><td>Afghanistan</td><td>X1.25.20</td><td>0</td></tr>
+	<tr><td>Afghanistan</td><td>X1.26.20</td><td>0</td></tr>
+	<tr><td>Afghanistan</td><td>X1.27.20</td><td>0</td></tr>
 </tbody>
 </table>
 
@@ -15280,13 +15954,13 @@ The following objects are masked from ‘package:base’:
 </div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># With %&gt;%</span>
-<span class="n">chicago_bulls</span> <span class="o">%&gt;%</span> 
-    <span class="nf">select</span><span class="p">(</span><span class="n">Player</span><span class="p">)</span> <span class="o">%&gt;%</span> 
-    <span class="nf">filter</span><span class="p">(</span><span class="n">Player</span> <span class="o">==</span> <span class="s">&quot;Michael Jordan&quot;</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">time_series_confirmed_long</span>  <span class="o">&lt;-</span> <span class="n">time_series_confirmed_long</span> <span class="o">%&gt;%</span> 
+    <span class="nf">group_by</span><span class="p">(</span><span class="n">Country.Region</span><span class="p">,</span> <span class="n">Date</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+    <span class="nf">summarise</span><span class="p">(</span><span class="n">Confirmed</span> <span class="o">=</span> <span class="nf">sum</span><span class="p">(</span><span class="n">Confirmed</span><span class="p">))</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">dim</span><span class="p">(</span><span class="n">time_series_confirmed_long</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -15305,12 +15979,97 @@ The following objects are masked from ‘package:base’:
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>`summarise()` regrouping output by &#39;Country.Region&#39; (override with `.groups` argument)
+
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[1] 113685      3
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#20351;&#29992;-tidyr-&#30340;-pivot_wider()-&#20989;&#25976;&#38263;&#36681;&#23532;">&#20351;&#29992; <code>tidyr</code> &#30340; <code>pivot_wider()</code> &#20989;&#25976;&#38263;&#36681;&#23532;<a class="anchor-link" href="#&#20351;&#29992;-tidyr-&#30340;-pivot_wider()-&#20989;&#25976;&#38263;&#36681;&#23532;">&#182;</a></h2><ul>
+<li><code>id_cols</code>: 用來標示獨一值的變數 <code>Country.Region</code>。</li>
+<li><code>names_from</code>: <code>Date</code>。</li>
+<li><code>values_from</code>: <code>Confirmed</code>。</li>
+</ul>
+
+</div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="n">time_series_confirmed_wide</span> <span class="o">&lt;-</span> <span class="n">time_series_confirmed_long</span> <span class="o">%&gt;%</span> 
+    <span class="nf">pivot_wider</span><span class="p">(</span><span class="n">id_cols</span> <span class="o">=</span> <span class="n">Country.Region</span><span class="p">,</span>
+                <span class="n">names_from</span> <span class="o">=</span> <span class="s">&quot;Date&quot;</span><span class="p">,</span>
+                <span class="n">values_from</span> <span class="o">=</span> <span class="s">&quot;Confirmed&quot;</span>
+               <span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">dim</span><span class="p">(</span><span class="n">time_series_confirmed_wide</span><span class="p">))</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">time_series_confirmed_wide</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[1] 195 584
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
 <table>
-<thead><tr><th scope=col>Player</th></tr></thead>
+<caption>A grouped_df: 6 × 584</caption>
+<thead>
+	<tr><th scope=col>Country.Region</th><th scope=col>X1.1.21</th><th scope=col>X1.10.21</th><th scope=col>X1.11.21</th><th scope=col>X1.12.21</th><th scope=col>X1.13.21</th><th scope=col>X1.14.21</th><th scope=col>X1.15.21</th><th scope=col>X1.16.21</th><th scope=col>X1.17.21</th><th scope=col>⋯</th><th scope=col>X9.28.20</th><th scope=col>X9.29.20</th><th scope=col>X9.3.20</th><th scope=col>X9.30.20</th><th scope=col>X9.4.20</th><th scope=col>X9.5.20</th><th scope=col>X9.6.20</th><th scope=col>X9.7.20</th><th scope=col>X9.8.20</th><th scope=col>X9.9.20</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>⋯</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
 <tbody>
-	<tr><td>Michael Jordan</td></tr>
+	<tr><td>Afghanistan        </td><td>51526</td><td> 53489</td><td> 53538</td><td> 53584</td><td> 53584</td><td> 53775</td><td> 53831</td><td> 53938</td><td> 53984</td><td>⋯</td><td>39239</td><td>39254</td><td>38288</td><td>39268</td><td>38304</td><td>38324</td><td>38398</td><td>38494</td><td>38520</td><td>38544</td></tr>
+	<tr><td>Albania            </td><td>58316</td><td> 63595</td><td> 63971</td><td> 64627</td><td> 65334</td><td> 65994</td><td> 66635</td><td> 67216</td><td> 67690</td><td>⋯</td><td>13391</td><td>13518</td><td> 9844</td><td>13649</td><td> 9967</td><td>10102</td><td>10255</td><td>10406</td><td>10553</td><td>10704</td></tr>
+	<tr><td>Algeria            </td><td>99897</td><td>102144</td><td>102369</td><td>102641</td><td>102860</td><td>103127</td><td>103381</td><td>103611</td><td>103833</td><td>⋯</td><td>51213</td><td>51368</td><td>45469</td><td>51530</td><td>45773</td><td>46071</td><td>46364</td><td>46653</td><td>46938</td><td>47216</td></tr>
+	<tr><td>Andorra            </td><td> 8117</td><td>  8586</td><td>  8586</td><td>  8682</td><td>  8818</td><td>  8868</td><td>  8946</td><td>  9038</td><td>  9083</td><td>⋯</td><td> 1966</td><td> 1966</td><td> 1199</td><td> 2050</td><td> 1215</td><td> 1215</td><td> 1215</td><td> 1261</td><td> 1261</td><td> 1301</td></tr>
+	<tr><td>Angola             </td><td>17568</td><td> 18193</td><td> 18254</td><td> 18343</td><td> 18425</td><td> 18613</td><td> 18679</td><td> 18765</td><td> 18875</td><td>⋯</td><td> 4797</td><td> 4905</td><td> 2805</td><td> 4972</td><td> 2876</td><td> 2935</td><td> 2965</td><td> 2981</td><td> 3033</td><td> 3092</td></tr>
+	<tr><td>Antigua and Barbuda</td><td>  159</td><td>   176</td><td>   176</td><td>   176</td><td>   176</td><td>   184</td><td>   184</td><td>   187</td><td>   189</td><td>⋯</td><td>  101</td><td>  101</td><td>   95</td><td>  101</td><td>   95</td><td>   95</td><td>   95</td><td>   95</td><td>   95</td><td>   95</td></tr>
 </tbody>
 </table>
 
@@ -15325,17 +16084,34 @@ The following objects are masked from ‘package:base’:
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#25490;&#24207;&#36039;&#26009;&#26694;">&#25490;&#24207;&#36039;&#26009;&#26694;<a class="anchor-link" href="#&#25490;&#24207;&#36039;&#26009;&#26694;">&#182;</a></h2><p>使用 <code>dplyr::arrange()</code> 函數排序</p>
+<h2 id="&#20351;&#29992;-dplyr-&#30340;&#20989;&#25976;&#21512;&#20341;&#36039;&#26009;&#26694;">&#20351;&#29992; <code>dplyr</code> &#30340;&#20989;&#25976;&#21512;&#20341;&#36039;&#26009;&#26694;<a class="anchor-link" href="#&#20351;&#29992;-dplyr-&#30340;&#20989;&#25976;&#21512;&#20341;&#36039;&#26009;&#26694;">&#182;</a></h2><ul>
+<li>垂直合併。<ul>
+<li><code>dplyr::bind_rows()</code> 函數。</li>
+</ul>
+</li>
+<li>水平合併。<ul>
+<li><code>dplyr::bind_cols()</code> 函數。</li>
+<li><code>dplyr::..._join()</code> 函數。</li>
+</ul>
+</li>
+</ul>
 
+</div>
+</div></section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="bind_rows()-&#20989;&#25976;"><code>bind_rows()</code> &#20989;&#25976;<a class="anchor-link" href="#bind_rows()-&#20989;&#25976;">&#182;</a></h2>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">chicago_bulls</span> <span class="o">%&gt;%</span> 
-    <span class="nf">arrange</span><span class="p">(</span><span class="n">`No.`</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">twn</span> <span class="o">&lt;-</span> <span class="n">time_series_confirmed_wide</span><span class="p">[</span><span class="n">time_series_confirmed_wide</span><span class="o">$</span><span class="n">Country.Region</span> <span class="o">==</span> <span class="s">&quot;Taiwan*&quot;</span><span class="p">,</span> <span class="p">]</span>
+<span class="n">jpn</span> <span class="o">&lt;-</span> <span class="n">time_series_confirmed_wide</span><span class="p">[</span><span class="n">time_series_confirmed_wide</span><span class="o">$</span><span class="n">Country.Region</span> <span class="o">==</span> <span class="s">&quot;Japan&quot;</span><span class="p">,</span> <span class="p">]</span>
+<span class="n">twn</span> <span class="o">%&gt;%</span> 
+    <span class="nf">bind_rows</span><span class="p">(</span><span class="n">jpn</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15357,23 +16133,14 @@ The following objects are masked from ‘package:base’:
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
 <table>
-<thead><tr><th scope=col>No.</th><th scope=col>Player</th><th scope=col>Pos</th><th scope=col>Ht</th><th scope=col>Wt</th><th scope=col>Birth.Date</th><th scope=col>College</th><th scope=col>Wt_kg</th><th scope=col>Ht_cm</th></tr></thead>
+<caption>A grouped_df: 2 × 584</caption>
+<thead>
+	<tr><th scope=col>Country.Region</th><th scope=col>X1.1.21</th><th scope=col>X1.10.21</th><th scope=col>X1.11.21</th><th scope=col>X1.12.21</th><th scope=col>X1.13.21</th><th scope=col>X1.14.21</th><th scope=col>X1.15.21</th><th scope=col>X1.16.21</th><th scope=col>X1.17.21</th><th scope=col>⋯</th><th scope=col>X9.28.20</th><th scope=col>X9.29.20</th><th scope=col>X9.3.20</th><th scope=col>X9.30.20</th><th scope=col>X9.4.20</th><th scope=col>X9.5.20</th><th scope=col>X9.6.20</th><th scope=col>X9.7.20</th><th scope=col>X9.8.20</th><th scope=col>X9.9.20</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>⋯</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
 <tbody>
-	<tr><td> 0                                                </td><td>Randy Brown                                       </td><td>PG                                                </td><td>6-2                                               </td><td>190                                               </td><td>May 22, 1968                                      </td><td>University of Houston, New Mexico State University</td><td> 86.18210                                         </td><td>187.96                                            </td></tr>
-	<tr><td> 7                                                </td><td>Toni Kukoc                                        </td><td>SF                                                </td><td>6-10                                              </td><td>192                                               </td><td>September 18, 1968                                </td><td>                                                  </td><td> 87.08928                                         </td><td>208.28                                            </td></tr>
-	<tr><td> 8                                                </td><td>Dickey Simpkins                                   </td><td>PF                                                </td><td>6-9                                               </td><td>248                                               </td><td>April 6, 1972                                     </td><td>Providence College                                </td><td>112.49032                                         </td><td>205.74                                            </td></tr>
-	<tr><td> 9                                                </td><td>Ron Harper                                        </td><td>PG                                                </td><td>6-6                                               </td><td>185                                               </td><td>January 20, 1964                                  </td><td>Miami University                                  </td><td> 83.91415                                         </td><td>198.12                                            </td></tr>
-	<tr><td>13                                                </td><td>Luc Longley                                       </td><td>C                                                 </td><td>7-2                                               </td><td>265                                               </td><td>January 19, 1969                                  </td><td>University of New Mexico                          </td><td>120.20135                                         </td><td>218.44                                            </td></tr>
-	<tr><td>22                                                </td><td>John Salley                                       </td><td>PF                                                </td><td>6-11                                              </td><td>230                                               </td><td>May 16, 1964                                      </td><td>Georgia Institute of Technology                   </td><td>104.32570                                         </td><td>210.82                                            </td></tr>
-	<tr><td>23                                                </td><td>Michael Jordan                                    </td><td>SG                                                </td><td>6-6                                               </td><td>195                                               </td><td>February 17, 1963                                 </td><td>University of North Carolina                      </td><td> 88.45005                                         </td><td>198.12                                            </td></tr>
-	<tr><td>25                                                </td><td>Steve Kerr                                        </td><td>PG                                                </td><td>6-3                                               </td><td>175                                               </td><td>September 27, 1965                                </td><td>University of Arizona                             </td><td> 79.37825                                         </td><td>190.50                                            </td></tr>
-	<tr><td>30                                                </td><td>Jud Buechler                                      </td><td>SF                                                </td><td>6-6                                               </td><td>220                                               </td><td>June 19, 1968                                     </td><td>University of Arizona                             </td><td> 99.78980                                         </td><td>198.12                                            </td></tr>
-	<tr><td>33                                                </td><td>Scottie Pippen                                    </td><td>SF                                                </td><td>6-8                                               </td><td>210                                               </td><td>September 25, 1965                                </td><td>University of Central Arkansas                    </td><td> 95.25390                                         </td><td>203.20                                            </td></tr>
-	<tr><td>34                                                </td><td>Bill Wennington                                   </td><td>C                                                 </td><td>7-0                                               </td><td>245                                               </td><td>April 26, 1963                                    </td><td>St. John's University                             </td><td>111.12955                                         </td><td>213.36                                            </td></tr>
-	<tr><td>35                                                </td><td>Jason Caffey                                      </td><td>PF                                                </td><td>6-8                                               </td><td>255                                               </td><td>June 12, 1973                                     </td><td>University of Alabama                             </td><td>115.66545                                         </td><td>203.20                                            </td></tr>
-	<tr><td>53                                                </td><td>James Edwards                                     </td><td>C                                                 </td><td>7-0                                               </td><td>225                                               </td><td>November 22, 1955                                 </td><td>University of Washington                          </td><td>102.05775                                         </td><td>213.36                                            </td></tr>
-	<tr><td>54                                                </td><td>Jack Haley                                        </td><td>C                                                 </td><td>6-10                                              </td><td>240                                               </td><td>January 27, 1964                                  </td><td>University of California, Los Angeles             </td><td>108.86160                                         </td><td>208.28                                            </td></tr>
-	<tr><td>91                                                </td><td>Dennis Rodman                                     </td><td>PF                                                </td><td>6-7                                               </td><td>210                                               </td><td>May 13, 1961                                      </td><td>Southeastern Oklahoma State University            </td><td> 95.25390                                         </td><td>200.66                                            </td></tr>
+	<tr><td>Taiwan*</td><td>   802</td><td>   828</td><td>   834</td><td>   838</td><td>   842</td><td>   842</td><td>   843</td><td>   851</td><td>   855</td><td>⋯</td><td>  513</td><td>  513</td><td>  489</td><td>  514</td><td>  490</td><td>  492</td><td>  493</td><td>  494</td><td>  495</td><td>  495</td></tr>
+	<tr><td>Japan  </td><td>239068</td><td>288818</td><td>293746</td><td>298321</td><td>304140</td><td>310734</td><td>317871</td><td>324942</td><td>330715</td><td>⋯</td><td>82484</td><td>83022</td><td>70278</td><td>83591</td><td>70866</td><td>71467</td><td>71918</td><td>72213</td><td>72724</td><td>73264</td></tr>
 </tbody>
 </table>
 
@@ -15388,17 +16155,23 @@ The following objects are masked from ‘package:base’:
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#26032;&#22686;&#35722;&#25976;">&#26032;&#22686;&#35722;&#25976;<a class="anchor-link" href="#&#26032;&#22686;&#35722;&#25976;">&#182;</a></h2><p>使用 <code>dplyr::mutate()</code> 函數新增變數</p>
-
+<h2 id="bind_cols()-&#20989;&#25976;"><code>bind_cols()</code> &#20989;&#25976;<a class="anchor-link" href="#bind_cols()-&#20989;&#25976;">&#182;</a></h2>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">chicago_bulls</span> <span class="o">%&gt;%</span> 
-    <span class="nf">mutate</span><span class="p">(</span><span class="n">Wt_kg</span> <span class="o">=</span> <span class="n">Wt</span> <span class="o">*</span> <span class="m">0.45359</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">get_time_series_deaths</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">csv_url</span> <span class="o">&lt;-</span> <span class="nf">paste0</span><span class="p">(</span><span class="s">&quot;https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/&quot;</span><span class="p">,</span>
+                      <span class="s">&quot;csse_covid_19_data/csse_covid_19_time_series/&quot;</span><span class="p">,</span>
+                      <span class="s">&quot;time_series_covid19_deaths_global.csv&quot;</span><span class="p">)</span>
+    <span class="n">time_series_deaths</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span><span class="n">csv_url</span><span class="p">)</span>
+    <span class="nf">return</span><span class="p">(</span><span class="n">time_series_deaths</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="n">time_series_deaths</span> <span class="o">&lt;-</span> <span class="nf">get_time_series_deaths</span><span class="p">()</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">dim</span><span class="p">(</span><span class="n">time_series_deaths</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -15417,31 +16190,53 @@ The following objects are masked from ‘package:base’:
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<table>
-<thead><tr><th scope=col>No.</th><th scope=col>Player</th><th scope=col>Pos</th><th scope=col>Ht</th><th scope=col>Wt</th><th scope=col>Birth.Date</th><th scope=col>College</th><th scope=col>Wt_kg</th><th scope=col>Ht_cm</th></tr></thead>
-<tbody>
-	<tr><td> 0                                                </td><td>Randy Brown                                       </td><td>PG                                                </td><td>6-2                                               </td><td>190                                               </td><td>May 22, 1968                                      </td><td>University of Houston, New Mexico State University</td><td> 86.18210                                         </td><td>187.96                                            </td></tr>
-	<tr><td>30                                                </td><td>Jud Buechler                                      </td><td>SF                                                </td><td>6-6                                               </td><td>220                                               </td><td>June 19, 1968                                     </td><td>University of Arizona                             </td><td> 99.78980                                         </td><td>198.12                                            </td></tr>
-	<tr><td>35                                                </td><td>Jason Caffey                                      </td><td>PF                                                </td><td>6-8                                               </td><td>255                                               </td><td>June 12, 1973                                     </td><td>University of Alabama                             </td><td>115.66545                                         </td><td>203.20                                            </td></tr>
-	<tr><td>53                                                </td><td>James Edwards                                     </td><td>C                                                 </td><td>7-0                                               </td><td>225                                               </td><td>November 22, 1955                                 </td><td>University of Washington                          </td><td>102.05775                                         </td><td>213.36                                            </td></tr>
-	<tr><td>54                                                </td><td>Jack Haley                                        </td><td>C                                                 </td><td>6-10                                              </td><td>240                                               </td><td>January 27, 1964                                  </td><td>University of California, Los Angeles             </td><td>108.86160                                         </td><td>208.28                                            </td></tr>
-	<tr><td> 9                                                </td><td>Ron Harper                                        </td><td>PG                                                </td><td>6-6                                               </td><td>185                                               </td><td>January 20, 1964                                  </td><td>Miami University                                  </td><td> 83.91415                                         </td><td>198.12                                            </td></tr>
-	<tr><td>23                                                </td><td>Michael Jordan                                    </td><td>SG                                                </td><td>6-6                                               </td><td>195                                               </td><td>February 17, 1963                                 </td><td>University of North Carolina                      </td><td> 88.45005                                         </td><td>198.12                                            </td></tr>
-	<tr><td>25                                                </td><td>Steve Kerr                                        </td><td>PG                                                </td><td>6-3                                               </td><td>175                                               </td><td>September 27, 1965                                </td><td>University of Arizona                             </td><td> 79.37825                                         </td><td>190.50                                            </td></tr>
-	<tr><td> 7                                                </td><td>Toni Kukoc                                        </td><td>SF                                                </td><td>6-10                                              </td><td>192                                               </td><td>September 18, 1968                                </td><td>                                                  </td><td> 87.08928                                         </td><td>208.28                                            </td></tr>
-	<tr><td>13                                                </td><td>Luc Longley                                       </td><td>C                                                 </td><td>7-2                                               </td><td>265                                               </td><td>January 19, 1969                                  </td><td>University of New Mexico                          </td><td>120.20135                                         </td><td>218.44                                            </td></tr>
-	<tr><td>33                                                </td><td>Scottie Pippen                                    </td><td>SF                                                </td><td>6-8                                               </td><td>210                                               </td><td>September 25, 1965                                </td><td>University of Central Arkansas                    </td><td> 95.25390                                         </td><td>203.20                                            </td></tr>
-	<tr><td>91                                                </td><td>Dennis Rodman                                     </td><td>PF                                                </td><td>6-7                                               </td><td>210                                               </td><td>May 13, 1961                                      </td><td>Southeastern Oklahoma State University            </td><td> 95.25390                                         </td><td>200.66                                            </td></tr>
-	<tr><td>22                                                </td><td>John Salley                                       </td><td>PF                                                </td><td>6-11                                              </td><td>230                                               </td><td>May 16, 1964                                      </td><td>Georgia Institute of Technology                   </td><td>104.32570                                         </td><td>210.82                                            </td></tr>
-	<tr><td> 8                                                </td><td>Dickey Simpkins                                   </td><td>PF                                                </td><td>6-9                                               </td><td>248                                               </td><td>April 6, 1972                                     </td><td>Providence College                                </td><td>112.49032                                         </td><td>205.74                                            </td></tr>
-	<tr><td>34                                                </td><td>Bill Wennington                                   </td><td>C                                                 </td><td>7-0                                               </td><td>245                                               </td><td>April 26, 1963                                    </td><td>St. John's University                             </td><td>111.12955                                         </td><td>213.36                                            </td></tr>
-</tbody>
-</table>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[1] 279 587
+</pre>
+</div>
+</div>
 
 </div>
 
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="n">time_series_deaths_long</span> <span class="o">&lt;-</span> <span class="n">time_series_deaths</span><span class="p">[,</span> <span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span> <span class="m">5</span><span class="o">:</span><span class="nf">ncol</span><span class="p">(</span><span class="n">time_series_deaths</span><span class="p">))]</span> <span class="o">%&gt;%</span> 
+    <span class="nf">pivot_longer</span><span class="p">(</span><span class="n">cols</span> <span class="o">=</span> <span class="nf">all_of</span><span class="p">(</span><span class="n">cols_to_pivot_longer</span><span class="p">),</span>
+                 <span class="n">names_to</span> <span class="o">=</span> <span class="s">&quot;Date&quot;</span><span class="p">,</span>
+                 <span class="n">values_to</span> <span class="o">=</span> <span class="s">&quot;Deaths&quot;</span>
+                <span class="p">)</span>
+<span class="n">time_series_deaths_long</span> <span class="o">&lt;-</span> <span class="n">time_series_deaths_long</span> <span class="o">%&gt;%</span> 
+    <span class="nf">group_by</span><span class="p">(</span><span class="n">Country.Region</span><span class="p">,</span> <span class="n">Date</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+    <span class="nf">summarise</span><span class="p">(</span><span class="n">Deaths</span> <span class="o">=</span> <span class="nf">sum</span><span class="p">(</span><span class="n">Deaths</span><span class="p">))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>`summarise()` regrouping output by &#39;Country.Region&#39; (override with `.groups` argument)
+
+</pre>
+</div>
 </div>
 
 </div>
@@ -15451,18 +16246,39 @@ The following objects are masked from ‘package:base’:
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#25688;&#35201;">&#25688;&#35201;<a class="anchor-link" href="#&#25688;&#35201;">&#182;</a></h2><p>使用 <code>dplyr::summarise()</code> 函數摘要</p>
+<h2 id="..._join()-&#20989;&#25976;"><code>..._join()</code> &#20989;&#25976;<a class="anchor-link" href="#..._join()-&#20989;&#25976;">&#182;</a></h2><ul>
+<li><code>left_join()</code> 函數，保留所有左邊資料表觀測值。</li>
+<li><code>right_join()</code> 函數，保留所有右邊資料表觀測值。</li>
+<li><code>inner_join()</code> 函數，保留所有資料表交集觀測值。</li>
+<li><code>full_join()</code> 函數，保留所有資料表觀測值。</li>
+</ul>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">chicago_bulls</span> <span class="o">%&gt;%</span> 
-    <span class="nf">mutate</span><span class="p">(</span><span class="n">Wt_kg</span> <span class="o">=</span> <span class="n">Wt</span> <span class="o">*</span> <span class="m">0.45359</span><span class="p">)</span> <span class="o">%&gt;%</span> 
-    <span class="nf">summarise</span><span class="p">(</span><span class="n">Avg_Wt_kg</span> <span class="o">=</span> <span class="nf">mean</span><span class="p">(</span><span class="n">Wt_kg</span><span class="p">))</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">condition_tw_jp</span> <span class="o">&lt;-</span> <span class="n">time_series_confirmed_long</span><span class="o">$</span><span class="n">Country.Region</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Taiwan*&quot;</span><span class="p">,</span> <span class="s">&quot;Japan&quot;</span><span class="p">)</span>
+<span class="n">condition_tw_kr</span> <span class="o">&lt;-</span> <span class="n">time_series_confirmed_long</span><span class="o">$</span><span class="n">Country.Region</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Taiwan*&quot;</span><span class="p">,</span> <span class="s">&quot;Korea, South&quot;</span><span class="p">)</span>
+<span class="n">confirmed_left</span> <span class="o">&lt;-</span> <span class="n">time_series_confirmed_long</span><span class="p">[</span><span class="n">condition_tw_jp</span><span class="p">,</span> <span class="p">]</span>
+<span class="n">deaths_right</span> <span class="o">&lt;-</span> <span class="n">time_series_deaths_long</span><span class="p">[</span><span class="n">condition_tw_kr</span><span class="p">,</span> <span class="p">]</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="n">confirmed_left</span> <span class="o">%&gt;%</span> 
+    <span class="nf">left_join</span><span class="p">(</span><span class="n">deaths_right</span><span class="p">,</span> <span class="n">by</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Country.Region&quot;</span><span class="p">,</span> <span class="s">&quot;Date&quot;</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -15484,9 +16300,73 @@ The following objects are masked from ‘package:base’:
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
 <table>
-<thead><tr><th scope=col>Avg_Wt_kg</th></tr></thead>
+<caption>A grouped_df: 1166 × 4</caption>
+<thead>
+	<tr><th scope=col>Country.Region</th><th scope=col>Date</th><th scope=col>Confirmed</th><th scope=col>Deaths</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
 <tbody>
-	<tr><td>99.33621</td></tr>
+	<tr><td>Japan</td><td>X1.1.21 </td><td>239068</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.10.21</td><td>288818</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.11.21</td><td>293746</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.12.21</td><td>298321</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.13.21</td><td>304140</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.14.21</td><td>310734</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.15.21</td><td>317871</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.16.21</td><td>324942</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.17.21</td><td>330715</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.18.21</td><td>335605</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.19.21</td><td>340989</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.2.21 </td><td>242097</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.20.21</td><td>346508</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.21.21</td><td>352129</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.22.20</td><td>     2</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.22.21</td><td>357174</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.23.20</td><td>     2</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.23.21</td><td>361928</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.24.20</td><td>     2</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.24.21</td><td>365899</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.25.20</td><td>     2</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.25.21</td><td>368684</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.26.20</td><td>     4</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.26.21</td><td>372545</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.27.20</td><td>     4</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.27.21</td><td>376482</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.28.20</td><td>     7</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.28.21</td><td>380644</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.29.20</td><td>     7</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.29.21</td><td>384180</td><td>NA</td></tr>
+	<tr><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td></tr>
+	<tr><td>Taiwan*</td><td>X9.1.20 </td><td>488</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.10.20</td><td>496</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.11.20</td><td>498</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.12.20</td><td>498</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.13.20</td><td>498</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.14.20</td><td>499</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.15.20</td><td>499</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.16.20</td><td>500</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.17.20</td><td>503</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.18.20</td><td>503</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.19.20</td><td>506</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.2.20 </td><td>489</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.20.20</td><td>507</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.21.20</td><td>509</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.22.20</td><td>509</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.23.20</td><td>509</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.24.20</td><td>509</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.25.20</td><td>510</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.26.20</td><td>510</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.27.20</td><td>510</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.28.20</td><td>513</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.29.20</td><td>513</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.3.20 </td><td>489</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.30.20</td><td>514</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.4.20 </td><td>490</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.5.20 </td><td>492</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.6.20 </td><td>493</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.7.20 </td><td>494</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.8.20 </td><td>495</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.9.20 </td><td>495</td><td>7</td></tr>
 </tbody>
 </table>
 
@@ -15498,113 +16378,366 @@ The following objects are masked from ‘package:base’:
 
 </div>
 
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="n">confirmed_left</span> <span class="o">%&gt;%</span> 
+    <span class="nf">right_join</span><span class="p">(</span><span class="n">deaths_right</span><span class="p">,</span> <span class="n">by</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Country.Region&quot;</span><span class="p">,</span> <span class="s">&quot;Date&quot;</span><span class="p">))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A grouped_df: 1166 × 4</caption>
+<thead>
+	<tr><th scope=col>Country.Region</th><th scope=col>Date</th><th scope=col>Confirmed</th><th scope=col>Deaths</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Taiwan*</td><td>X1.1.21 </td><td>802</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.10.21</td><td>828</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.11.21</td><td>834</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.12.21</td><td>838</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.13.21</td><td>842</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.14.21</td><td>842</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.15.21</td><td>843</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.16.21</td><td>851</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.17.21</td><td>855</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.18.21</td><td>862</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.19.21</td><td>868</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.2.21 </td><td>808</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.20.21</td><td>870</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.21.21</td><td>881</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.22.20</td><td>  1</td><td>0</td></tr>
+	<tr><td>Taiwan*</td><td>X1.22.21</td><td>881</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.23.20</td><td>  1</td><td>0</td></tr>
+	<tr><td>Taiwan*</td><td>X1.23.21</td><td>884</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.24.20</td><td>  3</td><td>0</td></tr>
+	<tr><td>Taiwan*</td><td>X1.24.21</td><td>889</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.25.20</td><td>  3</td><td>0</td></tr>
+	<tr><td>Taiwan*</td><td>X1.25.21</td><td>889</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.26.20</td><td>  4</td><td>0</td></tr>
+	<tr><td>Taiwan*</td><td>X1.26.21</td><td>890</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.27.20</td><td>  5</td><td>0</td></tr>
+	<tr><td>Taiwan*</td><td>X1.27.21</td><td>893</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.28.20</td><td>  8</td><td>0</td></tr>
+	<tr><td>Taiwan*</td><td>X1.28.21</td><td>895</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.29.20</td><td>  8</td><td>0</td></tr>
+	<tr><td>Taiwan*</td><td>X1.29.21</td><td>899</td><td>7</td></tr>
+	<tr><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td></tr>
+	<tr><td>Korea, South</td><td>X9.1.20 </td><td>NA</td><td>326</td></tr>
+	<tr><td>Korea, South</td><td>X9.10.20</td><td>NA</td><td>350</td></tr>
+	<tr><td>Korea, South</td><td>X9.11.20</td><td>NA</td><td>355</td></tr>
+	<tr><td>Korea, South</td><td>X9.12.20</td><td>NA</td><td>358</td></tr>
+	<tr><td>Korea, South</td><td>X9.13.20</td><td>NA</td><td>363</td></tr>
+	<tr><td>Korea, South</td><td>X9.14.20</td><td>NA</td><td>367</td></tr>
+	<tr><td>Korea, South</td><td>X9.15.20</td><td>NA</td><td>367</td></tr>
+	<tr><td>Korea, South</td><td>X9.16.20</td><td>NA</td><td>372</td></tr>
+	<tr><td>Korea, South</td><td>X9.17.20</td><td>NA</td><td>377</td></tr>
+	<tr><td>Korea, South</td><td>X9.18.20</td><td>NA</td><td>378</td></tr>
+	<tr><td>Korea, South</td><td>X9.19.20</td><td>NA</td><td>383</td></tr>
+	<tr><td>Korea, South</td><td>X9.2.20 </td><td>NA</td><td>329</td></tr>
+	<tr><td>Korea, South</td><td>X9.20.20</td><td>NA</td><td>385</td></tr>
+	<tr><td>Korea, South</td><td>X9.21.20</td><td>NA</td><td>388</td></tr>
+	<tr><td>Korea, South</td><td>X9.22.20</td><td>NA</td><td>388</td></tr>
+	<tr><td>Korea, South</td><td>X9.23.20</td><td>NA</td><td>393</td></tr>
+	<tr><td>Korea, South</td><td>X9.24.20</td><td>NA</td><td>395</td></tr>
+	<tr><td>Korea, South</td><td>X9.25.20</td><td>NA</td><td>399</td></tr>
+	<tr><td>Korea, South</td><td>X9.26.20</td><td>NA</td><td>401</td></tr>
+	<tr><td>Korea, South</td><td>X9.27.20</td><td>NA</td><td>406</td></tr>
+	<tr><td>Korea, South</td><td>X9.28.20</td><td>NA</td><td>407</td></tr>
+	<tr><td>Korea, South</td><td>X9.29.20</td><td>NA</td><td>413</td></tr>
+	<tr><td>Korea, South</td><td>X9.3.20 </td><td>NA</td><td>331</td></tr>
+	<tr><td>Korea, South</td><td>X9.30.20</td><td>NA</td><td>415</td></tr>
+	<tr><td>Korea, South</td><td>X9.4.20 </td><td>NA</td><td>333</td></tr>
+	<tr><td>Korea, South</td><td>X9.5.20 </td><td>NA</td><td>334</td></tr>
+	<tr><td>Korea, South</td><td>X9.6.20 </td><td>NA</td><td>336</td></tr>
+	<tr><td>Korea, South</td><td>X9.7.20 </td><td>NA</td><td>341</td></tr>
+	<tr><td>Korea, South</td><td>X9.8.20 </td><td>NA</td><td>344</td></tr>
+	<tr><td>Korea, South</td><td>X9.9.20 </td><td>NA</td><td>346</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="n">confirmed_left</span> <span class="o">%&gt;%</span> 
+    <span class="nf">inner_join</span><span class="p">(</span><span class="n">deaths_right</span><span class="p">,</span> <span class="n">by</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Country.Region&quot;</span><span class="p">,</span> <span class="s">&quot;Date&quot;</span><span class="p">))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A grouped_df: 583 × 4</caption>
+<thead>
+	<tr><th scope=col>Country.Region</th><th scope=col>Date</th><th scope=col>Confirmed</th><th scope=col>Deaths</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Taiwan*</td><td>X1.1.21 </td><td>802</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.10.21</td><td>828</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.11.21</td><td>834</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.12.21</td><td>838</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.13.21</td><td>842</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.14.21</td><td>842</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.15.21</td><td>843</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.16.21</td><td>851</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.17.21</td><td>855</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.18.21</td><td>862</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.19.21</td><td>868</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.2.21 </td><td>808</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.20.21</td><td>870</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.21.21</td><td>881</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.22.20</td><td>  1</td><td>0</td></tr>
+	<tr><td>Taiwan*</td><td>X1.22.21</td><td>881</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.23.20</td><td>  1</td><td>0</td></tr>
+	<tr><td>Taiwan*</td><td>X1.23.21</td><td>884</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.24.20</td><td>  3</td><td>0</td></tr>
+	<tr><td>Taiwan*</td><td>X1.24.21</td><td>889</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.25.20</td><td>  3</td><td>0</td></tr>
+	<tr><td>Taiwan*</td><td>X1.25.21</td><td>889</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.26.20</td><td>  4</td><td>0</td></tr>
+	<tr><td>Taiwan*</td><td>X1.26.21</td><td>890</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.27.20</td><td>  5</td><td>0</td></tr>
+	<tr><td>Taiwan*</td><td>X1.27.21</td><td>893</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.28.20</td><td>  8</td><td>0</td></tr>
+	<tr><td>Taiwan*</td><td>X1.28.21</td><td>895</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X1.29.20</td><td>  8</td><td>0</td></tr>
+	<tr><td>Taiwan*</td><td>X1.29.21</td><td>899</td><td>7</td></tr>
+	<tr><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td></tr>
+	<tr><td>Taiwan*</td><td>X9.1.20 </td><td>488</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.10.20</td><td>496</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.11.20</td><td>498</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.12.20</td><td>498</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.13.20</td><td>498</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.14.20</td><td>499</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.15.20</td><td>499</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.16.20</td><td>500</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.17.20</td><td>503</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.18.20</td><td>503</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.19.20</td><td>506</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.2.20 </td><td>489</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.20.20</td><td>507</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.21.20</td><td>509</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.22.20</td><td>509</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.23.20</td><td>509</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.24.20</td><td>509</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.25.20</td><td>510</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.26.20</td><td>510</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.27.20</td><td>510</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.28.20</td><td>513</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.29.20</td><td>513</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.3.20 </td><td>489</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.30.20</td><td>514</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.4.20 </td><td>490</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.5.20 </td><td>492</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.6.20 </td><td>493</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.7.20 </td><td>494</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.8.20 </td><td>495</td><td>7</td></tr>
+	<tr><td>Taiwan*</td><td>X9.9.20 </td><td>495</td><td>7</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="n">confirmed_left</span> <span class="o">%&gt;%</span> 
+    <span class="nf">full_join</span><span class="p">(</span><span class="n">deaths_right</span><span class="p">,</span> <span class="n">by</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Country.Region&quot;</span><span class="p">,</span> <span class="s">&quot;Date&quot;</span><span class="p">))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A grouped_df: 1749 × 4</caption>
+<thead>
+	<tr><th scope=col>Country.Region</th><th scope=col>Date</th><th scope=col>Confirmed</th><th scope=col>Deaths</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Japan</td><td>X1.1.21 </td><td>239068</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.10.21</td><td>288818</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.11.21</td><td>293746</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.12.21</td><td>298321</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.13.21</td><td>304140</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.14.21</td><td>310734</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.15.21</td><td>317871</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.16.21</td><td>324942</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.17.21</td><td>330715</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.18.21</td><td>335605</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.19.21</td><td>340989</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.2.21 </td><td>242097</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.20.21</td><td>346508</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.21.21</td><td>352129</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.22.20</td><td>     2</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.22.21</td><td>357174</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.23.20</td><td>     2</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.23.21</td><td>361928</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.24.20</td><td>     2</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.24.21</td><td>365899</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.25.20</td><td>     2</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.25.21</td><td>368684</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.26.20</td><td>     4</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.26.21</td><td>372545</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.27.20</td><td>     4</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.27.21</td><td>376482</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.28.20</td><td>     7</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.28.21</td><td>380644</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.29.20</td><td>     7</td><td>NA</td></tr>
+	<tr><td>Japan</td><td>X1.29.21</td><td>384180</td><td>NA</td></tr>
+	<tr><td>⋮</td><td>⋮</td><td>⋮</td><td>⋮</td></tr>
+	<tr><td>Korea, South</td><td>X9.1.20 </td><td>NA</td><td>326</td></tr>
+	<tr><td>Korea, South</td><td>X9.10.20</td><td>NA</td><td>350</td></tr>
+	<tr><td>Korea, South</td><td>X9.11.20</td><td>NA</td><td>355</td></tr>
+	<tr><td>Korea, South</td><td>X9.12.20</td><td>NA</td><td>358</td></tr>
+	<tr><td>Korea, South</td><td>X9.13.20</td><td>NA</td><td>363</td></tr>
+	<tr><td>Korea, South</td><td>X9.14.20</td><td>NA</td><td>367</td></tr>
+	<tr><td>Korea, South</td><td>X9.15.20</td><td>NA</td><td>367</td></tr>
+	<tr><td>Korea, South</td><td>X9.16.20</td><td>NA</td><td>372</td></tr>
+	<tr><td>Korea, South</td><td>X9.17.20</td><td>NA</td><td>377</td></tr>
+	<tr><td>Korea, South</td><td>X9.18.20</td><td>NA</td><td>378</td></tr>
+	<tr><td>Korea, South</td><td>X9.19.20</td><td>NA</td><td>383</td></tr>
+	<tr><td>Korea, South</td><td>X9.2.20 </td><td>NA</td><td>329</td></tr>
+	<tr><td>Korea, South</td><td>X9.20.20</td><td>NA</td><td>385</td></tr>
+	<tr><td>Korea, South</td><td>X9.21.20</td><td>NA</td><td>388</td></tr>
+	<tr><td>Korea, South</td><td>X9.22.20</td><td>NA</td><td>388</td></tr>
+	<tr><td>Korea, South</td><td>X9.23.20</td><td>NA</td><td>393</td></tr>
+	<tr><td>Korea, South</td><td>X9.24.20</td><td>NA</td><td>395</td></tr>
+	<tr><td>Korea, South</td><td>X9.25.20</td><td>NA</td><td>399</td></tr>
+	<tr><td>Korea, South</td><td>X9.26.20</td><td>NA</td><td>401</td></tr>
+	<tr><td>Korea, South</td><td>X9.27.20</td><td>NA</td><td>406</td></tr>
+	<tr><td>Korea, South</td><td>X9.28.20</td><td>NA</td><td>407</td></tr>
+	<tr><td>Korea, South</td><td>X9.29.20</td><td>NA</td><td>413</td></tr>
+	<tr><td>Korea, South</td><td>X9.3.20 </td><td>NA</td><td>331</td></tr>
+	<tr><td>Korea, South</td><td>X9.30.20</td><td>NA</td><td>415</td></tr>
+	<tr><td>Korea, South</td><td>X9.4.20 </td><td>NA</td><td>333</td></tr>
+	<tr><td>Korea, South</td><td>X9.5.20 </td><td>NA</td><td>334</td></tr>
+	<tr><td>Korea, South</td><td>X9.6.20 </td><td>NA</td><td>336</td></tr>
+	<tr><td>Korea, South</td><td>X9.7.20 </td><td>NA</td><td>341</td></tr>
+	<tr><td>Korea, South</td><td>X9.8.20 </td><td>NA</td><td>344</td></tr>
+	<tr><td>Korea, South</td><td>X9.9.20 </td><td>NA</td><td>346</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="&#37325;&#40670;&#32113;&#25972;">&#37325;&#40670;&#32113;&#25972;<a class="anchor-link" href="#&#37325;&#40670;&#32113;&#25972;">&#182;</a></h2><ul>
+<li>使用 <code>%&gt;%</code> pipe 運算符鏈結函數。</li>
+<li>使用 <code>dplyr::select()</code> 函數選擇。</li>
+<li>使用 <code>dplyr::filter()</code> 函數篩選。</li>
+<li>使用 <code>dplyr::arrange()</code> 函數排序。</li>
+<li>使用 <code>dplyr::mutate()</code> 函數新增變數。</li>
+<li>使用 <code>dplyr::group_by()</code> 搭配 <code>dplyr::summarise()</code> 函數分組摘要。</li>
+</ul>
+
+</div>
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#20998;&#32068;&#25688;&#35201;">&#20998;&#32068;&#25688;&#35201;<a class="anchor-link" href="#&#20998;&#32068;&#25688;&#35201;">&#182;</a></h2><p>使用 <code>dplyr::group_by()</code> 搭配 <code>dplyr::summarise()</code> 函數分組摘要</p>
+<h2 id="&#37325;&#40670;&#32113;&#25972;&#65288;&#32396;&#65289;">&#37325;&#40670;&#32113;&#25972;&#65288;&#32396;&#65289;<a class="anchor-link" href="#&#37325;&#40670;&#32113;&#25972;&#65288;&#32396;&#65289;">&#182;</a></h2><ul>
+<li>使用 <code>tidyr::pivot_longer()</code> 函數寬格式轉長格式。</li>
+<li>使用 <code>tidyr::pivot_wider()</code> 函數長格式轉寬格式。</li>
+</ul>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">chicago_bulls</span> <span class="o">%&gt;%</span> 
-    <span class="nf">mutate</span><span class="p">(</span><span class="n">Wt_kg</span> <span class="o">=</span> <span class="n">Wt</span> <span class="o">*</span> <span class="m">0.45359</span><span class="p">)</span> <span class="o">%&gt;%</span> 
-    <span class="nf">group_by</span><span class="p">(</span><span class="n">Pos</span><span class="p">)</span> <span class="o">%&gt;%</span> 
-    <span class="nf">summarise</span><span class="p">(</span><span class="n">Avg_Wt_kg</span> <span class="o">=</span> <span class="nf">mean</span><span class="p">(</span><span class="n">Wt_kg</span><span class="p">))</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<table>
-<thead><tr><th scope=col>Pos</th><th scope=col>Avg_Wt_kg</th></tr></thead>
-<tbody>
-	<tr><td>C        </td><td>110.56256</td></tr>
-	<tr><td>PF       </td><td>106.93384</td></tr>
-	<tr><td>PG       </td><td> 83.15817</td></tr>
-	<tr><td>SF       </td><td> 94.04433</td></tr>
-	<tr><td>SG       </td><td> 88.45005</td></tr>
-</tbody>
-</table>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#25688;&#35201;&#27599;&#20491;&#37586;&#34907;&#20301;&#32622;&#30340;&#26368;&#39640;&#36523;&#39640;">&#38568;&#22530;&#32244;&#32722;&#65306;&#25688;&#35201;&#27599;&#20491;&#37586;&#34907;&#20301;&#32622;&#30340;&#26368;&#39640;&#36523;&#39640;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#25688;&#35201;&#27599;&#20491;&#37586;&#34907;&#20301;&#32622;&#30340;&#26368;&#39640;&#36523;&#39640;">&#182;</a></h2>
-</div>
-</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">ans</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<table>
-<thead><tr><th scope=col>Pos</th><th scope=col>max_Ht_cm</th></tr></thead>
-<tbody>
-	<tr><td>C       </td><td>213.3600</td></tr>
-	<tr><td>PF      </td><td>205.1050</td></tr>
-	<tr><td>PG      </td><td>192.1933</td></tr>
-	<tr><td>SF      </td><td>203.2000</td></tr>
-	<tr><td>SG      </td><td>198.1200</td></tr>
-</tbody>
-</table>
+<h2 id="&#37325;&#40670;&#32113;&#25972;&#65288;&#32396;&#65289;">&#37325;&#40670;&#32113;&#25972;&#65288;&#32396;&#65289;<a class="anchor-link" href="#&#37325;&#40670;&#32113;&#25972;&#65288;&#32396;&#65289;">&#182;</a></h2><ul>
+<li>垂直合併。<ul>
+<li><code>dplyr::bind_rows()</code> 函數。</li>
+</ul>
+</li>
+<li>水平合併。<ul>
+<li><code>dplyr::bind_cols()</code> 函數。</li>
+<li><code>dplyr::..._join()</code> 函數。</li>
+</ul>
+</li>
+</ul>
 
 </div>
-
-</div>
-
-</div>
-
-</div>
-
-</div></div></section></section>
+</div></section></section>
 </div>
 </div>
 </body>
