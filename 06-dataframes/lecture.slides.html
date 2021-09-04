@@ -15333,19 +15333,38 @@ div.jp-OutputPrompt {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="&#26032;&#22686;&#35264;&#28204;&#20540;&#65306;&#20351;&#29992;-rbind-&#20989;&#25976;">&#26032;&#22686;&#35264;&#28204;&#20540;&#65306;&#20351;&#29992; <code>rbind</code> &#20989;&#25976;<a class="anchor-link" href="#&#26032;&#22686;&#35264;&#28204;&#20540;&#65306;&#20351;&#29992;-rbind-&#20989;&#25976;">&#182;</a></h2>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">hobbit_df</span> <span class="o">&lt;-</span> <span class="nf">list</span><span class="p">(</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">df</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">titles</span><span class="p">,</span>
+    <span class="n">release_year</span> <span class="o">=</span> <span class="n">release_years</span><span class="p">,</span>
+    <span class="n">box_office</span> <span class="o">=</span> <span class="n">box_offices</span><span class="p">,</span>
+    <span class="n">director</span> <span class="o">=</span> <span class="n">director</span>
+<span class="p">)</span>
+<span class="n">hobbit</span> <span class="o">&lt;-</span> <span class="nf">list</span><span class="p">(</span>
     <span class="n">title</span> <span class="o">=</span> <span class="s">&quot;The Hobbit: An Unexpected Journey&quot;</span><span class="p">,</span>
     <span class="n">release_year</span> <span class="o">=</span> <span class="m">2012</span><span class="p">,</span>
     <span class="n">box_office</span> <span class="o">=</span> <span class="m">1017003568</span><span class="p">,</span>
     <span class="n">director</span> <span class="o">=</span> <span class="s">&quot;Peter Jackson&quot;</span>
 <span class="p">)</span>
-<span class="nf">rbind</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">hobbit_df</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">rbind</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">hobbit</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15364,15 +15383,24 @@ div.jp-OutputPrompt {
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-Error in rbind(deparse.level, ...): numbers of columns of arguments do not match
-Traceback:
 
-1. rbind(df, hobbit_df)
-2. rbind(deparse.level, ...)
-3. stop(&#34;numbers of columns of arguments do not match&#34;)</pre>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 4 × 4</caption>
+<thead>
+	<tr><th></th><th scope=col>title</th><th scope=col>release_year</th><th scope=col>box_office</th><th scope=col>director</th></tr>
+	<tr><th></th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>The Fellowship of the Ring       </td><td>2001</td><td> 897690072</td><td>Peter Jackson</td></tr>
+	<tr><th scope=row>2</th><td>The Two Towers                   </td><td>2002</td><td> 947495095</td><td>Peter Jackson</td></tr>
+	<tr><th scope=row>3</th><td>The Return of the King           </td><td>2003</td><td>1146030912</td><td>Peter Jackson</td></tr>
+	<tr><th scope=row>4</th><td>The Hobbit: An Unexpected Journey</td><td>2012</td><td>1017003568</td><td>Peter Jackson</td></tr>
+</tbody>
+</table>
+
 </div>
+
 </div>
 
 </div>
@@ -15398,10 +15426,10 @@ Traceback:
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="&#20351;&#29992;-[,--index]">&#20351;&#29992; <code>[, -index]</code><a class="anchor-link" href="#&#20351;&#29992;-[,--index]">&#182;</a></h2>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="n">df</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span>
@@ -15418,10 +15446,44 @@ Traceback:
 </div>
 </div>
 
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 3 × 3</caption>
+<thead>
+	<tr><th scope=col>title</th><th scope=col>release_year</th><th scope=col>box_office</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>The Fellowship of the Ring</td><td>2001</td><td> 897690072</td></tr>
+	<tr><td>The Two Towers            </td><td>2002</td><td> 947495095</td></tr>
+	<tr><td>The Return of the King    </td><td>2003</td><td>1146030912</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="n">df</span><span class="p">[,</span> <span class="o">-</span><span class="nf">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="m">4</span><span class="p">)]</span>
@@ -15432,15 +15494,49 @@ Traceback:
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 3 × 2</caption>
+<thead>
+	<tr><th scope=col>title</th><th scope=col>release_year</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>The Fellowship of the Ring</td><td>2001</td></tr>
+	<tr><td>The Two Towers            </td><td>2002</td></tr>
+	<tr><td>The Return of the King    </td><td>2003</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="&#20197;&#31354;&#20540;-NULL-&#26356;&#26032;">&#20197;&#31354;&#20540; <code>NULL</code> &#26356;&#26032;<a class="anchor-link" href="#&#20197;&#31354;&#20540;-NULL-&#26356;&#26032;">&#182;</a></h2>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s">&quot;director&quot;</span><span class="p">]</span> <span class="o">&lt;-</span> <span class="kc">NULL</span>
@@ -15451,6 +15547,40 @@ Traceback:
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 3 × 2</caption>
+<thead>
+	<tr><th scope=col>title</th><th scope=col>release_year</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>The Fellowship of the Ring</td><td>2001</td></tr>
+	<tr><td>The Two Towers            </td><td>2002</td></tr>
+	<tr><td>The Return of the King    </td><td>2003</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div></section><section>
@@ -15467,10 +15597,10 @@ Traceback:
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="&#20351;&#29992;-[-index,]">&#20351;&#29992; <code>[-index,]</code><a class="anchor-link" href="#&#20351;&#29992;-[-index,]">&#182;</a></h2>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="n">df</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span>
@@ -15487,10 +15617,43 @@ Traceback:
 </div>
 </div>
 
-</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 2 × 4</caption>
+<thead>
+	<tr><th></th><th scope=col>title</th><th scope=col>release_year</th><th scope=col>box_office</th><th scope=col>director</th></tr>
+	<tr><th></th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>The Fellowship of the Ring</td><td>2001</td><td> 897690072</td><td>Peter Jackson</td></tr>
+	<tr><th scope=row>3</th><td>The Return of the King    </td><td>2003</td><td>1146030912</td><td>Peter Jackson</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="o">-</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">3</span><span class="p">),]</span>
@@ -15501,15 +15664,47 @@ Traceback:
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 1 × 4</caption>
+<thead>
+	<tr><th></th><th scope=col>title</th><th scope=col>release_year</th><th scope=col>box_office</th><th scope=col>director</th></tr>
+	<tr><th></th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>2</th><td>The Two Towers</td><td>2002</td><td>947495095</td><td>Peter Jackson</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="&#20351;&#29992;&#37007;&#36655;&#20540;-[CONDITION,]">&#20351;&#29992;&#37007;&#36655;&#20540; <code>[CONDITION,]</code><a class="anchor-link" href="#&#20351;&#29992;&#37007;&#36655;&#20540;-[CONDITION,]">&#182;</a></h2>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="n">exclude_tt</span> <span class="o">&lt;-</span> <span class="n">df</span><span class="o">$</span><span class="n">title</span> <span class="o">!=</span> <span class="s">&quot;The Two Towers&quot;</span>
@@ -15521,15 +15716,48 @@ Traceback:
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 2 × 4</caption>
+<thead>
+	<tr><th></th><th scope=col>title</th><th scope=col>release_year</th><th scope=col>box_office</th><th scope=col>director</th></tr>
+	<tr><th></th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>The Fellowship of the Ring</td><td>2001</td><td> 897690072</td><td>Peter Jackson</td></tr>
+	<tr><th scope=row>3</th><td>The Return of the King    </td><td>2003</td><td>1146030912</td><td>Peter Jackson</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div></section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="&#20351;&#29992;-rm-&#20989;&#25976;&#21034;&#38500;&#36039;&#26009;&#26694;&#21629;&#21517;">&#20351;&#29992; <code>rm</code> &#20989;&#25976;&#21034;&#38500;&#36039;&#26009;&#26694;&#21629;&#21517;<a class="anchor-link" href="#&#20351;&#29992;-rm-&#20989;&#25976;&#21034;&#38500;&#36039;&#26009;&#26694;&#21629;&#21517;">&#182;</a></h2>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="n">df</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span>
@@ -15548,6 +15776,28 @@ Traceback:
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[1] TRUE
+[1] FALSE
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div></section></section><section><section>
